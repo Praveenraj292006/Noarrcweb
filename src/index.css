@@ -1,0 +1,57 @@
+/* ── RESET ───────────────────────────────────────────────── */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* ── CSS VARIABLES ───────────────────────────────────────── */
+
+:root {
+  /* Brand */
+  --color-primary: #1F6F5F;
+  --color-primary-dark: #105d2c;
+  --color-accent: #2e7d32;
+  --color-accent-dark: #256628;
+
+  /* Functional */
+  --color-whatsapp: #25D366;
+  --color-call: #1976d2;
+  --color-hero-title: #1e63b5;
+
+  /* Neutrals */
+  --color-bg: aliceblue;
+  --color-surface: #ffffff;
+  --color-surface-alt: whitesmoke;
+  --color-strip: #dfe6ec;
+  --color-text: #333333;
+  --color-text-dark: #111111;
+  --color-text-light: #ffffff;
+
+  /* Shadows */
+  --shadow-sm: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  --shadow-lg: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  /* Spacing */
+  --section-padding-x: 20px;
+  --section-padding-y: 60px;
+
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+}
+
+body {
+  background-color: var(--color-bg);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

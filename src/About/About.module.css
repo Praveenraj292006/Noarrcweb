@@ -1,0 +1,30 @@
+/* ══════════════════════════════════════════════════════════
+   ABOUT SECTION
+   ══════════════════════════════════════════════════════════ */
+
+.about {
+  width: 100%;
+  min-height: 80vh;
+  display: flex;
+  background-color: var(--color-surface-alt);
+  position: relative;
+  padding: var(--section-padding-y) var(--section-padding-x);
+}
+
+/* ── TABLET  (≤ 991px) ───────────────────────────────────── */
+
+@media (max-width: 991px) {
+  .about {
+    min-height: 60vh;
+    padding: 48px 20px;
+  }
+}
+
+/* ── MOBILE  (≤ 600px) ───────────────────────────────────── */
+
+@media (max-width: 600px) {
+  .about {
+    min-height: auto;
+    padding: 40px 16px;
+  }
+}
