@@ -1,30 +1,221 @@
-/* ══════════════════════════════════════════════════════════
-   ABOUT SECTION
-   ══════════════════════════════════════════════════════════ */
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&display=swap');
 
 .about {
   width: 100%;
   min-height: 80vh;
   display: flex;
-  background-color: var(--color-surface-alt);
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+
+  background: linear-gradient(135deg, #E0F0FE, #f5fbff);
   position: relative;
-  padding: var(--section-padding-y) var(--section-padding-x);
+  overflow: hidden;
+
+  padding: clamp(40px, 6vw, 80px);
 }
 
-/* ── TABLET  (≤ 991px) ───────────────────────────────────── */
+/* LEFT IMAGE */
+.abtimg {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
 
-@media (max-width: 991px) {
+.square1 {
+  width: clamp(220px, 25vw, 320px);
+  height: clamp(300px, 35vw, 420px);
+  background: white;
+  border-radius: 20px;
+  position: relative;
+  transition: transform 0.4s ease;
+}
+
+.square1:hover {
+  transform: rotateY(8deg) scale(1.05);
+}
+
+.image {
+  width: 110%;
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  border-radius: 15px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+/* RIGHT CONTENT */
+.abtpara {
+  width: 60%;
+  padding: 20px;
+  z-index: 2;
+}
+
+.abtpara h1 {
+  font-size: clamp(28px, 4vw, 55px);
+  color: #035EA1;
+}
+
+.abtpara p {
+  margin-top: 20px;
+  font-size: clamp(14px, 1.5vw, 18px);
+  font-family: "Fredoka", sans-serif;
+  line-height: 1.6;
+}
+
+/* ILLUSTRATION */
+.illustration {
+  width: clamp(150px, 20vw, 280px);
+  position: absolute;
+  right: 5%;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* BLOBS */
+.blob1,
+.blob2 {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.blob1 {
+  width: 300px;
+  height: 300px;
+  background: #90caf9;
+  top: -80px;
+  left: -80px;
+}
+
+.blob2 {
+  width: 250px;
+  height: 250px;
+  background: #4fc3f7;
+  bottom: -60px;
+  right: -60px;
+}
+
+
+
+/* CSS */
+.bookbtn {
+  position: relative;
+  padding: 10px;
+  background: linear-gradient(0deg, #0E96E9 0%, #7DCBFC 100%);
+  border: 6px solid transparent;
+  border-radius: 16px;
+  background-clip: padding-box;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 4px 0 rgba(0, 0, 0, 0.5), 1px 3px 3px 2px #fff, 0 0 0 6px #ECECEC;
+  border-radius: 16px;
+  font-family: "Inter", sans-serif;
+  font-weight: 550;
+  font-size: 20px;
+  line-height: 1;
+  transition: border 0.1s ease-in-out, padding 0.1s ease-in-out, margin 0.1s ease-in-out;
+}
+.bookbtn:after {
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: -6px;
+  right: -6px;
+  background: linear-gradient(#0E96E9, #7DCBFC);
+  content: "";
+  z-index: -1;
+  border-radius: 16px;
+}
+.bookbtn:hover {
+  border: 2px solid transparent;
+  background-image: linear-gradient(180deg, #7DCBFC 0%, #0E96E9 100%);
+  box-shadow: 0 0 2px 0 rgba(0, 0, 0, 0.35), 0 0 0 6px #082B49;
+  padding: 20px;
+}
+.bookbtn:active {
+  border-top: 1px solid transparent;
+}
+
+
+
+/* SLIDER */
+.slider {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  top: 0;
+  left: 0;
+}
+/* TABLET */
+@media (max-width: 1024px) {
   .about {
-    min-height: 60vh;
-    padding: 48px 20px;
+    flex-direction: column;
+    text-align: justify;
+  }
+
+  .abtimg,
+  .abtpara {
+    width: 100%;
+  }
+
+  .illustration {
+    display: none;
+  }
+
+  .bookbtn{
+    font-size: 12px;
   }
 }
 
-/* ── MOBILE  (≤ 600px) ───────────────────────────────────── */
-
+/* MOBILE */
 @media (max-width: 600px) {
+
   .about {
-    min-height: auto;
-    padding: 40px 16px;
+    padding: 30px 16px;
+  }
+
+  .square1 {
+    width: 220px;
+    height: 280px;
+  }
+
+  .image {
+    width: 100%;
+    top: -10px;
+    left: -10px;
+  }
+
+  .abtpara h1 {
+    font-size: 24px;
+  }
+
+  .abtpara p {
+    font-size: 14px;
+  }
+
+  .illustration {
+    display: none;
+  }
+
+  .blob1 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .blob2 {
+    width: 150px;
+    height: 150px;
   }
 }

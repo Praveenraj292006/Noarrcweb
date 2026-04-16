@@ -6,7 +6,7 @@ import iconBrain from '../assets/neuro.png'
 import iconOrtho from '../assets/hand-bone.png'
 import iconRobo from '../assets/robotic.png'
 
-import { gsap } from 'gsap'
+import {gsap} from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
