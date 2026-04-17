@@ -1,0 +1,156 @@
+/* ===== SECTION ===== */
+.section {
+  padding: 80px 20px;
+  background-image: linear-gradient(to top, aliceblue 0%, #ace0f9 100%);
+  text-align: center;
+}
+
+/* HEADER */
+.header h2 {
+  font-size: clamp(35px, 8vw, 45px);
+  color: #035EA1;
+}
+
+.header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 15px;
+}
+
+/* ===== SLIDER ===== */
+.sliderWrapper {
+  overflow: hidden;
+  margin-top: 50px;
+}
+
+.slider {
+  display: flex;
+  gap: 25px;
+  width: max-content;
+}
+
+/* ===== CARD ===== */
+.card {
+  min-width: 300px;
+  max-width: 320px;
+
+  padding: 25px;
+  border-radius: 20px;
+
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(10px);
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+
+  text-align: left;
+  transition: 0.3s ease;
+}
+
+/* HOVER */
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.12);
+}
+
+/* STARS */
+.stars {
+  color: #F4C150;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+.text {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* USER */
+.user {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* AVATAR */
+.avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #035EA1;
+}
+
+/* NAME */
+.user h4 {
+  font-size: 15px;
+  color: #035EA1;
+}
+/* READ MORE */
+.readMore {
+  color: #035EA1;
+  font-size: 13px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.readMore:hover {
+  text-decoration: underline;
+}
+
+/* ===== MODAL OVERLAY ===== */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 999;
+}
+
+/* ===== MODAL CARD ===== */
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
+
+  max-width: 500px;
+  width: 90%;
+
+  text-align: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.2);
+}
+
+.modal p {
+  margin: 20px 0;
+  line-height: 1.6;
+}
+
+.modal h4 {
+  color: #035EA1;
+  margin-bottom: 10px;
+}
+
+/* BUTTON */
+.modal button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+
+  background: #035EA1;
+  color: white;
+  cursor: pointer;
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .card {
+    min-width: 250px;
+  }
+
+}

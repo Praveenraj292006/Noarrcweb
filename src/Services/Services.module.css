@@ -2,7 +2,7 @@
 
 /* ===== BACKGROUND ===== */
 .bg {
-  background: linear-gradient(135deg, #bed0f0, #9bc6ff);
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   font-family: "Montserrat", sans-serif;
   padding: 60px 20px;
   margin: 50px;
