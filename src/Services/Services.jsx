@@ -1,102 +1,81 @@
-import React, { useEffect, useRef } from 'react'
+import React from 'react'
 import styles from './Services.module.css'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import neuro from '../assets/ai.png'
+import painicon from '../assets/pain.png'
+import neuroicon from '../assets/ai.png'
 import ortho from '../assets/medical.png'
-import robotic from '../assets/artificial-intelligence.png'
-import pain from '../assets/pain.png'
-
-gsap.registerPlugin(ScrollTrigger)
-
-const services = [
-  {
-    icon: neuro,
-    title: "Neuro Rehabilitation",
-    desc: "Recovery support for stroke, spinal cord injuries, and neurological conditions."
-  },
-  {
-    icon: ortho,
-    title: "Orthopedic Rehab",
-    desc: "Treat injuries, fractures, and joint issues with targeted therapy."
-  },
-  {
-    icon: robotic,
-    title: "Robotic Therapy",
-    desc: "Advanced technology-driven rehabilitation for faster recovery."
-  },
-  {
-    icon: pain,
-    title: "Pain Management",
-    desc: "Relieve chronic pain with personalized physiotherapy techniques."
-  }
-]
+import robot from '../assets/artificial-intelligence.png'
+import midimg from '../assets/noarrc-hosp.webp'
 
 function Services() {
-
-  const sectionRef = useRef(null)
-
-  useEffect(() => {
-  const ctx = gsap.context(() => {
-
-    // FORCE VISIBILITY FIRST (IMPORTANT)
-    gsap.set(`.${styles.card}`, { opacity: 1 })
-
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: sectionRef.current,
-        start: "top 85%",
-        toggleActions: "play none none none",
-        markers: false // turn true for debugging
-      }
-    })
-
-    // HEADER
-    tl.from(`.${styles.header}`, {
-      y: 40,
-      opacity: 0,
-      duration: 0.8,
-      ease: "power3.out"
-    })
-
-    // CARDS
-    .from(`.${styles.card}`, {
-      y: 80,
-      opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
-      ease: "power3.out"
-    }, "-=0.4")
-
-  }, sectionRef)
-
-  return () => ctx.revert()
-}, [])
-
   return (
-    <section className={styles.services} ref={sectionRef}>
+    <section className={styles.bg}>
 
-      <div className={styles.header}>
-        <h2>Our Services</h2>
+      {/* HEADER */}
+      <div className={styles.head}>
+        <h1>Our Services</h1>
         <p>
-          We provide specialized physiotherapy treatments designed to restore movement,
-          reduce pain, and improve quality of life.
+          We provide comprehensive physiotherapy solutions designed to restore movement,
+          reduce pain, and enhance your overall quality of life through personalized and
+          evidence-based care.
         </p>
       </div>
 
-      <div className={styles.grid}>
-        {services.map((service, index) => (
-          <div key={index} className={styles.card}>
-            <img src={service.icon} alt={service.title} />
-            <h3>{service.title}</h3>
-            <p>{service.desc}</p>
-          </div>
-        ))}
-      </div>
+      {/* MAIN WRAPPER */}
+      <div className={styles.Servicewrapper}>
 
-      <div className={styles.cta}>
-        <button>View All Services</button>
+        {/* LEFT CARDS */}
+        <div className={styles.twocards}>
+          <div className={styles.card}>
+            <img src={neuroicon} alt="Neuro Rehab" className={styles.icon} />
+            <h3>Neuro Rehabilitation</h3>
+            <p>
+              Specialized therapy programs focused on recovery from neurological conditions
+              such as stroke, spinal cord injuries, and movement disorders, helping patients
+              regain independence and function.
+            </p>
+           <button className={`${styles.custombtn} ${styles.btn1}`}>Read More</button>
+          </div>
+
+          <div className={styles.card}>
+            <img src={ortho} alt="Ortho Rehab" className={styles.icon} />
+            <h3>Orthopedic Rehabilitation</h3>
+            <p>
+              Targeted treatment for joint, muscle, and bone-related injuries including
+              fractures, post-surgical recovery, and chronic orthopedic conditions.
+            </p>
+            <button className={`${styles.custombtn} ${styles.btn1}`}>Read More</button>
+          </div>
+        </div>
+
+        {/* CENTER IMAGE */}
+        <div className={styles.midimage}>
+          <img src={midimg} alt="Clinic" className={styles.midimg} />
+        </div>
+
+        {/* RIGHT CARDS */}
+        <div className={styles.twocards}>
+          <div className={styles.card}>
+            <img src={robot} alt="Robotic Therapy" className={styles.icon} />
+            <h3>Robotic Therapy</h3>
+            <p>
+              Advanced technology-driven rehabilitation that enhances precision,
+              improves outcomes, and accelerates recovery through assisted movement training.
+            </p>
+           <button className={`${styles.custombtn} ${styles.btn1}`}>Read More</button>
+          </div>
+
+          <div className={styles.card}>
+            <img src={painicon} alt="Pain Management" className={styles.icon} />
+            <h3>Pain Management</h3>
+            <p>
+              Comprehensive pain relief programs addressing chronic pain conditions
+              through manual therapy, exercise, and modern physiotherapy techniques.
+            </p>
+            <button className={`${styles.custombtn} ${styles.btn1}`}>Read More</button>
+          </div>
+        </div>
+
       </div>
 
     </section>
