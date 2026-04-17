@@ -171,7 +171,7 @@
    RESPONSIVE — TABLET  (≤ 991px)
    ══════════════════════════════════════════════════════════ */
 
-@media (max-width: 1024px) {
+@media (max-width: 1300px) {
   .hero {
     height: auto;
     min-height: 70vh;

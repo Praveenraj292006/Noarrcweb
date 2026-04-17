@@ -1,0 +1,182 @@
+/* ===== SERVICES SECTION ===== */
+
+.services {
+  width: 100%;
+  padding: clamp(40px, 6vw, 80px);
+  background: #F0F8FF;
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+.header {
+  max-width: 700px;
+  margin: 0 auto 40px;
+}
+
+.header h2 {
+  font-size: clamp(28px, 3vw, 40px);
+  color: #035EA1;
+}
+
+.header p {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+/* ===== CIRCLE LAYOUT ===== */
+
+.grid {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  height: 500px;
+  margin: 50px auto;
+}
+
+/* ===== CARD ===== */
+.card {
+  position: absolute;
+  width: 170px;
+  height: 170px;
+
+  background: #f7fbff;
+  border-radius: 18px;
+  padding: 15px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ===== POSITIONING (PERFECT CROSS CIRCLE) ===== */
+
+.card:nth-child(1) {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card:nth-child(2) {
+  top: 50%;
+  right: 0;
+  transform: translate(0, -50%);
+}
+
+.card:nth-child(3) {
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.card:nth-child(4) {
+  top: 50%;
+  left: 0;
+  transform: translate(0, -50%);
+}
+
+/* ===== ICON ===== */
+.card img {
+  width: 45px;
+  margin-bottom: 10px;
+}
+
+/* ===== TEXT ===== */
+.card h3 {
+  font-size: 15px;
+  margin-bottom: 6px;
+  color: #035EA1;
+}
+
+.card p {
+  font-size: 13px;
+  color: #555;
+  line-height: 1.4;
+}
+
+/* ===== HOVER (SAFE — no layout break) ===== */
+.card:hover {
+  transform: scale(1.05) translateY(-2px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+/* ===== CENTER SOFT CIRCLE (OPTIONAL BUT NICE) ===== */
+.grid::before {
+  content: "";
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(3, 94, 161, 0.05);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* ===== CTA BUTTON ===== */
+.cta {
+  margin-top: 100px;
+}
+
+.cta button {
+  padding: 10px 24px;
+  border-radius: 6px;
+  border: none;
+
+  background: #035EA1;
+  color: white;
+  font-size: 14px;
+
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.cta button:hover {
+  background: #024a80;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 991px) {
+
+  .grid {
+    max-width: 400px;
+    height: 400px;
+  }
+
+  .card {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ===== MOBILE (IMPORTANT SWITCH) ===== */
+@media (max-width: 600px) {
+
+  .grid {
+    position: static;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .card {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    transform: none !important;
+  }
+
+  .grid::before {
+    display: none;
+  }
+}

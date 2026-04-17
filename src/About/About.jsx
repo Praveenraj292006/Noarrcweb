@@ -1,159 +1,122 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './About.module.css'
+import img from '../assets/noarc-real-img.jpg'
 import illustration from '../assets/physio-illu.png'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from "gsap/ScrollTrigger"
-import img1 from '../assets/noarrc-hosp.webp'
-import img2 from '../assets/placeholder_2.jpg'
-import img3 from '../assets/placeholder_4.jpg'
-import img4 from '../assets/placeholder_5.jpeg'
+import logo from '../assets/Noarrc-logo.png'
+import therapy from '../assets/placeholder_3.jpg'
 
-const images = [img1, img2, img3, img4]
+import { gsap } from 'gsap'
+import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
 function About() {
 
-  const sectionRef = useRef(null)
+  const aboutRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      // SCROLL REVEAL
       const tl = gsap.timeline({
         scrollTrigger: {
-          trigger: sectionRef.current,
+          trigger: aboutRef.current,
           start: "top 80%",
         }
       })
 
-      tl.from(`.${styles.slide}`, {
+      // LEFT IMAGE
+      tl.from(`.${styles.left}`, {
         x: -80,
         opacity: 0,
         duration: 1,
         ease: "power3.out"
       })
 
-      .from(`.${styles.abtpara}`, {
+      // RIGHT TEXT
+      .from(`.${styles.right}`, {
         x: 80,
         opacity: 0,
         duration: 1
-      }, "-=0.6")
+      }, "-=0.7")
 
-      .from(`.${styles.illustration}`, {
-        y: 60,
+      // BUTTON
+      .from(`.${styles.btn}`, {
+        y: 20,
         opacity: 0,
-        duration: 0.8
+        duration: 0.6
       }, "-=0.5")
 
-      // FLOATING ILLUSTRATION
-      gsap.to(`.${styles.illustration}`, {
-        y: "-=10",
-        duration: 2,
-        repeat: -1,
-        yoyo: true,
-        ease: "sine.inOut"
-      })
+      // BOTTOM CARDS STAGGER
+      .from(`.${styles.cardSmall}, .${styles.cardHighlight}`, {
+        y: 60,
+        opacity: 0,
+        duration: 0.8,
+        stagger: 0.2,
+        ease: "power3.out"
+      }, "-=0.4")
 
-    }, sectionRef)
+    }, aboutRef)
 
     return () => ctx.revert()
   }, [])
 
-  useEffect(() => {
-  const slides = document.querySelectorAll(`.${styles.slide}`)
-
-  gsap.set(slides, { opacity: 0 })
-  gsap.set(slides[0], { opacity: 1 })
-
-  let current = 0
-
-  const interval = setInterval(() => {
-    const next = (current + 1) % slides.length
-
-    gsap.to(slides[current], {
-      opacity: 0,
-      duration: 1
-    })
-
-   gsap.to(slides[next], {
-  opacity: 1,
-  scale: 1.05,
-  duration: 1
-    })
-
-    gsap.fromTo(slides[next],
-      { scale: 1.1 },
-      { scale: 1, duration: 3 }
-    )
-
-    current = next
-  }, 3000)
-
-  return () => clearInterval(interval)
-}, [])
-
-  // PARALLAX BLOBS
-  useEffect(() => {
-    const handleMove = (e) => {
-      const x = (e.clientX / window.innerWidth - 0.5) * 20
-      const y = (e.clientY / window.innerHeight - 0.5) * 20
-
-      gsap.to(`.${styles.blob1}`, {
-        x,
-        y,
-        duration: 1
-      })
-
-      gsap.to(`.${styles.blob2}`, {
-        x: -x,
-        y: -y,
-        duration: 1.2
-      })
-    }
-
-    window.addEventListener("mousemove", handleMove)
-    return () => window.removeEventListener("mousemove", handleMove)
-  }, [])
-
   return (
-    <section className={styles.about} ref={sectionRef}>
-
-      {/* BLOBS */}
-      <div className={styles.blob1}></div>
-      <div className={styles.blob2}></div>
+    <section className={styles.about} ref={aboutRef}>
+      <div className={styles.topsect}>
 
       {/* LEFT IMAGE */}
-      <div className={styles.abtimg}>
-      <div className={styles.square1}>
-        
-        <div className={styles.slider}>
-          {images.map((img, index) => (
-            <img key={index} src={img} className={styles.slide} />
-          ))}
-        </div>
-
+      <div className={styles.left}>
+        <img src={img} alt="NOARRC Clinic" />
       </div>
-    </div>
 
       {/* RIGHT CONTENT */}
-      <div className={styles.abtpara}>
-        <h1>NOARRC GUEST PHYSIO</h1>
+      <div className={styles.right}>
+        <h2>NOARRC Guest Physio</h2>
 
         <p>
-          At NOARRC Physiotherapy & Rehabilitation Centre, we provide
-          evidence-based treatments focused on long-term recovery and functional independence.
-          <br /><br />
-          Our expert team treats neurological and orthopedic conditions using
-          modern techniques and personalized care.
-          <br /><br />
-          We believe recovery is not just healing the body — but restoring
+          At NOARRC Physiotherapy & Rehabilitation Centre, we are committed to
+          delivering evidence-based treatment focused on long-term recovery and
+          functional independence.
+        </p>
+
+        <p>
+          Our team of experienced physiotherapists specializes in treating a
+          wide range of conditions—from neurological disorders to orthopedic
+          injuries—using modern techniques and patient-centered care.
+        </p>
+
+        <p>
+          We believe recovery is not just about healing the body, but restoring
           confidence, mobility, and quality of life.
         </p>
-        <button className={styles.bookbtn}>Book Appoinment</button>
 
-        <img src={illustration} alt="illustration" className={styles.illustration} />
+        <button className={styles.btn}>
+          Book Appointment
+        </button>
       </div>
+      </div>
+      <div className={styles.abtbottom}>
+
+      {/* LEFT SMALL IMAGE */}
+      <div className={`${styles.cardSmall}`}>
+        <img src={illustration} alt="therapy" className={styles.illustration} />
+      </div>
+
+      {/* CENTER INFO CARD */}
+      <div className={styles.cardHighlight}>
+        <p>
+          We help patients recover faster with advanced physiotherapy techniques
+          and personalized care plans.
+        </p>
+        <button>Know More →</button>
+      </div>
+
+      {/* RIGHT SMALL IMAGE */}
+      <div className={`${styles.cardSmall} `}>
+        <img src={therapy} alt="clinic"  className={styles.therapy}/>
+      </div>
+
+</div>
 
     </section>
   )
