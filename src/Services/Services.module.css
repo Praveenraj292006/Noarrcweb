@@ -1,10 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300..700&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 /* ===== BACKGROUND ===== */
 .bg {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
   font-family: "Montserrat", sans-serif;
-  padding: 60px 20px;
+  padding: 40px 20px;
   margin: 50px;
   border-radius: 25px;
 }
@@ -36,14 +35,17 @@
   gap: 30px;
   max-width: 1200px;
   margin: auto;
+  
 }
 
 /* ===== CARD COLUMNS ===== */
 .twocards {
   display: flex;
   flex-direction: column;
-  gap: 25px;
+  gap: 30px;
   width: 30%;
+  justify-content: center;
+  align-items: center;
 }
 
 /* ===== CENTER IMAGE ===== */
@@ -71,6 +73,12 @@
 
   box-shadow: 0 8px 20px rgba(0,0,0,0.08);
   transition: 0.3s ease;
+
+  width: 300px; /* 🔥 makes it square */
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  
 }
 
 .card:hover {
@@ -79,8 +87,8 @@
 
 /* ===== ICON ===== */
 .icon {
-  width: 50px;
-  height: 50px;
+  width: 80px;
+  height: 80px;
   padding: 10px;
   background-color: #D6ECFF;
   border-radius: 50%;
@@ -89,14 +97,18 @@
 
 /* ===== TEXT ===== */
 .card h3 {
-  font-size: 18px;
+  font-size: 20px;
   margin-bottom: 8px;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-optical-sizing: auto;
 }
 
 .card p {
-  font-size: 14px;
+  font-size: 15px;
   color: #555;
   line-height: 1.5;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 500;
 }
 /*=======BUTTON=======*/
 /* From Uiverse.io by bandirevanth */ 
@@ -107,6 +119,7 @@
  border-radius: 5px;
  padding: 10px 25px;
  font-family: 'Lato', sans-serif;
+ font-size: 14px;
  font-weight: 500;
  background: transparent;
  cursor: pointer;
@@ -139,9 +152,14 @@
 
 /* ===== TABLET ===== */
 @media (max-width: 991px) {
+  .bg{
+    padding: 30px 10px;
+    background-image: linear-gradient(to top, white 0%, whitesmoke 100%);
+    margin:0;
+  }
 
   .Servicewrapper {
-    flex-direction: column;
+  width: 100%;
   }
 
   .twocards,
@@ -152,25 +170,53 @@
 
   .card {
     max-width: 400px;
+    font-size: 22px;
   }
+  .bg {
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+  font-family: "Montserrat", sans-serif;
+  
+  border-radius: 25px;
+}
 }
 
 /* ===== MOBILE ===== */
 @media (max-width: 600px) {
+   .bg {
+  background-image: linear-gradient(to top, white 0%, whitesmoke 100%);
+  font-family: "Montserrat", sans-serif;
+  border-radius: 25px;
+}
+
+  .Servicewrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  /* 🔥 Hide middle image */
+  .midimage {
+    display: none;
+  }
+
+  /* 🔥 Convert cards into grid */
+  .twocards {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 2x2 grid */
+    gap: 15px;
+  }
 
   .card {
     padding: 15px;
+    aspect-ratio: 1 / 1; /* keep square */
   }
 
   .card h3 {
-    font-size: 16px;
+    font-size: 14px;
   }
 
   .card p {
-    font-size: 13px;
-  }
-
-  .midimg {
-    max-width: 280px;
+    font-size: 12px;
   }
 }
