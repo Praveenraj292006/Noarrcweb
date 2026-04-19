@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 import styles from './ContactForm.module.css'
-import emailjs from 'emailjs-com'
+import emailjs from '@emailjs/browser'
 import formImg from '../assets/placeholder_3.jpg'
 
 function ContactForm() {
