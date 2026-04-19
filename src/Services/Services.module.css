@@ -160,6 +160,7 @@
 
   .Servicewrapper {
   width: 100%;
+  margin:0px;
   }
 
   .twocards,
@@ -169,8 +170,8 @@
   }
 
   .card {
-    max-width: 400px;
-    font-size: 22px;
+    max-width: 200px;
+    font-size: 18px;
   }
   .bg {
   background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);

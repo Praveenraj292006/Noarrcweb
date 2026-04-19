@@ -5,6 +5,7 @@ import Card from './Card/Card'
 import About from './About/About'
 import Services from './Services/Services'
 import Testimonials from './Testimonials/Testimonials'
+import ContactForm from './ContactForm/ContactForm'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <About />
       <Services/>
       <Testimonials/>
+      <ContactForm/>
     </>
   )
 }
