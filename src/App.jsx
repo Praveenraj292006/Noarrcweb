@@ -8,11 +8,13 @@ import Testimonials from './Testimonials/Testimonials'
 import ContactForm from './ContactForm/ContactForm'
 import Location from './Location/Location'
 import Footer from './Footer/Footer'
+import FloatingBar from './FloatingBar/FloatinBar'
 
 function App() {
   return (
     <>
     <Navbar />
+    <FloatingBar />
     <section id="home"><Hero /></section>
     <section id="card"><Card /></section>
     <section id="about"> <About /></section>

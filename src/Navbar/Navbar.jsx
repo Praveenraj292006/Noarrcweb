@@ -10,8 +10,8 @@ function Navbar() {
   })
 }
   return (
-    <nav className={`navbar navbar-expand-lg sticky-top ${styles.navbarCustom}`}>
-      <div className="container-fluid">
+    <nav className={`navbar navbar-expand-lg  ${styles.navbarCustom}`}>
+      <div className="container-fluid " >
 
         {/* ── Logo ─────────────────────────────── */}
         <a className="navbar-brand" href="#" onClick={() => scrollTo('home')}>

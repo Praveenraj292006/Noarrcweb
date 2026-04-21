@@ -35,7 +35,7 @@ function Location() {
           </p>
 
           <a
-            href="https://www.google.com/maps/place/NOARRC+-+Guest+Physiotherapy"
+            href="https://maps.app.goo.gl/uFinwqksPjXUqWQ28"
             target="_blank"
             rel="noreferrer"
             className={styles.mapBtn}

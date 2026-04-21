@@ -11,7 +11,7 @@
   backdrop-filter: blur(8px);
   border-radius: 12px;
   box-shadow: var(--shadow-sm);
-  position: sticky ;
+
 }
 
 /* ── Logo ────────────────────────────────────────────────── */
