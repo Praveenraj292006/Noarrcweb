@@ -88,6 +88,45 @@ textarea {
 .btn:hover {
   background: #024a80;
 }
+.buttons{
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  margin-top:30px;
+}
+.whatsappbtn {
+ display: flex;
+  align-items: center;
+  justify-content: center;
+  outline: none;
+  cursor: pointer;
+  width: 200px;
+  height: 50px;
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+  border-radius: 30px;
+  border: 1px solid #8F9092;
+  transition: all 0.2s ease;
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #606060;
+  text-shadow: 0 1px #fff;
+
+}
+.whatsappbtn:hover {
+  box-shadow: 0 4px 3px 1px #78e3fe, 0 6px 8px #7ba7ff, 0 -4px 4px #3778f9, 0 -6px 4px #FEFEFE, inset 0 0 3px 3px #CECFD1;
+}
+
+.whatsappbtn :active {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+.whatsappbtn:focus {
+  box-shadow: 0 4px 3px 1px #FCFCFC, 0 6px 8px #D6D7D9, 0 -4px 4px #CECFD1, 0 -6px 4px #FEFEFE, inset 0 0 5px 3px #999, inset 0 0 30px #aaa;
+}
+
+
 
 /* ===== RIGHT IMAGE ===== */
 .formimg {

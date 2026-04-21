@@ -14,6 +14,16 @@ function About() {
 
   const aboutRef = useRef(null)
 
+  const scrollToContact = () => {
+    const el = document.getElementById('contact')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
+  const scrollToServices = () => {
+    const el = document.getElementById('services')
+    if (el) el.scrollIntoView({ behavior: 'smooth' })
+  }
+
   useEffect(() => {
     const ctx = gsap.context(() => {
 
@@ -90,7 +100,7 @@ function About() {
           confidence, mobility, and quality of life.
         </p>
 
-        <button className={styles.btn}>
+        <button className={styles.btn} onClick={scrollToContact}>
           Book Appointment
         </button>
       </div>
@@ -108,7 +118,7 @@ function About() {
           We help patients recover faster with advanced physiotherapy techniques
           and personalized care plans.
         </p>
-        <button>Know More →</button>
+        <button onClick={scrollToServices}>Know More →</button>
       </div>
 
       {/* RIGHT SMALL IMAGE */}

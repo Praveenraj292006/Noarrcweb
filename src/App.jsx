@@ -6,17 +6,30 @@ import About from './About/About'
 import Services from './Services/Services'
 import Testimonials from './Testimonials/Testimonials'
 import ContactForm from './ContactForm/ContactForm'
+import Location from './Location/Location'
+import Footer from './Footer/Footer'
 
 function App() {
   return (
     <>
-      <Navbar />
-      <Hero />
-      <Card />
-      <About />
-      <Services/>
-      <Testimonials/>
-      <ContactForm/>
+    <Navbar />
+    <section id="home"><Hero /></section>
+    <section id="card"><Card /></section>
+    <section id="about"> <About /></section>
+    <section id="services"> <Services/></section>
+    <section id="reviews"> <Testimonials/></section>
+    <section id="contact">  <ContactForm/></section>
+    <section id="Location"> <Location/></section>
+    <section id="Footer"><Footer /></section>
+    
+      
+      
+      
+     
+     
+      
+     
+      
     </>
   )
 }

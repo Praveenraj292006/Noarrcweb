@@ -18,7 +18,7 @@ const reviews = [
     text: "I had went to guest hospital for neck pain. It was an nice experience. Their treatment approach was very good . The doctors were very kind too. Finally I get rid of my neck pain through their exercises . Within one week. I recommend everyone to visit the guest hospital.",
     rating: 4
   },
-   {
+  {
     name: "Gokul Hema",
     text: "I have pain on shoulder for 1 week but it reduced within 2 days.well good treatment.The doctors were very kind too.Finally I get rid of my shoulder pain through their exercises.",
     rating: 4

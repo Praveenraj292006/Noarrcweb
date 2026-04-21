@@ -1,0 +1,147 @@
+/* ===== SECTION ===== */
+.section {
+  padding: 50px ;
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Alice blue */
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 1350px;
+  margin: auto;
+  background:white;
+  padding :40px 20px;
+  border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+}
+
+/* ===== DETAILS ===== */
+.details {
+  flex: 1;
+  font-family: "Montserrat", sans-serif;
+}
+
+.details h2 {
+  color: #035EA1;
+  margin-bottom: 10px;
+}
+
+.address {
+  margin-bottom: 10px;
+  color: #444;
+}
+
+.details p {
+  margin: 6px 0;
+  color: #555;
+}
+
+/* ===== BUTTON ===== */
+.mapBtn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 10px 20px;
+
+  background: #035EA1;
+  color: white;
+  border-radius: 6px;
+
+  text-decoration: none;
+  font-size: 14px;
+
+  transition: 0.3s ease;
+}
+
+.mapBtn:hover {
+  background: #024a80;
+}
+
+/* ===== MAP ===== */
+.mapsection {
+  flex: 1;
+}
+
+.map {
+  width: 100%;
+  height: 350px;
+  border: none;
+  border-radius: 15px;
+
+  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+}
+
+/* ===== ICON STYLING ===== */
+.details i {
+  color: #035EA1;
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* HEADER ICON */
+.details h2 i {
+  font-size: 20px;
+}
+
+/* ===== BUTTON ICON ===== */
+.mapBtn i {
+  margin-right: 6px;
+}
+
+/* ===== HOVER EFFECT ===== */
+.details p {
+  transition: 0.3s ease;
+}
+
+.details p:hover {
+  transform: translateX(5px);
+}
+
+/* ===== MAP HOVER ===== */
+.map {
+  transition: 0.3s ease;
+}
+
+.map:hover {
+  transform: scale(1.02);
+}
+
+/* ===== BUTTON HOVER ===== */
+.mapBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .map {
+    height: 300px;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 600px) {
+
+  .section {
+    padding: 40px 15px;
+  }
+
+  .details {
+    text-align: center;
+  }
+
+  .mapBtn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .map {
+    height: 250px;
+  }
+}

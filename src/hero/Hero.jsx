@@ -8,6 +8,11 @@ import img2 from '../assets/placeholder_2.jpg'
 
 function Hero() {
 
+  const scrollTo = (id) => {
+  document.getElementById(id).scrollIntoView({
+    behavior: "smooth"
+  })}
+
   const heroRef = useRef(null)
 
   useEffect(() => {
@@ -23,43 +28,43 @@ function Hero() {
         ease: "power3.out"
       })
 
-      .from(`.${styles.titleSub}`, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8
-      }, "-=0.6")
+        .from(`.${styles.titleSub}`, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8
+        }, "-=0.6")
 
-      // DESCRIPTION
-      .from(`.${styles.description}`, {
-        y: 30,
-        opacity: 0,
-        duration: 0.8
-      }, "-=0.5")
+        // DESCRIPTION
+        .from(`.${styles.description}`, {
+          y: 30,
+          opacity: 0,
+          duration: 0.8
+        }, "-=0.5")
 
-      // BUTTON
-      .from(`.${styles.ctaBtn}`, {
-        y: 20,
-        opacity: 0,
-        duration: 0.6
-      }, "-=0.4")
+        // BUTTON
+        .from(`.${styles.ctaBtn}`, {
+          y: 20,
+          opacity: 0,
+          duration: 0.6
+        }, "-=0.4")
 
-      // DOCTOR IMAGE (main visual)
-      .from(`.${styles.centerImage}`, {
-        y: 80,
-        scale: 0.9,
-        opacity: 0,
-        duration: 0.8,
-        ease: "power3.out"
-      }, "-=0.6")
+        // DOCTOR IMAGE (main visual)
+        .from(`.${styles.centerImage}`, {
+          y: 80,
+          scale: 0.9,
+          opacity: 0,
+          duration: 0.8,
+          ease: "power3.out"
+        }, "-=0.6")
 
-      // SIDE CARDS (stagger)
-      .from(`.${styles.imageCard}`, {
-        x: 60,
-        opacity: 0,
-        duration: 1,
-        stagger: 0.2,
-        ease: "power3.out"
-      }, "-=0.8")
+        // SIDE CARDS (stagger)
+        .from(`.${styles.imageCard}`, {
+          x: 60,
+          opacity: 0,
+          duration: 1,
+          stagger: 0.2,
+          ease: "power3.out"
+        }, "-=0.8")
 
       // FLOATING EFFECT (subtle)
       gsap.to(`.${styles.imageCard}`, {
@@ -80,7 +85,7 @@ function Hero() {
   }, [])
 
   return (
-    <section className={styles.hero} ref={heroRef}>
+    <section className={styles.hero} ref={heroRef} id="home">
 
       {/* Background overlay */}
       <div className={styles.background} />
@@ -94,10 +99,10 @@ function Hero() {
 
         <div className={styles.description}>
           <p>
-            We provide advanced Robotic in house rehabilitation for Neuro,Ortho and Cardiac 
+            We provide advanced Robotic in house rehabilitation for Neuro,Ortho and Cardiac
             patients and also we provide very good treatment for musculo skeletal disorders
           </p>
-          <button className={styles.ctaBtn}>
+          <button className={styles.ctaBtn} onClick={() => scrollTo('contact')}>
             Book Appointment
             <i className={`bi bi-arrow-right-circle-fill ${styles.iconArrow}`} />
           </button>

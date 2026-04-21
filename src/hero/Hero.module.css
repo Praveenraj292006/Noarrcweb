@@ -340,7 +340,7 @@
 @media (max-width: 400px) {
   .centerImage{
     left:-30%;
-    top:50%;
+    top:10%;
   }
 
   .centerImage img {
@@ -349,11 +349,27 @@
 
   .topText {
     position: relative;
-    margin-top: 0px;
+    top:0;
     font-size: 12px;
+    margin: 10px;
   }
 
   .ctaBtn{
-    width: 120px;
+    width: 150px;
+    font-size: 9px;
+    margin-top: 2px;
+  }
+  .titleMain {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+
+  .titleSub {
+    font-size: 15px;
+  }
+
+  .description {
+    width: 60%;
+    margin-top: 80px;
   }
 }
