@@ -1,9 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './About.module.css'
-import img from '../assets/noarc-real-img.jpg'
-import illustration from '../assets/physio-illu.png'
-import logo from '../assets/Noarrc-logo.png'
-import therapy from '../assets/placeholder_3.jpg'
+import img from '../../assets/noarc-real-img.jpg'
+import illustration from '../../assets/physio-illu.png'
+import logo from '../../assets/Noarrc-logo.png'
+import therapy from '../../assets/placeholder_3.jpg'
 
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'

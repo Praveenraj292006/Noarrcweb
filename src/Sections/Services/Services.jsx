@@ -2,11 +2,11 @@ import React from 'react'
 import styles from './Services.module.css'
 import ServiceCard from './ServiceCard'
 
-import painicon from '../assets/pain.png'
-import neuroicon from '../assets/ai.png'
-import ortho from '../assets/medical.png'
-import robot from '../assets/artificial-intelligence.png'
-import midimg from '../assets/noarrc-hosp.webp'
+import painicon from '../../assets/pain.png'
+import neuroicon from '../../assets/ai.png'
+import ortho from '../../assets/medical.png'
+import robot from '../../assets/artificial-intelligence.png'
+import midimg from '../../assets/noarrc-hosp.webp'
 
 /* 🔥 Editable data */
 const servicesData = {

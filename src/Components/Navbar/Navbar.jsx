@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Navbar.module.css'
-import logo from '../assets/Noarrc-logo-Recovered.png'
+import logo from '../../assets/Noarrc-logo-Recovered.png'
 
 /** Primary site navigation — sticky, glassmorphic bar with Bootstrap collapse. */
 function Navbar() {
