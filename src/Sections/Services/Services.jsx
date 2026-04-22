@@ -1,61 +1,46 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styles from './Services.module.css'
 import ServiceCard from './ServiceCard'
-
-import painicon from '../../assets/pain.png'
-import neuroicon from '../../assets/ai.png'
-import ortho from '../../assets/medical.png'
-import robot from '../../assets/artificial-intelligence.png'
+import ServiceModal from './ServiceModal'
+import { servicesData } from '../../data/serviceData'
 import midimg from '../../assets/noarrc-hosp.webp'
 
-/* 🔥 Editable data */
-const servicesData = {
-  left: [
-    {
-      icon: neuroicon,
-      title: "Neuro Rehabilitation",
-      desc: "Recovery support for stroke and neurological disorders."
-    },
-    {
-      icon: ortho,
-      title: "Orthopedic Rehab",
-      desc: "Treatment for joints, muscles, and injury recovery."
-    }
-  ],
-  right: [
-    {
-      icon: robot,
-      title: "Robotic Therapy",
-      desc: "Technology-assisted rehab for faster improvement."
-    },
-    {
-      icon: painicon,
-      title: "Pain Management",
-      desc: "Relief from chronic pain and mobility issues."
-    }
-  ]
-}
-
 function Services() {
+
+  const [selectedService, setSelectedService] = useState(null)
+
+  const openModal = (service) => {
+    if (!service) return
+    setSelectedService(service)
+
+    // ✅ correct way to debug state
+    console.log("Opening:", service)
+  }
+
+  const closeModal = () => {
+    setSelectedService(null)
+  }
+
   return (
     <section className={styles.bg}>
 
       {/* HEADER */}
       <div className={styles.head}>
         <h1>Our Services</h1>
-        <p>
-          Personalized physiotherapy treatments to restore movement,
-          reduce pain, and improve quality of life.
-        </p>
+        <p>Personalized physiotherapy treatments for better recovery.</p>
       </div>
 
-      {/* MAIN WRAPPER */}
+      {/* MAIN */}
       <div className={styles.Servicewrapper}>
 
-        {/* LEFT CARDS */}
+        {/* LEFT */}
         <div className={styles.twocards}>
-          {servicesData.left.map((item, index) => (
-            <ServiceCard key={index} {...item} />
+          {servicesData?.left?.map((item, index) => (
+            <ServiceCard
+              key={index}
+              service={item}         // ✅ FIXED
+              onClick={openModal}
+            />
           ))}
         </div>
 
@@ -64,14 +49,21 @@ function Services() {
           <img src={midimg} alt="Clinic" className={styles.midimg} />
         </div>
 
-        {/* RIGHT CARDS */}
+        {/* RIGHT */}
         <div className={styles.twocards}>
-          {servicesData.right.map((item, index) => (
-            <ServiceCard key={index} {...item} />
+          {servicesData?.right?.map((item, index) => (
+            <ServiceCard
+              key={index}
+              service={item}         // ✅ FIXED (IMPORTANT)
+              onClick={openModal}
+            />
           ))}
         </div>
 
       </div>
+
+      {/* MODAL */}
+      <ServiceModal service={selectedService} onClose={closeModal} />
 
     </section>
   )

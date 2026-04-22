@@ -55,8 +55,8 @@ function ContactForm() {
         {/* LEFT SIDE */}
         <form ref={formRef} onSubmit={handleSubmit} className={styles.inputarea}>
 
-          <h2>Book an Appointment</h2>
-          <p>We will contact you shortly to confirm your booking.</p>
+          <h2>For Enquiry Fill the Form</h2>
+          <p>We will contact you shortly to discuss your needs.</p>
 
           <div className={styles.row}>
             <input name="name" type="text" placeholder="Full Name" required />
@@ -84,7 +84,7 @@ function ContactForm() {
           />
 
           <button type="submit" className={styles.btn}>
-            Book Appointment
+            Submit
           </button>
 
         </form>

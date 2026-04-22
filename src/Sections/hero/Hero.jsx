@@ -103,7 +103,7 @@ function Hero() {
             patients and also we provide very good treatment for musculo skeletal disorders
           </p>
           <button className={styles.ctaBtn} onClick={() => scrollTo('contact')}>
-            Book Appointment
+            Contact US 
             <i className={`bi bi-arrow-right-circle-fill ${styles.iconArrow}`} />
           </button>
         </div>

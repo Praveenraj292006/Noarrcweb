@@ -1,15 +1,18 @@
 import React from 'react'
 import styles from './Services.module.css'
 
-function ServiceCard({ icon, title, desc }) {
+function ServiceCard({ service, onClick }) {
   return (
     <div className={styles.card}>
-      <img src={icon} alt={title} className={styles.icon} />
+      <img src={service.icon} alt={service.title} className={styles.icon} />
 
-      <h3>{title}</h3>
-      <p>{desc}</p>
+      <h3>{service.title}</h3>
+      <p>{service.desc}</p>
 
-      <button className={`${styles.custombtn} ${styles.btn1}`}>
+      <button
+        onClick={() => onClick(service)} // 🔥 PASS FULL OBJECT
+        className={`${styles.custombtn} ${styles.btn1}`}
+      >
         Know More
       </button>
     </div>

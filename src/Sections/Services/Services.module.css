@@ -150,6 +150,136 @@
     inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
 }
 
+/* ===== MODAL ===== */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.5);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  z-index: 2000;
+}
+
+/* MODAL BOX */
+.modal {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+
+  max-width: 500px;
+  width: 90%;
+
+  text-align: center;
+
+  animation: fadeIn 0.3s ease;
+}
+
+.modal h2 {
+  color: #035EA1;
+  margin-bottom: 10px;
+}
+
+.modal p {
+  color: #555;
+  line-height: 1.6;
+}
+/* IMAGE */
+.modalImage {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 12px;
+  margin-bottom: 15px;
+}
+
+/* DESCRIPTION */
+.modalDesc {
+  margin-bottom: 15px;
+  color: #555;
+}
+
+/* SECTION */
+.section {
+  text-align: left;
+  margin-top: 15px;
+}
+
+.section h3 {
+  color: #035EA1;
+  margin-bottom: 8px;
+}
+
+.section ul {
+  padding-left: 10px;
+}
+
+.section li {
+  font-size: 14px;
+  margin-bottom: 5px;
+  color: #444;
+}
+
+/* CLOSE ICON */
+.closeIcon {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* CTA BUTTON */
+.bookBtn {
+  margin-top: 20px;
+  width: 100%;
+  padding: 12px;
+
+  background: linear-gradient(135deg, #035EA1, #0284c7);
+  color: white;
+
+  border: none;
+  border-radius: 8px;
+
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.bookBtn:hover {
+  transform: scale(1.03);
+}
+
+/* CLOSE BUTTON */
+.closeBtn {
+  margin-top: 20px;
+  padding: 8px 20px;
+
+  background: #035EA1;
+  color: white;
+  border: none;
+  border-radius: 5px;
+
+  cursor: pointer;
+}
+
+/* ANIMATION */
+@keyframes fadeIn {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /* ===== TABLET ===== */
 @media (max-width: 991px) {
   .bg{
