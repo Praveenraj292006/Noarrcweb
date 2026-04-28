@@ -16,7 +16,8 @@ function App() {
     <Navbar />
     <FloatingBar />
     <section id="home"><Hero /></section>
-    <section id="card"><Card /></section>
+   
+    
     <section id="about"> <About /></section>
     <section id="services"> <Services/></section>
     <section id="reviews"> <Testimonials/></section>

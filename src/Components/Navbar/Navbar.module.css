@@ -1,89 +1,228 @@
 /* ══════════════════════════════════════════════════════════
-   NAVBAR
+   NOARRC · NAVBAR — Navbar.module.css
+   Alice Blue palette · matches Hero section
    ══════════════════════════════════════════════════════════ */
 
-/* ── Base ────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=DM+Sans:wght@300;400;500;600&display=swap');
 
+/* ── Tokens (mirrors Hero) ───────────────────────────────── */
 .navbarCustom {
-  margin: 12px;
-  padding: 10px 20px;
-  background: rgba(255, 255, 255, 0.75);
-  backdrop-filter: blur(8px);
-  border-radius: 12px;
-  box-shadow: var(--shadow-sm);
+  --navy:        #0B2545;
+  --navy-mid:    #134074;
+  --blue:        #1E6FBF;
+  --accent:      #0EA5E9;
+  --alice:       #EFF8FF;
+  --alice-mid:   #DBEEFF;
+  --alice-deep:  #B8DCFF;
+  --text-soft:   #4A6FA5;
+  --whatsapp:    #25D366;
+  --call:        #1E6FBF;
+  --serif:       'Cormorant Garamond', Georgia, serif;
+  --sans:        'DM Sans', system-ui, sans-serif;
+  --ease:        cubic-bezier(0.4, 0, 0.2, 1);
+}
 
+/* ── Base — floats above hero with card shape ────────────── */
+.navbarCustom {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+
+  margin: 14px 20px;
+  padding: 10px 24px;
+  border-radius: 14px;
+
+  font-family: var(--sans);
+
+  /* Pre-scroll: soft transparent card */
+  background: rgba(239, 248, 255, 0.55);
+  border: 1px solid rgba(184, 220, 255, 0.5);
+  box-shadow: 0 2px 12px rgba(11, 37, 69, 0.06);
+  backdrop-filter: blur(0px);
+
+  transition:
+    background    0.4s var(--ease),
+    border-color  0.4s var(--ease),
+    box-shadow    0.4s var(--ease),
+    backdrop-filter 0.4s var(--ease),
+    margin        0.4s var(--ease),
+    border-radius 0.4s var(--ease);
+}
+
+/* ── Scrolled state — full glassmorphism ─────────────────── */
+.scrolled {
+  background: rgba(239, 248, 255, 0.72);
+  border-color: rgba(184, 220, 255, 0.75);
+  box-shadow:
+    0 8px 32px rgba(11, 37, 69, 0.12),
+    0 1px 0 rgba(255, 255, 255, 0.6) inset;
+  backdrop-filter: blur(18px) saturate(1.4);
+  margin: 8px 16px;
+  border-radius: 16px;
 }
 
 /* ── Logo ────────────────────────────────────────────────── */
-
 .logo {
-  width: 150px;
-  transition: var(--transition-fast);
+  width: 140px;
+  height: auto;
+  transition: transform 0.25s var(--ease), opacity 0.25s;
+  display: block;
 }
 
 .logo:hover {
-  transform: scale(1.05);
+  transform: scale(1.04);
+  opacity: 0.9;
 }
 
 /* ── Nav Links ───────────────────────────────────────────── */
-
 .navLink {
-  color: var(--color-text);
+  font-family: var(--sans);
+  font-size: 14px;
   font-weight: 500;
-  font-size: 18px;
+  color: var(--navy-mid);
   text-decoration: none;
-  padding: 6px 12px;
-  border-radius: 10px;
-  transition: var(--transition-fast);
+  padding: 7px 16px;
+  border-radius: 8px;
+  letter-spacing: 0.3px;
+  position: relative;
+  display: inline-block;
+  transition: color 0.22s var(--ease), background 0.22s var(--ease);
+}
+
+/* Underline pill on hover */
+.navLink::after {
+  content: '';
+  position: absolute;
+  bottom: 4px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 20px;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease);
 }
 
 .navLink:hover {
-  background-color: var(--color-primary-dark);
-  color: var(--color-text-light);
+  color: var(--navy);
+  background: rgba(14, 165, 233, 0.08);
 }
 
-/* ── Action Buttons ──────────────────────────────────────── */
+.navLink:hover::after {
+  transform: translateX(-50%) scaleX(1);
+}
 
+/* ── Buttons container ───────────────────────────────────── */
 .buttons {
   display: flex;
-  gap: 10px;
+  align-items: center;
+  gap: 8px;
+}
+
+/* Shared button base */
+.btnWhatsapp,
+.btnCall,
+.btnBook {
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  border-radius: 8px;
+  padding: 7px 16px;
+  transition: transform 0.2s var(--ease), box-shadow 0.2s var(--ease), background 0.22s, color 0.22s;
+  white-space: nowrap;
+}
+
+.btnWhatsapp:hover,
+.btnCall:hover,
+.btnBook:hover {
+  transform: translateY(-1px);
 }
 
 /* WhatsApp */
 .btnWhatsapp {
-  border: 2px solid var(--color-whatsapp);
-  color: var(--color-whatsapp);
+  border: 1.5px solid var(--whatsapp);
+  color: var(--whatsapp);
   background: transparent;
-  transition: var(--transition-fast);
 }
 
 .btnWhatsapp:hover {
-  background: var(--color-whatsapp);
-  color: var(--color-text-light);
+  background: var(--whatsapp);
+  color: white;
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.28);
 }
 
 /* Call */
 .btnCall {
-  border: 2px solid var(--color-call);
-  color: var(--color-call);
+  border: 1.5px solid var(--call);
+  color: var(--call);
   background: transparent;
-  transition: var(--transition-fast);
 }
 
 .btnCall:hover {
-  background: var(--color-call);
-  color: var(--color-text-light);
+  background: var(--call);
+  color: white;
+  box-shadow: 0 4px 14px rgba(30, 111, 191, 0.25);
 }
 
-/* Book */
+/* Book Now — filled primary */
 .btnBook {
-  background: var(--color-whatsapp);
-  color: var(--color-text-light);
-  transition: var(--transition-fast);
+  background: var(--navy);
+  color: white;
+  border: 1.5px solid var(--navy);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnBook::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.28s var(--ease);
 }
 
 .btnBook:hover {
-  background: var(--color-primary-dark);
+  color: white;
+  box-shadow: 0 4px 18px rgba(11, 37, 69, 0.28);
+}
+
+.btnBook:hover::before {
+  transform: scaleX(1);
+}
+
+/* text above the pseudo fill */
+.btnBook span,
+.btnBook i {
+  position: relative;
+  z-index: 1;
+}
+
+/* ── Custom mobile toggler ───────────────────────────────── */
+.toggler {
+  border: 1.5px solid rgba(11, 37, 69, 0.2);
+  border-radius: 8px;
+  padding: 6px 10px;
+  background: rgba(255, 255, 255, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background 0.2s;
+}
+
+.toggler:focus { box-shadow: none; outline: none; }
+.toggler:hover { background: rgba(255, 255, 255, 0.7); }
+
+.togglerBar {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background: var(--navy-mid);
+  border-radius: 2px;
+  transition: transform 0.25s var(--ease), opacity 0.25s;
 }
 
 /* ══════════════════════════════════════════════════════════
@@ -92,42 +231,79 @@
 
 @media (max-width: 992px) {
   .navbarCustom {
-    padding: 10px;
+    margin: 10px 14px;
+    padding: 10px 18px;
+  }
+
+  /* Expanded menu panel */
+  :global(#navbarNav.show),
+  :global(#navbarNav.collapsing) {
+    background: rgba(239, 248, 255, 0.96);
+    border-top: 1px solid rgba(184, 220, 255, 0.6);
+    border-radius: 0 0 12px 12px;
+    padding: 12px 0 16px;
+    margin: 0 -18px -10px;
   }
 
   .navLink {
     display: block;
-    text-align: center;
     width: 100%;
-    margin-bottom: 10px;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 20px;
+    border-radius: 0;
+  }
+
+  .navLink::after { display: none; }
+
+  .navLink:hover {
+    background: rgba(14, 165, 233, 0.08);
+    border-radius: 0;
+  }
+
+  .buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 4px 16px 0;
+  }
+
+  .btnWhatsapp,
+  .btnCall,
+  .btnBook {
+    flex: 1 1 120px;
+    text-align: center;
+  }
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE  (≤ 576px)
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 576px) {
+  .navbarCustom {
+    margin: 8px 10px;
+    padding: 8px 14px;
+    border-radius: 12px;
+  }
+
+  .scrolled {
+    margin: 6px 8px;
+  }
+
+  .logo {
+    width: 115px;
   }
 
   .buttons {
     flex-direction: column;
+    padding: 4px 12px 0;
   }
 
   .btnWhatsapp,
   .btnCall,
   .btnBook {
     width: 100%;
-    margin-top: 4px;
-  }
-}
-
-/* ══════════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE  (≤ 576px)
-   ══════════════════════════════════════════════════════════ */
-
-@media (max-width: 576px) {
-  .navbarCustom {
-    margin: 8px;
-  }
-
-  .logo {
-    width: 120px;
-  }
-
-  .navLink {
-    font-size: 16px;
+    flex: unset;
   }
 }

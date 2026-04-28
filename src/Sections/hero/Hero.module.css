@@ -1,375 +1,698 @@
 /* ══════════════════════════════════════════════════════════
-   HERO SECTION
+   NOARRC · HERO  —  Hero.module.css
+   Alice Blue palette · DM Sans + Cormorant Garamond
    ══════════════════════════════════════════════════════════ */
 
-/* ── Base Layout ─────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+
+/* ── CSS Tokens ─────────────────────────────────────────── */
+.hero {
+  --alice:      #EFF8FF;
+  --alice-mid:  #DBEEFF;
+  --alice-deep: #B8DCFF;
+  --navy:       #0B2545;
+  --navy-mid:   #134074;
+  --blue:       #1E6FBF;
+  --blue-light: #3A9FE0;
+  --accent:     #0EA5E9;
+  --text-soft:  #4A6FA5;
+  --text-muted: #7BAFD4;
+  --serif:      'Cormorant Garamond', Georgia, serif;
+  --sans:       'DM Sans', system-ui, sans-serif;
+  --lato: "Lato", sans-serif;
+}
+
+/* ══════════════════════════════════════════════════════════
+   BASE LAYOUT
+   ══════════════════════════════════════════════════════════ */
 
 .hero {
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  background: linear-gradient(155deg, #EFF8FF 0%, #DBEEFF 45%, #C5E3FF 72%, #B0D4F5 100%);
   position: relative;
   overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--lato);
 }
 
-/* ── Background ──────────────────────────────────────────── */
+/* ══════════════════════════════════════════════════════════
+   PARTICLES
+   ══════════════════════════════════════════════════════════ */
 
-.background {
+.particles {
   position: absolute;
   inset: 0;
-  background: url('../assets/hero-bg.jpg') center / cover no-repeat;
-  filter: brightness(0.7);
+  z-index: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(14, 165, 233, 0.13);
+  animation: floatParticle linear infinite;
+}
+
+@keyframes floatParticle {
+  0%   { transform: translateY(100vh) scale(0); opacity: 0; }
+  10%  { opacity: 1; }
+  90%  { opacity: 0.5; }
+  100% { transform: translateY(-80px) scale(1.4); opacity: 0; }
+}
+
+/* ══════════════════════════════════════════════════════════
+   BLOBS
+   ══════════════════════════════════════════════════════════ */
+
+.blob1,
+.blob2 {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
   z-index: 0;
 }
 
-/* ── Text Area ───────────────────────────────────────────── */
-
-.topText {
-  position: relative;
-  z-index: 3;
-  padding-top: 30px;
+.blob1 {
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(14,165,233,0.12) 0%, transparent 70%);
+  top: 10%;
+  left: -80px;
+  animation: driftBlob 14s ease-in-out infinite alternate;
 }
 
+.blob2 {
+  width: 360px;
+  height: 360px;
+  background: radial-gradient(circle, rgba(30,111,191,0.10) 0%, transparent 70%);
+  bottom: 15%;
+  right: -60px;
+  animation: driftBlob 18s ease-in-out infinite alternate-reverse;
+}
 
+@keyframes driftBlob {
+  from { transform: translate(0, 0); }
+  to   { transform: translate(30px, -30px); }
+}
 
+/* ══════════════════════════════════════════════════════════
+   TICKER
+   ══════════════════════════════════════════════════════════ */
+
+.ticker {
+  position: relative;
+  z-index: 3;
+  background: rgba(219, 238, 255, 0.6);
+  border-top: 1px solid rgba(184,220,255,0.8);
+  border-bottom: 1px solid rgba(184,220,255,0.8);
+  padding: 9px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  backdrop-filter: blur(4px);
+}
+
+.tickerTrack {
+  display: inline-block;
+  animation: marquee 32s linear infinite;
+}
+
+.tickerItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  color: var(--text-soft);
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-right: 48px;
+}
+
+.tickerDot {
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* ══════════════════════════════════════════════════════════
+   HERO BODY — 2-column grid
+   ══════════════════════════════════════════════════════════ */
+
+.heroBody {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0;
+  padding: 40px 60px 0;
+  position: relative;
+  z-index: 2;
+}
+
+/* ══════════════════════════════════════════════════════════
+   LEFT COLUMN
+   ══════════════════════════════════════════════════════════ */
+
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-right: 48px;
+  padding-bottom: 60px;
+}
+
+/* Badge */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(11, 37, 69, 0.07);
+  border: 1px solid rgba(11, 37, 69, 0.13);
+  border-radius: 100px;
+  padding: 6px 16px;
+  width: fit-content;
+  margin-bottom: 24px;
+}
+
+.badgeDot {
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  border-radius: 50%;
+  animation: pulseDot 2s ease-in-out infinite;
+}
+
+@keyframes pulseDot {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50%       { transform: scale(1.5); opacity: 0.5; }
+}
+
+.badgeLabel {
+  font-size: 11px;
+  color: var(--navy-mid);
+  font-weight: 500;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+}
+
+/* Tag */
+.tag {
+  font-family: var(--serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--blue);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+/* Titles */
 .titleMain {
-  font-size: clamp(50px, 8vw, 100px);
-  font-weight: 600;
-  color: var(--color-hero-title);
+  font-family: var(--lato);
+  font-size: clamp(52px, 6vw, 86px);
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 0.95;
+  letter-spacing: -1px;
+  margin-bottom: 8px;
 }
 
 .titleSub {
-  font-size: clamp(24px, 4vw, 40px);
-  font-weight: 700;
-  color: black;
+  font-family: var(--lato);
+  font-size: clamp(15px, 2vw, 22px);
+  font-weight: 300;
+  color: var(--navy-mid);
+  letter-spacing: 2.5px;
+  margin-bottom: 22px;
 }
 
-.description {
-  width: min(450px, 100%);
-  position: absolute;
-  top: 20%;
-  right: 10px;
+/* Divider */
+.divider {
+  width: 56px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+  margin-bottom: 22px;
 }
 
-/* ── CTA Button ──────────────────────────────────────────── */
+/* Description */
+.desc {
+  font-size: 15px;
+  line-height: 1.85;
+  color: var(--text-soft);
+  max-width: 430px;
+  margin-bottom: 34px;
+}
 
-.ctaBtn {
-  position: relative;
-  display: inline-block;
-  padding: 12px 30px;
-  font-size: 16px;
-  font-weight: 700;
-  text-transform: uppercase;
+.desc strong {
+  color: var(--navy-mid);
+  font-weight: 500;
+}
+
+/* CTA row */
+.ctaRow {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 36px;
+  flex-wrap: wrap;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--navy);
+  color: white;
   border: none;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-family: var(--sans);
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  background: transparent;
-  color: var(--color-text-dark);
+  position: relative;
   overflow: hidden;
-  z-index: 5;
+  transition: transform 0.2s, box-shadow 0.2s;
 }
 
-/* Blob pseudo-elements */
-.ctaBtn::before,
-.ctaBtn::after {
-  content: "";
+.btnPrimary::before {
+  content: '';
   position: absolute;
-  z-index: -1;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background: var(--color-accent);
-  transition: var(--transition-medium);
+  inset: 0;
+  background: var(--blue);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.3s ease;
 }
 
-.ctaBtn::before {
-  top: -20px;
-  left: -20px;
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(11, 37, 69, 0.28);
 }
 
-.ctaBtn::after {
-  bottom: -20px;
-  right: -20px;
-}
+.btnPrimary:hover::before { transform: scaleX(1); }
 
-.ctaBtn:hover {
-  color: var(--color-text-light);
-}
-
-.ctaBtn:hover::before,
-.ctaBtn:hover::after {
-  width: 100%;
-  height: 100%;
-  border-radius: 0;
-  top: 0;
-  left: 0;
-}
-
-.iconArrow {
-  font-size: 12px;
-  margin-left: 5px;
-}
-
-/* ── Center Doctor Image ─────────────────────────────────── */
-
-.centerImage {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
+.btnPrimary span,
+.btnArrow {
+  position: relative;
   z-index: 1;
 }
 
-.centerImage img {
-  height: 105vh;
+.btnArrow { font-size: 16px; }
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background: transparent;
+  color: var(--navy-mid);
+  border: none;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: color 0.2s;
+  padding: 0;
+}
+
+.btnSecondary:hover { color: var(--accent); }
+
+.playIcon {
+  width: 36px;
+  height: 36px;
+  border: 1.5px solid var(--alice-deep);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s, background 0.2s;
+  padding-left: 2px;
+}
+
+.btnSecondary:hover .playIcon {
+  border-color: var(--accent);
+  background: rgba(14, 165, 233, 0.08);
+}
+
+/* Trust strip */
+.trustStrip {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.trustItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--text-soft);
+}
+
+.trustCheck {
+  width: 18px;
+  height: 18px;
+  background: rgba(14, 165, 233, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ══════════════════════════════════════════════════════════
+   RIGHT COLUMN
+   ══════════════════════════════════════════════════════════ */
+
+.heroRight {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: 0;
+}
+
+/* Radar */
+.radarWrap {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.radarSvg {
+  width: 110%;
+  max-width: 520px;
+  opacity: 0.9;
+}
+
+/* Doctor */
+.doctorWrap {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.doctorImg {
+  height: clamp(440px, 115vh, 620px);
+  width: auto;
   object-fit: contain;
+  filter: drop-shadow(0 24px 48px rgba(11, 37, 69, 0.18));
+}
+
+/* ── Stat Cards ──────────────────────────────────────────── */
+
+.statCard {
+  position: absolute;
+  background: white;
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 8px 30px rgba(11, 37, 69, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  z-index: 3;
+  cursor: default;
+  transition: box-shadow 0.25s;
+  animation: floatCard 5s ease-in-out infinite;
+}
+
+.statCard:hover {
+  box-shadow: 0 16px 48px rgba(11, 37, 69, 0.2);
+}
+
+.statCard1 {
+  top: 70px;
+  left: 0px;
+  animation-delay: 0s;
+  min-width: 140px;
+}
+
+.statCard2 {
+  top: 46%;
+  right: 0px;
+  animation-delay: 1.6s;
+  min-width: 130px;
+}
+
+.statCard3 {
+  bottom: 80px;
+  left: 10px;
+  animation-delay: 0.9s;
+  min-width: 150px;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-10px); }
+}
+
+.statNum {
+  font-family: var(--serif);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+  margin-bottom: 4px;
+}
+
+.statLabel {
+  font-size: 11px;
+  color: var(--text-soft);
+  font-weight: 400;
 }
 
 /* ── Side Image Cards ────────────────────────────────────── */
 
-.cardContainer {
+.sideCardLeft,
+.sideCardRight {
   position: absolute;
-  width: 100%;
-  top: 45%;
-  transform: translateY(-50%);
-  z-index: 2;
-}
-
-.imageCard {
-  width: 260px;
-  height: 200px;
-  border-radius: 10px;
+  border-radius: 14px;
   overflow: hidden;
-  position: absolute;
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 12px 32px rgba(11, 37, 69, 0.15);
+  border: 2px solid rgba(255, 255, 255, 0.8);
+  z-index: 4;
+  backdrop-filter: blur(4px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.imageCard img {
+.sideCardLeft:hover,
+.sideCardRight:hover {
+  transform: scale(1.04);
+  box-shadow: 0 20px 48px rgba(11, 37, 69, 0.22);
+}
+
+.sideCardLeft {
+  width: 130px;
+  height: 100px;
+  bottom: 160px;
+  left: 0px;
+}
+
+.sideCardRight {
+  width: 120px;
+  height: 90px;
+  bottom: 160px;
+  right: 0px;
+}
+
+.sideCardLeft img,
+.sideCardRight img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-.cardLeft {
-  left: 10%;
-}
+/* ══════════════════════════════════════════════════════════
+   WAVE DIVIDER
+   ══════════════════════════════════════════════════════════ */
 
-.cardRight {
-  right: 10%;
-}
-
-/* ── Bottom Strip ────────────────────────────────────────── */
-
-.bottomStrip {
+.wave {
+  display: block;
   width: 100%;
-  height: 120px;
-  background: var(--color-strip);
-  position: absolute;
-  bottom: 0;
-  z-index: 1;
+  line-height: 0;
+  position: relative;
+  z-index: 4;
+  margin-top: -2px;
 }
 
 /* ══════════════════════════════════════════════════════════
-   RESPONSIVE — TABLET  (≤ 991px)
+   INFO STRIP
    ══════════════════════════════════════════════════════════ */
 
-@media (max-width: 1300px) {
-  .hero {
-    height: auto;
-    min-height: 70vh;
-    padding-bottom: 120px;
-  }
+.infoStrip {
+  background: var(--navy);
+  padding: 26px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  position: relative;
+  z-index: 5;
+  flex-wrap: wrap;
+}
 
-  .topText {
-    font-size: 18px;    
-  }
+.infoItem {
+  flex: 1;
+  min-width: 100px;
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: default;
+  transition: background 0.2s;
+  text-align: center;
+}
 
-  .description {
-    position: absolute;
-    right: 1%;
-    width: 250px;
-    margin-top: 10px;
-    
-  }
-  .centerImage{
-    bottom:0;
-    top:25%;
+.infoItem:hover { background: rgba(255, 255, 255, 0.06); }
 
-  }
+.infoItem + .infoItem {
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+}
 
-  .centerImage img {
-    height: 60vh;
-  }
+.infoNum {
+  font-family: var(--serif);
+  font-size: clamp(20px, 2.2vw, 28px);
+  font-weight: 700;
+  color: white;
+  line-height: 1;
+  margin-bottom: 4px;
+}
 
-  /* Side cards */
-  .imageCard {
-    width: 180px;
-    height: 140px;
-  }
-
-  .cardLeft {
-    left: 5%;
-  }
-
-  .cardRight {
-    right: 5%;
-  }
-
-  .bottomStrip {
-    height: 80px;
-  }
+.infoLabel {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+  font-weight: 400;
+  letter-spacing: 0.5px;
 }
 
 /* ══════════════════════════════════════════════════════════
-   RESPONSIVE — MOBILE  (≤ 768px)
+   RESPONSIVE — TABLET  (≤ 1100px)
    ══════════════════════════════════════════════════════════ */
 
-@media (max-width: 882px) {
-
-  .hero {
-    height: auto;
-    padding: 20px 10px;
+@media (max-width: 1100px) {
+  .heroBody {
+    padding: 32px 40px 0;
+    gap: 20px;
   }
 
-  /* ===== TOP VISUAL AREA ===== */
-  /* Use hero as positioning container */
-  
-  .centerImage {
-    position: absolute;
-    left: -10%;
-    bottom: 10px; /* adjust based on your layout */
-    transform: none;
-    width: 50%;
-    z-index: 2;
+  .heroLeft {
+    padding-right: 24px;
+    padding-bottom: 48px;
   }
 
-  .centerImage img {
-    height: 620px;
+  .doctorImg {
+    height: clamp(280px, 46vh, 420px);
   }
 
-  /* CARDS → RIGHT SIDE */
-  .cardContainer {
-    position: absolute;
-    right: 10px;
-    bottom: 100px;
-    width: 45%;
-    transform: none;
+  .statCard1 { left: -10px; }
+  .statCard2 { right: -10px; }
+  .statCard3 { left: 0; }
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    gap: 10px;
-  }
+  .sideCardLeft  { width: 110px; height: 84px; }
+  .sideCardRight { width: 100px; height: 76px; }
 
-  .imageCard {
-    position: relative;
-    width: 110px;
-    height: 80px;
-  }
-
-  /* REMOVE LEFT/RIGHT ABSOLUTE OFFSET */
-  .cardLeft,
-  .cardRight {
-    left: 0 !important;
-    right: 0 !important;
-    
-  }
-
-  /* ===== TEXT BELOW ===== */
-  .topText {
-    margin-top: 0px;
-    margin: 10px; /* pushes below doctor/cards */
-    text-align: right;
-    z-index: 3;
-  }
-
-  .titleMain {
-    font-size: 40px;
-  }
-
-  .titleSub {
-    font-size: 20px;
-  }
-
-  .description {
-    width: 60%;
-    margin-top: 90px;
-  }
-
-  /* BUTTON */
-  .ctaBtn {
-    margin-top: 10px;
-  }
-
-  /* BOTTOM STRIP */
-  .bottomStrip {
-    position: relative;
-    height: 60px;
-    margin-top: 20px;
-  }
+  .infoStrip { padding: 22px 40px; }
 }
+
 /* ══════════════════════════════════════════════════════════
-   RESPONSIVE — SMALL MOBILE  (≤ 480px)
+   RESPONSIVE — TABLET PORTRAIT  (≤ 880px)
    ══════════════════════════════════════════════════════════ */
 
-@media (max-width: 480px) {
-  .centerImage{
-    left:-10%;
+@media (max-width: 880px) {
+  .heroBody {
+    grid-template-columns: 1fr;
+    padding: 28px 28px 0;
+    gap: 0;
   }
-  .centerImage img {
+
+  /* Stack: text top, image below */
+  .heroLeft {
+    padding-right: 0;
+    padding-bottom: 28px;
+    order: 1;
+  }
+
+  .heroRight {
+    order: 2;
     height: 380px;
-    top:10%;
-    z-index: -1;
+    margin: 0 -28px;
   }
 
-  .imageCard {
-    top: 40%;
-    width: 150px;
-    height: 80px;
-  }
-  .bottomStrip{
-    height:130px;
-    position: absolute;
-    bottom: 0;
-  }
+  .desc { max-width: 100%; }
 
-  .ctaBtn {
-    padding: 8px 16px;
-    font-size: 13px;
-  }
+  /* Reposition stat cards for stacked layout */
+  .statCard1 { top: 20px; left: 16px; }
+  .statCard2 { top: 20px; right: 16px; }
+  .statCard3 { bottom: 60px; left: 50%; transform: translateX(-50%); }
+
+  .sideCardLeft,
+  .sideCardRight { display: none; }
+
+  .doctorImg { height: 340px; }
+
+  .infoStrip { padding: 20px 28px; }
+  .infoItem + .infoItem { border-left: none; border-top: 1px solid rgba(255,255,255,0.1); }
+  .infoStrip { flex-direction: row; flex-wrap: wrap; justify-content: center; gap: 0; }
+  .infoItem  { flex: 1 1 45%; text-align: center; }
 }
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — MOBILE  (≤ 600px)
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 600px) {
+  .heroBody {
+    padding: 20px 20px 0;
+  }
+
+  .titleMain { font-size: clamp(44px, 13vw, 60px); }
+  .titleSub  { font-size: 14px; letter-spacing: 1.5px; }
+  .desc      { font-size: 14px; }
+
+  .ctaRow    { gap: 14px; }
+  .btnPrimary { padding: 12px 22px; font-size: 13px; }
+
+  .trustStrip { gap: 12px; }
+  .trustItem  { font-size: 11px; }
+
+  .heroRight { height: 300px; }
+  .doctorImg { height: 280px; }
+
+  .statCard1 { top: 14px; left: 8px; padding: 12px 14px; }
+  .statCard2 { top: 14px; right: 8px; padding: 12px 14px; }
+  .statCard3 { display: none; }
+
+  .statNum  { font-size: 24px; }
+  .statLabel{ font-size: 10px; }
+
+  .infoStrip { padding: 16px 20px; }
+  .infoNum   { font-size: 20px; }
+
+  .ticker    { display: none; } /* saves space on small phones */
+}
+
+/* ══════════════════════════════════════════════════════════
+   RESPONSIVE — SMALL MOBILE  (≤ 400px)
+   ══════════════════════════════════════════════════════════ */
 
 @media (max-width: 400px) {
-  .centerImage{
-    left:-30%;
-    top:10%;
-  }
-
-  .centerImage img {
-    height: 480px;
-  }
-
-  .topText {
-    position: relative;
-    top:0;
-    font-size: 12px;
-    margin: 10px;
-  }
-
-  .ctaBtn{
-    width: 150px;
-    font-size: 9px;
-    margin-top: 2px;
-  }
-  .titleMain {
-    font-size: 30px;
-    margin-top: 10px;
-  }
-
-  .titleSub {
-    font-size: 15px;
-  }
-
-  .description {
-    width: 60%;
-    margin-top: 80px;
-  }
+  .titleMain  { font-size: 40px; }
+  .heroRight  { height: 260px; }
+  .doctorImg  { height: 240px; }
+  .infoItem   { flex: 1 1 100%; }
+  .infoItem + .infoItem { border-left: none; border-top: 1px solid rgba(255,255,255,0.08); }
+  .btnSecondary { display: none; }
 }
