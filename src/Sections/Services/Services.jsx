@@ -90,6 +90,8 @@ function Services() {
   return (
     <section className={styles.services} ref={sectionRef} id="services">
 
+      
+
       {/* ── Decorative background shapes ── */}
       <div className={styles.bgShape1} aria-hidden="true" />
       <div className={styles.bgShape2} aria-hidden="true" />

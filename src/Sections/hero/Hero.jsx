@@ -91,11 +91,6 @@ function Hero() {
         {/* LEFT */}
         <div className={styles.heroLeft}>
 
-          <div className={styles.badge}>
-            <span className={styles.badgeDot} />
-            <span className={styles.badgeLabel}>Established 2024 · Chennai</span>
-          </div>
-
           <p className={styles.tag}>Redefine Life</p>
 
           <h1 className={styles.titleMain}>NOARRC</h1>
@@ -114,18 +109,10 @@ function Hero() {
               className={styles.btnPrimary}
               onClick={() => scrollTo('contact')}
             >
-              <span>Book Appointment</span>
+              <span>Know more</span>
               <span className={styles.btnArrow}>→</span>
             </button>
 
-            <button className={styles.btnSecondary}>
-              <span className={styles.playIcon}>
-                <svg viewBox="0 0 10 12" fill="none" width="10" height="12">
-                  <path d="M2 1.5L8.5 6L2 10.5V1.5Z" fill="currentColor" />
-                </svg>
-              </span>
-              <span>Watch our story</span>
-            </button>
           </div>
 
           <div className={styles.trustStrip}>
@@ -179,12 +166,8 @@ function Hero() {
           ))}
 
           {/* Side image cards */}
-          <div className={styles.sideCardLeft}>
-            <img src={img1} alt="Rehabilitation session" />
-          </div>
-          <div className={styles.sideCardRight}>
-            <img src={img2} alt="Robotic therapy equipment" />
-          </div>
+          <div className={styles.box}></div>
+          <div className={styles.circle}></div>
         </div>
       </div>
 
@@ -194,18 +177,46 @@ function Hero() {
       </svg>
 
       <div className={styles.infoStrip}>
-        {[
-          { num: '5,000+', label: 'Patients Treated' },
-          { num: 'Est. 2024', label: 'Founded in Chennai' },
-          { num: '12+', label: 'Robotic Modalities' },
-          { num: '98%', label: 'Recovery Success' },
-        ].map((item) => (
-          <div key={item.label} className={styles.infoItem}>
-            <div className={styles.infoNum}>{item.num}</div>
-            <div className={styles.infoLabel}>{item.label}</div>
-          </div>
-        ))}
+
+  {[
+    {
+      icon: "bi bi-telephone-fill",
+      label: "Call Us",
+      detail: "+91 98765 43210",
+      action: "tel:+919876543210"
+    },
+    {
+      icon: "bi bi-envelope-fill",
+      label: "Email Us",
+      detail: "noarrcphysion@gmail.com",
+      action: "mailto:noarrcphysion@gmail.com"
+    },
+    {
+      icon: "bi bi-geo-alt-fill",
+      label: "Visit Us",
+      detail: "Kilpauk, Chennai",
+      action: "https://maps.google.com"
+    }
+  ].map((item, index) => (
+    
+    <a
+      key={index}
+      href={item.action}
+      target="_blank"
+      rel="noreferrer"
+      className={styles.infoItem}
+    >
+      <i className={`${item.icon} ${styles.icon}`} />
+
+      <div className={styles.text}>
+        <span className={styles.label}>{item.label}</span>
+        <span className={styles.detail}>{item.detail}</span>
       </div>
+    </a>
+
+  ))}
+
+</div>
 
     </section>
   )
