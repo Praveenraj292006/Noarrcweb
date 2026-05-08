@@ -1,8 +1,8 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 
-import HomePage from './pages/Homepage/Homepage'
-import ServicePage from './pages/ServicePage/ServicePage'
+import HomePage from './Pages/Homepage/Homepage'
+import ServicePage from './Pages/ServicePage/ServicePage'
 
 import ScrollToTop from './Components/ScrolltoTop/ScrollToTop'
 import NotFound from './Pages/Notfound/Notfound'
