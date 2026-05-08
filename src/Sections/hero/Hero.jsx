@@ -46,7 +46,7 @@ function Hero() {
     const ctx = gsap.context(() => {
       const tl = gsap.timeline({ defaults: { ease: 'power3.out' } })
 
-      tl.from(`.${styles.badge}`, { y: 20, opacity: 0, duration: 0.7 })
+      tl
         .from(`.${styles.tag}`,   { y: 16, opacity: 0, duration: 0.6 }, '-=0.4')
         .from(`.${styles.titleMain}`, { y: 40, opacity: 0, duration: 0.9 }, '-=0.4')
         .from(`.${styles.titleSub}`,  { y: 24, opacity: 0, duration: 0.7 }, '-=0.5')
@@ -182,20 +182,20 @@ function Hero() {
     {
       icon: "bi bi-telephone-fill",
       label: "Call Us",
-      detail: "+91 98765 43210",
-      action: "tel:+919876543210"
+      detail: "+91 099403 32902",
+      action: "tel:+9109940332902"
     },
     {
       icon: "bi bi-envelope-fill",
       label: "Email Us",
-      detail: "noarrcphysion@gmail.com",
-      action: "mailto:noarrcphysion@gmail.com"
+      detail: "noarrcphysio@gmail.com",
+      action: "mailto:noarrcphysio@gmail.com"
     },
     {
       icon: "bi bi-geo-alt-fill",
       label: "Visit Us",
-      detail: "Kilpauk, Chennai",
-      action: "https://maps.google.com"
+      detail: "373, Poonamallee High Rd, Kilpauk, Chennai, Tamil Nadu 600010",
+      action: "https://maps.app.goo.gl/v2v26QacvQ4UWDA1A"
     }
   ].map((item, index) => (
     

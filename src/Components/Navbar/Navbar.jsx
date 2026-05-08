@@ -4,6 +4,19 @@ import logo from '../../assets/Noarrc-logo-Recovered.png'
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
+  const [dropdownOpen, setDropdownOpen] = useState(false)
+
+
+  const servicesDropdown = [
+  { name: 'Neuro Rehabilitation', slug: 'neuro-rehabilitation' },
+  { name: 'Laser Therapy', slug: 'laser-therapy' },
+  { name: 'Orthopedic Rehab', slug: 'orthopedic-rehabilitation' },
+  { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
+  { name: 'Sports Therapy', slug: 'sports-therapy' },
+  { name: "Women's Health", slug: 'womens-health' },
+  { name: 'Robotic Physiotherapy', slug: 'robotic-physiotherapy' },
+  { name: 'Speech Therapy', slug: 'speech-therapy' },
+]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -43,17 +56,74 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
 
           <ul className="navbar-nav mx-auto gap-lg-2 text-center">
-            {['home', 'about', 'services', 'contact'].map((id) => (
-              <li className="nav-item" key={id}>
-                <a
-                  className={styles.navLink}
-                  href={`#${id}`}
-                  onClick={(e) => { e.preventDefault(); scrollTo(id) }}
-                >
-                  {id.charAt(0).toUpperCase() + id.slice(1)}
-                </a>
-              </li>
-            ))}
+           <li className="nav-item">
+              <a
+                className={styles.navLink}
+                href="#home"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollTo('home')
+                }}
+              >
+                Home
+              </a>
+            </li>
+
+            <li className="nav-item">
+              <a
+                className={styles.navLink}
+                href="#about"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollTo('about')
+                }}
+              >
+                About
+              </a>
+            </li>
+
+            {/* SERVICES DROPDOWN */}
+            <li
+              className={`nav-item ${styles.dropdownWrapper}`}
+              onMouseEnter={() => setDropdownOpen(true)}
+              onMouseLeave={() => setDropdownOpen(false)}
+            >
+
+              <button
+                className={styles.dropdownBtn}
+                onClick={() => setDropdownOpen(!dropdownOpen)}
+              >
+                Services
+                <i className={`bi bi-chevron-down ${dropdownOpen ? styles.rotate : ''}`} />
+              </button>
+
+              <div className={`${styles.dropdownMenu} ${dropdownOpen ? styles.showDropdown : ''}`}>
+
+                {servicesDropdown.map((service, index) => (
+                  <a
+                    key={index}
+                    href={`/services/${service.slug}`}
+                    className={styles.dropdownItem}
+                  >
+                    {service.name}
+                  </a>
+                ))}
+
+              </div>
+            </li>
+
+            <li className="nav-item">
+              <a
+                className={styles.navLink}
+                href="#contact"
+                onClick={(e) => {
+                  e.preventDefault()
+                  scrollTo('contact')
+                }}
+              >
+                Contact
+              </a>
+            </li>
           </ul>
 
           <div className={`d-flex flex-wrap gap-2 mt-lg-0 mt-3 ${styles.buttons}`}>

@@ -37,15 +37,8 @@ function About() {
         scrollTrigger: { trigger: sectionRef.current, start: 'top 73%' },
         scale: 0.85, opacity: 0, duration: 0.8, delay: 0.25, ease: 'back.out(1.4)',
       })
-      gsap.from(`.${styles.yearBadge}`, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 72%' },
-        scale: 0, opacity: 0, duration: 0.7, delay: 0.4, ease: 'back.out(2)',
-      })
+      
       /* Right text */
-      gsap.from(`.${styles.eyebrow}`, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 76%' },
-        y: 18, opacity: 0, duration: 0.6, delay: 0.1, ease: 'power3.out',
-      })
       gsap.from(`.${styles.heading}`, {
         scrollTrigger: { trigger: sectionRef.current, start: 'top 74%' },
         y: 30, opacity: 0, duration: 0.8, delay: 0.2, ease: 'power3.out',

@@ -2,159 +2,276 @@ import React, { useEffect, useRef } from 'react'
 import styles from './Services.module.css'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import { useNavigate } from 'react-router-dom'
 
-import neuro    from '../../assets/ai.png'
-import ortho    from '../../assets/medical.png'
-import robotic  from '../../assets/artificial-intelligence.png'
-import pain     from '../../assets/pain.png'
+import neuro from '../../assets/ai.png'
+import ortho from '../../assets/medical.png'
+import robotic from '../../assets/artificial-intelligence.png'
+import pain from '../../assets/pain.png'
+import sports from '../../assets/soccer-player.png'
+import laser from '../../assets/laser.png'
+import speech from '../../assets/man.png'
+import Women from '../../assets/meditation.png'
 
 gsap.registerPlugin(ScrollTrigger)
 
 const services = [
   {
+    slug: 'neuro-rehabilitation',
     icon: neuro,
     num: '01',
-    title: 'Neuro Rehabilitation',
-    desc: 'Comprehensive recovery programs for stroke, spinal cord injuries, and complex neurological conditions — restoring function and independence.',
+    title: 'Advanced Neuro Rehabilitation',
+    desc: 'Comprehensive recovery programs for neurological conditions.',
     tag: 'Neurology',
   },
+
   {
-    icon: ortho,
+    slug: 'laser-therapy',
+    icon: laser,
     num: '02',
-    title: 'Orthopedic Rehab',
-    desc: 'Precision treatment for joint pain, ligament injuries, and post-surgical recovery — engineered for faster return to daily life.',
+    title: 'Advanced Laser Therapy',
+    desc: 'Precision laser therapy for neck and back pain.',
+    tag: 'Pain Therapy',
+  },
+
+  {
+    slug: 'orthopedic-rehabilitation',
+    icon: ortho,
+    num: '03',
+    title: 'Orthopedic Rehabilitation',
+    desc: 'Focused recovery programs for orthopedic injuries.',
     tag: 'Orthopedics',
   },
+
   {
-    icon: robotic,
-    num: '03',
-    title: 'Robotic Therapy',
-    desc: 'State-of-the-art robot-assisted rehabilitation programs that augment human therapy for measurably better outcomes.',
-    tag: 'Technology',
-  },
-  {
+    slug: 'inpatient-rehabilitation',
     icon: pain,
     num: '04',
-    title: 'Pain Management',
-    desc: 'Evidence-based, targeted interventions to relieve chronic and acute pain — without dependence on medication alone.',
-    tag: 'Chronic Care',
+    title: 'Inpatient Rehabilitation',
+    desc: 'Structured inpatient care for intensive recovery.',
+    tag: 'Rehabilitation',
   },
+
   {
-    icon: neuro,
+    slug: 'sports-therapy',
+    icon: sports,
     num: '05',
-    title: 'Sports Rehabilitation',
-    desc: 'High-performance injury recovery and prevention training designed for athletes who demand peak physical condition.',
-    tag: 'Sports',
+    title: 'Sports & Fitness Therapy',
+    desc: 'Recovery and prevention programs for athletes.',
+    tag: 'Sports Medicine',
   },
+
   {
-    icon: ortho,
+    slug: 'womens-health',
+    icon: Women,
     num: '06',
     title: "Women's Health",
-    desc: 'Specialised physiotherapy for pelvic floor health, prenatal discomfort, and postpartum recovery — with dignity and care.',
-    tag: 'Wellness',
+    desc: 'Specialised physiotherapy care for women.',
+    tag: 'Women’s Health',
+  },
+
+  {
+    slug: 'robotic-physiotherapy',
+    icon: robotic,
+    num: '07',
+    title: 'Robotic Physiotherapy',
+    desc: 'Technology-assisted rehabilitation programs.',
+    tag: 'Robotic Rehab',
+  },
+
+  {
+    slug: 'speech-therapy',
+    icon: speech,
+    num: '08',
+    title: 'Speech Therapy',
+    desc: 'Support for speech and communication disorders.',
+    tag: 'Speech Therapy',
   },
 ]
 
 function Services() {
+
   const sectionRef = useRef(null)
+  const navigate = useNavigate()
+
+  const featured = services[0]
+  const rest = services.slice(1)
 
   useEffect(() => {
+
     const ctx = gsap.context(() => {
-      gsap.from(`.${styles.badge}`, {
-        scrollTrigger: { trigger: `.${styles.header}`, start: 'top 82%' },
-        y: 20, opacity: 0, duration: 0.7, ease: 'power3.out',
-      })
+
       gsap.from(`.${styles.heading}`, {
-        scrollTrigger: { trigger: `.${styles.header}`, start: 'top 80%' },
-        y: 30, opacity: 0, duration: 0.8, delay: 0.1, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: `.${styles.header}`,
+          start: 'top 80%'
+        },
+        y: 30,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
       })
+
       gsap.from(`.${styles.subText}`, {
-        scrollTrigger: { trigger: `.${styles.header}`, start: 'top 78%' },
-        y: 20, opacity: 0, duration: 0.7, delay: 0.2, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: `.${styles.header}`,
+          start: 'top 78%'
+        },
+        y: 20,
+        opacity: 0,
+        duration: 0.7,
+        delay: 0.1,
+        ease: 'power3.out',
       })
+
       gsap.from(`.${styles.card}`, {
-        scrollTrigger: { trigger: `.${styles.grid}`, start: 'top 80%' },
-        y: 40, opacity: 0, stagger: 0.1, duration: 0.7, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: `.${styles.grid}`,
+          start: 'top 82%'
+        },
+        y: 40,
+        opacity: 0,
+        stagger: 0.08,
+        duration: 0.7,
+        ease: 'power3.out',
       })
+
       gsap.from(`.${styles.featuredCard}`, {
-        scrollTrigger: { trigger: `.${styles.featuredCard}`, start: 'top 82%' },
-        scale: 0.96, opacity: 0, duration: 0.8, ease: 'power3.out',
+        scrollTrigger: {
+          trigger: `.${styles.featuredCard}`,
+          start: 'top 82%'
+        },
+        scale: 0.96,
+        opacity: 0,
+        duration: 0.8,
+        ease: 'power3.out',
       })
+
     }, sectionRef)
 
     return () => ctx.revert()
+
   }, [])
 
-  const [featured, ...rest] = services
-
   return (
-    <section className={styles.services} ref={sectionRef} id="services">
+    <section
+      className={styles.services}
+      ref={sectionRef}
+      id="services"
+    >
 
-      
+      {/* BACKGROUND SHAPES */}
+      <div className={styles.bgShape1} />
+      <div className={styles.bgShape2} />
 
-      {/* ── Decorative background shapes ── */}
-      <div className={styles.bgShape1} aria-hidden="true" />
-      <div className={styles.bgShape2} aria-hidden="true" />
-
-      {/* ── Header ── */}
+      {/* HEADER */}
       <div className={styles.header}>
-        <span className={styles.badge}>
-          <span className={styles.badgeDot} />
-          Our Services
-        </span>
+
         <h2 className={styles.heading}>
           Specialised Care,<br />
           <em>Engineered for Recovery</em>
         </h2>
+
         <p className={styles.subText}>
-          Advanced physiotherapy solutions — designed to restore movement,
-          reduce pain, and return you to the life you deserve.
+          Advanced physiotherapy solutions designed to restore movement,
+          reduce pain, and improve quality of life.
         </p>
+
       </div>
 
-      {/* ── Layout ── */}
+      {/* LAYOUT */}
       <div className={styles.layout}>
 
-        {/* Featured card — large, left */}
-        <div className={styles.featuredCard}>
+        {/* FEATURED */}
+        <div
+          className={styles.featuredCard}
+          onClick={() =>
+            navigate(`/services/${featured.slug}`)
+          }
+        >
+
           <div className={styles.featuredInner}>
-            <span className={styles.cardNum}>{featured.num}</span>
-            <div className={styles.featuredTag}>{featured.tag}</div>
-            <div className={styles.featuredIconBox}>
-              <img src={featured.icon} alt={featured.title} />
+
+            <span className={styles.cardNum}>
+              {featured.num}
+            </span>
+
+            <div className={styles.featuredTag}>
+              {featured.tag}
             </div>
-            <h3 className={styles.featuredTitle}>{featured.title}</h3>
-            <p className={styles.featuredDesc}>{featured.desc}</p>
+
+            <div className={styles.featuredIconBox}>
+              <img
+                src={featured.icon}
+                alt={featured.title}
+              />
+            </div>
+
+            <h3 className={styles.featuredTitle}>
+              {featured.title}
+            </h3>
+
+            <p className={styles.featuredDesc}>
+              {featured.desc}
+            </p>
+
             <button className={styles.featuredCta}>
-              <span>Learn More</span>
-              <span className={styles.ctaArrow}>→</span>
+              Learn More →
             </button>
+
           </div>
-          <div className={styles.featuredAccent} aria-hidden="true" />
+
+          <div className={styles.featuredAccent} />
+
         </div>
 
-        {/* Grid — remaining 5 cards */}
+        {/* GRID */}
         <div className={styles.grid}>
+
           {rest.map((item) => (
-            <div className={styles.card} key={item.num}>
+
+            <div
+              className={styles.card}
+              key={item.num}
+              onClick={() =>
+                navigate(`/services/${item.slug}`)
+              }
+            >
+
               <div className={styles.cardTop}>
+
                 <div className={styles.iconBox}>
                   <img src={item.icon} alt={item.title} />
                 </div>
-                <span className={styles.cardNum}>{item.num}</span>
+
+                <span className={styles.cardNum}>
+                  {item.num}
+                </span>
+
               </div>
-              <span className={styles.cardTag}>{item.tag}</span>
-              <h3 className={styles.cardTitle}>{item.title}</h3>
-              <p className={styles.cardDesc}>{item.desc}</p>
-              <span className={styles.link}>
-                Read More
-                <svg viewBox="0 0 16 16" fill="none" width="14" height="14">
-                  <path d="M3 8H13M9 4L13 8L9 12" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
-                </svg>
+
+              <span className={styles.cardTag}>
+                {item.tag}
               </span>
-              <div className={styles.cardLine} aria-hidden="true" />
+
+              <h3 className={styles.cardTitle}>
+                {item.title}
+              </h3>
+
+              <p className={styles.cardDesc}>
+                {item.desc}
+              </p>
+
+              <span className={styles.link}>
+                Read More →
+              </span>
+
+              <div className={styles.cardLine} />
+
             </div>
+
           ))}
+
         </div>
 
       </div>

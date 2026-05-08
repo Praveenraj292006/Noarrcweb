@@ -1,39 +1,42 @@
 import React from 'react'
-import Navbar from './Components/Navbar/Navbar'
-import Hero from './Sections/hero/Hero'
-import Card from './Components/Card/Card'
-import About from './Sections/About/About'
-import Services from './Sections/Services/Services'
-import Testimonials from './Components/Testimonials/Testimonials'
-import ContactForm from './Sections/ContactForm/ContactForm'
-import Location from './Sections/Location/Location'
-import Footer from './Components/Footer/Footer'
-import FloatingBar from './Components/FloatingBar/FloatinBar'
-import Imagebar from './Components/Imagebar/Imagebar'
+import { Routes, Route } from 'react-router-dom'
+
+import HomePage from './pages/Homepage/Homepage'
+import ServicePage from './pages/ServicePage/ServicePage'
+
+import ScrollToTop from './Components/ScrolltoTop/ScrollToTop'
+import NotFound from './Pages/Notfound/Notfound'
 
 function App() {
+
   return (
+
     <>
-    <Navbar />
-    <FloatingBar />
-    <section id="home"><Hero /></section>
-    <section id="about"> <About /></section>
-    <section id="services"> <Services/></section>
-      <Imagebar />
-    <section id="reviews"> <Testimonials/></section>
-    <section id="contact">  <ContactForm/></section>
-    <section id="Location"> <Location/></section>
-    <section id="Footer"><Footer /></section>
-    
-      
-      
-      
-     
-     
-      
-     
-      
+      <ScrollToTop />
+
+      <Routes>
+
+        {/* HOME */}
+        <Route
+          path="/"
+          element={<HomePage />}
+        />
+
+        {/* SERVICE PAGES */}
+        <Route
+          path="/services/:slug"
+          element={<ServicePage />}
+        />
+
+        {/* 404 */}
+        <Route
+          path="*"
+          element={<NotFound/>}
+        />
+
+      </Routes>
     </>
+
   )
 }
 
