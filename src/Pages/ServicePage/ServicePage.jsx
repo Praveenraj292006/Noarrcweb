@@ -1,6 +1,7 @@
 import React from 'react'
 import { useParams } from 'react-router-dom'
 import styles from './ServicePage.module.css'
+import Navbar from '../../Components/Navbar/Navbar.jsx'
 import { servicesDetails } from '../../data/servicesDetails'
 
 function ServicePage() {
@@ -21,6 +22,7 @@ function ServicePage() {
 
   return (
     <section className={styles.page}>
+      <Navbar></Navbar>
 
       {/* HERO */}
       <div

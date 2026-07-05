@@ -51,6 +51,10 @@
     border-radius 0.4s var(--ease);
 }
 
+button{
+  border: none;
+  background: transparent;
+}
 /* ── Scrolled state — full glassmorphism ─────────────────── */
 .scrolled {
   background: rgba(239, 248, 255, 0.72);
@@ -137,6 +141,7 @@
 .btnWhatsapp:hover,
 .btnCall:hover,
 .btnBook:hover {
+  color: white;
   transform: translateY(-1px);
 }
 

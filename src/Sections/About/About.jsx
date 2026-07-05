@@ -3,8 +3,8 @@ import styles from './About.module.css'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import img       from '../../assets/noarc-real-img.jpg'
-import therapy   from '../../assets/placeholder_3.jpg'
+import img       from '../../assets/noarrc_abt_2.jpg'
+import therapy   from '../../assets/noaarc abt.jpg'
 import illustration from '../../assets/physio-illu.png'
 import divimg from '../../assets/placeholder_6.png'
 

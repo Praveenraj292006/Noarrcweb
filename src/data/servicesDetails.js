@@ -1,7 +1,7 @@
-import neuroImg from '../assets/placeholder_4.jpg'
-import orthoImg from '../assets/placeholder_2.jpg'
-import roboticImg from '../assets/placeholder_3.jpg'
-import painImg from '../assets/placeholder_5.jpeg'
+import neuroImg from '../assets/Data/351A4663.webp'
+import orthoImg from '../assets/Data/351A4675.webp'
+import roboticImg from '../assets/Data/351A4800.webp'
+import painImg from '../assets/Data/351A4840.webp'
 
 export const servicesDetails = [
 

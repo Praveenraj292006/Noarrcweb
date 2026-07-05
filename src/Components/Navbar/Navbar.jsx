@@ -2,9 +2,16 @@ import React, { useEffect, useState } from 'react'
 import styles from './Navbar.module.css'
 import logo from '../../assets/Noarrc-logo-Recovered.png'
 
+import { Link, useNavigate } from "react-router-dom";
+
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
   const [dropdownOpen, setDropdownOpen] = useState(false)
+  const navigate = useNavigate();
+
+  const goToSection = (section) => {
+    navigate(`/#${section}`);
+  };
 
 
   const servicesDropdown = [
@@ -33,9 +40,9 @@ function Navbar() {
       <div className="container-fluid">
 
         {/* ── Logo ── */}
-        <a className="navbar-brand" href="#" onClick={() => scrollTo('home')}>
+       <Link className="navbar-brand" to="/">
           <img src={logo} alt="Noarrc Logo" className={styles.logo} />
-        </a>
+        </Link>
 
         {/* ── Mobile Toggle ── */}
         <button
@@ -57,29 +64,21 @@ function Navbar() {
 
           <ul className="navbar-nav mx-auto gap-lg-2 text-center">
            <li className="nav-item">
-              <a
+              <button
                 className={styles.navLink}
-                href="#home"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollTo('home')
-                }}
+                onClick={() => goToSection("home")}
               >
                 Home
-              </a>
+              </button>
             </li>
 
             <li className="nav-item">
-              <a
-                className={styles.navLink}
-                href="#about"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollTo('about')
-                }}
-              >
-                About
-              </a>
+              <button
+                  className={styles.navLink}
+                  onClick={() => goToSection("about")}
+                >
+                  About
+                </button>
             </li>
 
             {/* SERVICES DROPDOWN */}
@@ -113,16 +112,12 @@ function Navbar() {
             </li>
 
             <li className="nav-item">
-              <a
+              <button
                 className={styles.navLink}
-                href="#contact"
-                onClick={(e) => {
-                  e.preventDefault()
-                  scrollTo('contact')
-                }}
+                onClick={() => goToSection("contact")}
               >
                 Contact
-              </a>
+              </button>
             </li>
           </ul>
 

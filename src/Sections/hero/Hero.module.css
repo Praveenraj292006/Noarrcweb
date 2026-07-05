@@ -404,6 +404,58 @@
 }
 
 /* Doctor */
+.doctorWrap::before {
+  content: "";
+  position: absolute;
+
+  width: 65%;
+  height: 80px;
+
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: radial-gradient(
+    ellipse at center,
+    rgba(46, 164, 255, 0.35) 0%,
+    rgba(46, 164, 255, 0.18) 35%,
+    rgba(46, 164, 255, 0.08) 60%,
+    transparent 100%
+  );
+
+  filter: blur(35px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.doctorImg {
+  position: relative;
+  z-index: 2;
+  display: block;
+  width: 100%;
+  max-width: 650px;
+
+  filter: drop-shadow(0 18px 35px rgba(11, 37, 69, 0.18));
+}
+
+.doctorWrap::after {
+  content: "";
+  position: absolute;
+
+  width: 58%;
+  height: 28px;
+
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: rgba(10, 37, 69, 0.18);
+  border-radius: 50%;
+  filter: blur(18px);
+
+  z-index: -2;
+}
+
 .doctorWrap {
   position: relative;
   z-index: 2;
@@ -413,7 +465,7 @@
 }
 
 .doctorImg {
-  height: clamp(440px, 115vh, 620px);
+  height: clamp(540px, 215vh, 620px);
   width: auto;
   object-fit: contain;
   filter: drop-shadow(0 24px 48px rgba(11, 37, 69, 0.18));
@@ -439,10 +491,10 @@
 }
 
 .statCard1 {
-  top: 70px;
+  top: 50px;
   left: 0px;
   animation-delay: 0s;
-  min-width: 140px;
+  min-width: 120px;
 }
 
 .statCard2 {
