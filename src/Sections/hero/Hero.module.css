@@ -758,12 +758,12 @@
   .heroRight { height: 300px; }
   .doctorImg { height: 280px; }
 
-  .statCard1 { top: 14px; left: 8px; padding: 12px 14px; }
-  .statCard2 { top: 14px; right: 8px; padding: 12px 14px; }
+  .statCard1 { display: None; }
+  .statCard2 {  display: None; }
   .statCard3 { display: none; }
 
-  .statNum  { font-size: 24px; }
-  .statLabel{ font-size: 10px; }
+  .statNum  { display: hidden; }
+  .statLabel{ display: hidden; }
 
   .infoStrip { padding: 16px 20px; }
   .infoNum   { font-size: 20px; }

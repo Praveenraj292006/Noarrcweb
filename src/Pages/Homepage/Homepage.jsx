@@ -32,7 +32,6 @@ function HomePage() {
         <Services />
       </section>
 
-      <Imagebar />
 
       <section id="reviews">
         <Testimonials />
