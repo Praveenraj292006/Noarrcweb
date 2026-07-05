@@ -78,17 +78,17 @@ function About() {
 
           {/* Primary image — large */}
           <div className={styles.collagePrimary}>
-            <img src={img} alt="NOARRC Clinic" />
+            <img src={img} loading="lazy" alt="NOARRC Clinic" />
           </div>
 
           {/* Secondary image — overlaps bottom-right */}
           <div className={styles.collageSecondary}>
-            <img src={therapy} alt="Therapy session" />
+            <img src={therapy} loading="lazy" alt="Therapy session" />
           </div>
 
           {/* Illustration — overlaps top-right */}
           <div className={styles.collageIllustration}>
-            <img src={illustration} alt="Physiotherapy illustration" />
+            <img src={illustration} loading="lazy" alt="Physiotherapy illustration" />
           </div>
 
           {/* Est. badge */}
