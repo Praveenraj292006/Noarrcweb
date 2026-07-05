@@ -564,7 +564,7 @@ export const servicesDetails = [
   tagline:
     "Restoring movement, confidence, and independence through specialized neurological rehabilitation.",
 
-  image: neuroImg,
+  image: rehabimg,
 
   intro:
     "Our Advanced Neuro Rehabilitation program is designed to help individuals regain mobility, strength, balance, and independence following neurological disorders or injuries. Using evidence-based physiotherapy techniques, personalized rehabilitation plans, and advanced therapeutic technologies, we focus on improving functional movement, reducing disability, and enhancing overall quality of life. Every rehabilitation journey is carefully tailored to each patient's condition, goals, and recovery progress.",

@@ -6,6 +6,7 @@ import ServicePage from './Pages/ServicePage/ServicePage'
 
 import ScrollToTop from './Components/ScrolltoTop/ScrollToTop'
 import NotFound from './Pages/Notfound/Notfound'
+import AppointmentModal from './Components/AppointmentModal/AppointmentModal.jsx'
 
 function App() {
 
@@ -13,6 +14,7 @@ function App() {
 
     <>
       <ScrollToTop />
+      <AppointmentModal />
 
       <Routes>
 

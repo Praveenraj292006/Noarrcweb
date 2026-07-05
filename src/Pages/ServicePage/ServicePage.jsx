@@ -3,10 +3,12 @@ import { useParams } from 'react-router-dom'
 import styles from './ServicePage.module.css'
 import Navbar from '../../Components/Navbar/Navbar.jsx'
 import { servicesDetails } from '../../data/servicesDetails'
+import { useAppointment } from '../../Context/AppointmentContext.jsx'
 
 function ServicePage() {
 
   const { slug } = useParams()
+   const { setOpen } = useAppointment();
 
   const service = servicesDetails.find(
     (item) => item.slug === slug
@@ -45,7 +47,7 @@ function ServicePage() {
 
           <p>{service.tagline}</p>
 
-          <button className={styles.heroBtn}>
+          <button className={styles.heroBtn}  onClick={()=>setOpen(true)}>
             Book Appointment
           </button>
 
@@ -240,7 +242,7 @@ function ServicePage() {
 
           <div className={styles.ctaButtons}>
 
-            <button className={styles.primaryBtn}>
+            <button className={styles.primaryBtn}  onClick={()=>setOpen(true)}>
               Book Appointment
             </button>
 
