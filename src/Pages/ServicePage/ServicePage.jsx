@@ -4,6 +4,7 @@ import styles from './ServicePage.module.css'
 import Navbar from '../../Components/Navbar/Navbar.jsx'
 import { servicesDetails } from '../../data/servicesDetails'
 import { useAppointment } from '../../Context/AppointmentContext.jsx'
+import ContactData from '../../data/Contactdata.js'
 
 function ServicePage() {
 
@@ -247,7 +248,7 @@ function ServicePage() {
             </button>
 
             <a
-              href="https://wa.me/918952854565"
+              href={`https://wa.me/${ContactData.whatsapp}`}
               target="_blank"
               rel="noreferrer"
               className={styles.secondaryBtn}

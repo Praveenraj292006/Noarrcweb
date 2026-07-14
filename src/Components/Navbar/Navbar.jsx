@@ -3,6 +3,7 @@ import styles from './Navbar.module.css'
 import logo from '../../assets/Noarrc-logo-Recovered.png'
 
 import { Link, useNavigate } from "react-router-dom";
+import ContactData from '../../data/Contactdata';
 
 function Navbar() {
   const [scrolled, setScrolled] = useState(false)
@@ -123,14 +124,14 @@ function Navbar() {
 
           <div className={`d-flex flex-wrap gap-2 mt-lg-0 mt-3 ${styles.buttons}`}>
             <a
-              href="https://wa.me/918952854565"
+              href={`https://wa.me/${ContactData.whatsapp}`}
               target="_blank"
               rel="noreferrer"
               className={`btn ${styles.btnWhatsapp}`}
             >
               <i className="bi bi-whatsapp" /> WhatsApp
             </a>
-            <a href="tel:+918952854565" className={`btn ${styles.btnCall}`}>
+            <a href={`tel:${ContactData.phone}`} className={`btn ${styles.btnCall}`}>
               <i className="bi bi-telephone" /> Call Us
             </a>
             <button className={`btn ${styles.btnBook}`} onClick={() => scrollTo('contact')}>

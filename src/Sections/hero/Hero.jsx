@@ -149,7 +149,7 @@ function Hero() {
 
           {/* Doctor image */}
           <div className={styles.doctorWrap}>
-            <img src={doctor} alt="Physiotherapist" className={styles.doctorImg} />
+            <img src={doctor} alt="Physiotherapist" className={styles.doctorImg} fetchpriority="high" />
           </div>
 
           {/* Floating stat cards */}
