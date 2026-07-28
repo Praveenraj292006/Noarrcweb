@@ -113,19 +113,27 @@ function About() {
 
           <div className={styles.body}>
             <p>
-              At <strong>NOARRC</strong> — Neuro and Ortho Advanced Robotic Rehabilitation Centre —
-              we are committed to delivering evidence-based treatment focused on long-term
-              recovery and true functional independence.
+              At <strong> NOARRC </strong> – Neuro and Ortho Advanced Robotic Rehabilitation Centre, 
+              we combine advanced technology with expert physiotherapy to help patients 
+              regain strength, mobility, and independence.
             </p>
             <p>
-              Our experienced physiotherapists specialise in neurological disorders, orthopedic
-              injuries, and cardiac rehabilitation — using the most advanced robotic modalities
-              available, shaped around each patient's unique journey.
-            </p>
+             Our multidisciplinary team specializes in neurological, orthopedic, sports injury, geriatric, and post-operative rehabilitation, delivering personalized treatment plans tailored to each patient’s goals.</p>
+             <p>With state-of-the-art robotic rehabilitation, evidence-based therapy, and compassionate care, we focus not just 
+              on recovery—but on restoring confidence, improving quality of life, and helping every patient return to the activities 
+              they love. Orthopaedic rehabilitation at NOARRC – Neuro and Ortho Advanced Robotic Rehabilitation Centre is designed to
+               help individuals recover from injuries, surgeries, joint disorders, and musculoskeletal conditions. 
+               Our evidence-based rehabilitation programs focus on reducing pain,
+               improving mobility, restoring strength, and enabling patients to return to their daily activities with confidence.</p>
             <p>
-              We believe recovery is not just about healing the body. It is about restoring
-              confidence, reclaiming mobility, and returning you to the life you deserve.
+              Whether you are recovering from a fracture, ligament injury, joint replacement, 
+              or chronic orthopedic condition, our experienced physiotherapists create personalized treatment 
+              plans tailored to your specific goals and lifestyle. Inpatient Rehabilitation
             </p>
+            <p>Our inpatient rehabilitation program offers intensive, multidisciplinary care 
+              for patients recovering from neurological and orthopedic conditions. 
+              We provide personalized treatment plans in a supportive 
+              environment to promote faster recovery and improved functional outcomes. Robotic Physiotherapy</p>
           </div>
 
           {/* Mini stats row */}

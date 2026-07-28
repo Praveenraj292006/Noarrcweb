@@ -374,381 +374,277 @@ export const servicesDetails = [
   ]
 },
 {
-  slug: "robotic-physiotherapy",
+  slug: "pediatric-rehabilitation",
 
-  title: "Robotic Physiotherapy",
-
-  tagline:
-    "Combining advanced technology with expert care for faster rehabilitation.",
-
-  image: roboticImg,
-
-  intro:
-    "Our Robotic Physiotherapy program integrates advanced rehabilitation technology with personalized physiotherapy to help patients recover movement, strength, balance, and independence. Robotic-assisted therapy enables repetitive, precise, and controlled movements that enhance neuroplasticity and improve recovery outcomes for neurological and orthopedic conditions.",
-
-  conditions: [
-    "Stroke Rehabilitation",
-    "Spinal Cord Injuries",
-    "Parkinson's Disease",
-    "Traumatic Brain Injury",
-    "Balance Disorders",
-    "Post-Surgical Rehabilitation",
-    "Orthopedic Recovery",
-    "Gait Abnormalities",
-    "Neuromuscular Disorders",
-    "Mobility Impairments"
-  ],
-
-  procedure: [
-    {
-      step: "Comprehensive Functional Assessment",
-      desc:
-        "Our rehabilitation specialists evaluate mobility, muscle strength, balance, coordination, and functional limitations to determine the most appropriate robotic therapy program."
-    },
-
-    {
-      step: "Customized Robotic Therapy Plan",
-      desc:
-        "A personalized rehabilitation program is designed by combining robotic-assisted therapy with conventional physiotherapy based on each patient's recovery goals."
-    },
-
-    {
-      step: "Technology-Assisted Rehabilitation",
-      desc:
-        "Patients perform guided exercises using robotic rehabilitation systems that provide repetitive, accurate, and safe movement training while improving strength, coordination, and gait."
-    },
-
-    {
-      step: "Progress Evaluation & Program Adjustment",
-      desc:
-        "Recovery progress is continuously monitored, and therapy intensity is modified to maximize functional improvement and independence."
-    }
-  ],
-
-  benefits: [
-    "Enhanced recovery after neurological injuries",
-    "Improved walking ability and balance",
-    "Greater muscle strength and coordination",
-    "Highly precise movement training",
-    "Faster functional recovery",
-    "Improved confidence and independence",
-    "Reduced physical strain during therapy",
-    "Evidence-based rehabilitation outcomes"
-  ],
-
-  technologies: [
-    "Robotic Gait Training Systems",
-    "Body Weight Support Rehabilitation",
-    "Balance & Coordination Training Devices",
-    "Computer-Assisted Movement Analysis",
-    "Functional Mobility Assessment Systems"
-  ],
-
-  faq: [
-    {
-      question: "Who can benefit from robotic physiotherapy?",
-      answer:
-        "Patients recovering from stroke, spinal cord injuries, neurological disorders, orthopedic surgeries, and mobility impairments benefit greatly from robotic-assisted rehabilitation."
-    },
-
-    {
-      question: "Does robotic therapy replace conventional physiotherapy?",
-      answer:
-        "No. Robotic physiotherapy complements conventional physiotherapy by providing repetitive, precise movement training while therapists guide overall rehabilitation."
-    },
-
-    {
-      question: "Is robotic physiotherapy safe?",
-      answer:
-        "Yes. Robotic rehabilitation systems are designed with advanced safety features and are supervised by experienced physiotherapists throughout every session."
-    }
-  ]
-},
-
-{
-  slug: "speech-therapy",
-
-  title: "Speech Therapy",
+  title: "Pediatric Rehabilitation",
 
   tagline:
-    "Empowering communication, confidence, and quality of life.",
-
-  image: speechImg,
-
-  intro:
-    "Our Speech Therapy services help children and adults improve communication, speech clarity, language development, voice quality, and swallowing function. Our experienced speech-language pathologists provide individualized therapy plans using evidence-based techniques to support confident communication and everyday independence.",
-
-  conditions: [
-    "Speech Delay",
-    "Language Disorders",
-    "Articulation Disorders",
-    "Stammering (Stuttering)",
-    "Voice Disorders",
-    "Autism Spectrum Communication Support",
-    "Post-Stroke Speech Recovery",
-    "Swallowing Disorders (Dysphagia)",
-    "Neurological Speech Disorders",
-    "Childhood Communication Difficulties"
-  ],
-
-  procedure: [
-    {
-      step: "Speech & Language Assessment",
-      desc:
-        "A detailed evaluation is conducted to assess speech clarity, language skills, communication abilities, voice quality, and swallowing function."
-    },
-
-    {
-      step: "Individualized Therapy Planning",
-      desc:
-        "Based on the assessment, a customized therapy program is created according to the patient's age, condition, and communication goals."
-    },
-
-    {
-      step: "Speech Therapy Sessions",
-      desc:
-        "Interactive therapy sessions focus on improving speech production, language development, fluency, voice control, cognitive communication, and swallowing function where required."
-    },
-
-    {
-      step: "Home Practice & Progress Monitoring",
-      desc:
-        "Patients and caregivers receive guided home exercises and regular progress evaluations to reinforce therapy outcomes and encourage continuous improvement."
-    }
-  ],
-
-  benefits: [
-    "Improved speech clarity",
-    "Enhanced communication skills",
-    "Better language development",
-    "Increased confidence in social interactions",
-    "Improved swallowing safety",
-    "Greater independence in daily communication",
-    "Enhanced cognitive communication abilities",
-    "Improved overall quality of life"
-  ],
-
-  technologies: [
-    "Speech & Language Assessment Tools",
-    "Interactive Communication Therapy Programs",
-    "Voice Therapy Techniques",
-    "Swallowing Rehabilitation Methods",
-    "Evidence-Based Language Intervention Programs"
-  ],
-
-  faq: [
-    {
-      question: "Who can benefit from speech therapy?",
-      answer:
-        "Children with speech or language delays, adults recovering from stroke, individuals with neurological disorders, and anyone experiencing communication or swallowing difficulties can benefit from speech therapy."
-    },
-
-    {
-      question: "How long does speech therapy take?",
-      answer:
-        "The duration varies depending on the individual's condition, goals, and consistency with therapy. Some patients improve within weeks, while others may require longer-term intervention."
-    },
-
-    {
-      question: "Do parents participate in children's therapy sessions?",
-      answer:
-        "Yes. Parent involvement is encouraged, as home practice and family support significantly improve therapy outcomes."
-    }
-  ]
-},
-{
-  slug: "neuro-rehabilitation",
-
-  title: "Advanced Neuro Rehabilitation",
-
-  tagline:
-    "Restoring movement, confidence, and independence through specialized neurological rehabilitation.",
+    "Helping children achieve better movement, confidence, and independence.",
 
   image: rehabimg,
 
   intro:
-    "Our Advanced Neuro Rehabilitation program is designed to help individuals regain mobility, strength, balance, and independence following neurological disorders or injuries. Using evidence-based physiotherapy techniques, personalized rehabilitation plans, and advanced therapeutic technologies, we focus on improving functional movement, reducing disability, and enhancing overall quality of life. Every rehabilitation journey is carefully tailored to each patient's condition, goals, and recovery progress.",
+    "Our Pediatric Rehabilitation program supports children with developmental, neurological, and orthopedic conditions. Through child-friendly, evidence-based therapy and personalized treatment plans, we help improve movement, balance, coordination, strength, and functional independence while encouraging healthy physical development.",
 
   conditions: [
-    "Stroke Rehabilitation",
-    "Parkinson's Disease",
-    "Spinal Cord Injury",
-    "Traumatic Brain Injury",
-    "Multiple Sclerosis",
-    "Bell's Palsy",
-    "Balance & Vestibular Disorders",
-    "Neuromuscular Disorders",
-    "Peripheral Nerve Injuries",
-    "Post-Neurosurgical Rehabilitation"
+    "Developmental Delay",
+    "Cerebral Palsy",
+    "Autism Spectrum Disorders",
+    "Muscular Weakness",
+    "Balance & Coordination Disorders",
+    "Pediatric Orthopedic Conditions",
+    "Neurological Disorders",
+    "Post-Surgical Rehabilitation",
+    "Walking Difficulties",
+    "Sports Injuries in Children"
   ],
 
   procedure: [
     {
-      step: "Comprehensive Neurological Assessment",
+      step: "Comprehensive Child Assessment",
       desc:
-        "Our physiotherapists perform a detailed assessment of muscle strength, balance, coordination, gait, posture, reflexes, sensation, and functional mobility to understand the patient's current abilities and rehabilitation goals."
+        "Our pediatric physiotherapists evaluate your child's physical development, movement patterns, balance, coordination, strength, and functional abilities."
     },
 
     {
-      step: "Personalized Rehabilitation Planning",
+      step: "Individualized Therapy Plan",
       desc:
-        "Based on the assessment, an individualized rehabilitation program is developed using evidence-based techniques to improve movement, reduce functional limitations, and maximize recovery potential."
+        "A customized rehabilitation program is designed according to your child's condition, developmental stage, and rehabilitation goals."
     },
 
     {
-      step: "Intensive Neuro Physiotherapy Sessions",
+      step: "Interactive Therapy Sessions",
       desc:
-        "Treatment includes gait training, balance exercises, functional movement practice, muscle strengthening, coordination training, posture correction, neuroplasticity-based exercises, and task-oriented rehabilitation to restore independence."
+        "Child-friendly therapy sessions include balance training, strengthening exercises, gait training, coordination activities, and play-based rehabilitation."
     },
 
     {
-      step: "Progress Monitoring & Home Rehabilitation",
+      step: "Family Guidance & Progress Monitoring",
       desc:
-        "Recovery is continuously monitored through periodic assessments. Exercise programs are updated based on progress, and patients receive customized home exercise plans to reinforce therapy outcomes."
+        "Parents receive home exercise guidance while therapists regularly monitor progress and adjust treatment plans to maximize development."
     }
   ],
 
   benefits: [
-    "Improved walking ability and balance",
-    "Enhanced muscle strength and coordination",
-    "Reduced muscle stiffness and spasticity",
-    "Better posture and body control",
-    "Greater independence in daily activities",
-    "Improved confidence and quality of life",
-    "Reduced risk of falls",
-    "Enhanced neurological recovery"
-  ],
-
-  technologies: [
-    "Robotic-Assisted Rehabilitation",
-    "Functional Electrical Stimulation (FES)",
-    "Balance & Gait Training Systems",
-    "Mirror Therapy",
-    "Task-Oriented Functional Training",
-    "Advanced Movement Analysis"
-  ],
-
-  faq: [
-    {
-      question: "Who should undergo neuro rehabilitation?",
-      answer:
-        "Patients recovering from stroke, spinal cord injuries, Parkinson's disease, traumatic brain injuries, multiple sclerosis, or other neurological conditions can greatly benefit from neuro rehabilitation."
-    },
-
-    {
-      question: "How long does neuro rehabilitation take?",
-      answer:
-        "Recovery duration varies depending on the neurological condition, severity, age, and patient participation. Some patients improve within weeks, while others may require several months of rehabilitation."
-    },
-
-    {
-      question: "Can neuro rehabilitation help restore walking ability?",
-      answer:
-        "Yes. Through gait training, strength development, balance exercises, and repetitive functional practice, many patients experience significant improvements in walking ability and mobility."
-    },
-
-    {
-      question: "Is neuro rehabilitation painful?",
-      answer:
-        "No. Therapy is designed according to each patient's abilities. While some exercises may be challenging, treatment is carefully supervised to ensure safety and comfort."
-    }
-  ]
-},{
-  slug: "orthopedic-rehabilitation",
-
-  title: "Advanced Orthopedic Rehabilitation",
-
-  tagline:
-    "Helping you recover stronger, move better, and return to an active lifestyle.",
-
-  image: orthoImg,
-
-  intro:
-    "Our Advanced Orthopedic Rehabilitation program focuses on restoring movement, reducing pain, and improving physical function following orthopedic injuries, surgeries, and musculoskeletal conditions. Through personalized treatment plans, hands-on physiotherapy, strengthening exercises, and advanced rehabilitation techniques, we help patients recover safely and return to their daily activities with confidence.",
-
-  conditions: [
-    "Joint Pain",
-    "Arthritis",
-    "Sports Injuries",
-    "Fracture Rehabilitation",
-    "Ligament Injuries",
-    "Tendon Disorders",
-    "Post Joint Replacement Surgery",
-    "Shoulder Injuries",
-    "Back & Neck Pain",
-    "Post-Operative Orthopedic Recovery"
-  ],
-
-  procedure: [
-    {
-      step: "Detailed Orthopedic Assessment",
-      desc:
-        "Our physiotherapists assess joint mobility, muscle strength, posture, flexibility, pain levels, and functional movement to identify the root cause of the condition and establish recovery goals."
-    },
-
-    {
-      step: "Individualized Treatment Planning",
-      desc:
-        "A customized rehabilitation program is created using manual therapy, therapeutic exercises, pain management techniques, mobility training, and progressive strengthening exercises."
-    },
-
-    {
-      step: "Guided Rehabilitation Sessions",
-      desc:
-        "Patients participate in supervised therapy sessions focusing on restoring joint mobility, increasing muscle strength, improving flexibility, correcting posture, and enhancing functional movement."
-    },
-
-    {
-      step: "Recovery Monitoring & Injury Prevention",
-      desc:
-        "Progress is regularly evaluated, exercises are advanced according to recovery, and patients receive education on posture, ergonomics, and injury prevention for long-term musculoskeletal health."
-    }
-  ],
-
-  benefits: [
-    "Reduced pain and inflammation",
-    "Improved joint mobility",
+    "Improved balance and coordination",
     "Enhanced muscle strength",
-    "Increased flexibility",
-    "Faster recovery after surgery",
-    "Improved posture and body mechanics",
-    "Reduced risk of future injuries",
-    "Safe return to work, sports, and daily activities"
+    "Better posture and movement",
+    "Improved walking ability",
+    "Greater independence",
+    "Enhanced motor development",
+    "Increased confidence",
+    "Better quality of life"
   ],
 
   technologies: [
-    "Laser Therapy",
-    "Manual Therapy Techniques",
-    "Joint Mobilization",
-    "Functional Movement Assessment",
-    "Strength & Conditioning Equipment",
-    "Therapeutic Exercise Systems"
+    "Pediatric Therapy Equipment",
+    "Balance Training Systems",
+    "Functional Movement Training",
+    "Gait Training",
+    "Therapeutic Exercise Programs"
   ],
 
   faq: [
     {
-      question: "Who can benefit from orthopedic rehabilitation?",
+      question: "Which children benefit from pediatric rehabilitation?",
       answer:
-        "Individuals recovering from fractures, ligament injuries, joint replacement surgeries, arthritis, sports injuries, or chronic musculoskeletal pain can benefit from orthopedic rehabilitation."
+        "Children with developmental delays, neurological disorders, orthopedic conditions, or movement difficulties can benefit from pediatric rehabilitation."
     },
 
     {
-      question: "How soon should physiotherapy begin after surgery?",
+      question: "Are therapy sessions child-friendly?",
       answer:
-        "In many cases, rehabilitation begins within a few days after surgery, depending on your surgeon's recommendations and overall medical condition."
+        "Yes. Our therapy sessions are designed using engaging and play-based activities that make rehabilitation enjoyable and effective."
     },
 
     {
-      question: "Can orthopedic rehabilitation prevent future injuries?",
+      question: "Do parents participate in the treatment?",
       answer:
-        "Yes. Strengthening muscles, improving movement patterns, correcting posture, and increasing flexibility significantly reduce the risk of future injuries."
-    },
-
-    {
-      question: "Will the exercises continue after treatment?",
-      answer:
-        "Yes. Patients receive personalized home exercise programs to maintain strength, flexibility, and long-term joint health after completing supervised rehabilitation."
+        "Yes. Parents are encouraged to participate and receive home exercise guidance to support their child's progress."
     }
   ]
 },
-]
+
+{
+  slug: "pain-management",
+
+  title: "Pain Management",
+
+  tagline:
+    "Evidence-based care for lasting pain relief and improved mobility.",
+
+  image: laserimg,
+
+  intro:
+    "Our Pain Management program provides comprehensive treatment for acute and chronic musculoskeletal conditions. By combining manual therapy, therapeutic exercises, electrotherapy, and patient education, we reduce pain, restore movement, and improve overall quality of life.",
+
+  conditions: [
+    "Back Pain",
+    "Neck Pain",
+    "Shoulder Pain",
+    "Knee Pain",
+    "Joint Pain",
+    "Arthritis",
+    "Sciatica",
+    "Muscle Strains",
+    "Ligament Injuries",
+    "Chronic Musculoskeletal Pain"
+  ],
+
+  procedure: [
+    {
+      step: "Pain Assessment",
+      desc:
+        "Our physiotherapists perform a detailed assessment to identify the source, severity, and contributing factors of your pain."
+    },
+
+    {
+      step: "Personalized Treatment Plan",
+      desc:
+        "A customized rehabilitation program is created using evidence-based techniques tailored to your condition and recovery goals."
+    },
+
+    {
+      step: "Pain Relief Therapy",
+      desc:
+        "Treatment may include manual therapy, therapeutic exercises, electrotherapy, stretching, and posture correction to reduce pain and restore mobility."
+    },
+
+    {
+      step: "Recovery & Prevention",
+      desc:
+        "Patients receive ergonomic advice, home exercises, and lifestyle recommendations to prevent recurring pain."
+    }
+  ],
+
+  benefits: [
+    "Reduced pain",
+    "Improved mobility",
+    "Better flexibility",
+    "Reduced muscle stiffness",
+    "Enhanced physical function",
+    "Improved posture",
+    "Faster recovery",
+    "Better quality of life"
+  ],
+
+  technologies: [
+    "Electrotherapy",
+    "Manual Therapy",
+    "Therapeutic Exercise",
+    "Pain Assessment Tools",
+    "Movement Rehabilitation"
+  ],
+
+  faq: [
+    {
+      question: "What conditions can pain management treat?",
+      answer:
+        "We treat both acute and chronic musculoskeletal conditions, including back pain, neck pain, arthritis, joint pain, and sports injuries."
+    },
+
+    {
+      question: "Will I need medication?",
+      answer:
+        "Our physiotherapy-based pain management focuses on non-invasive treatments that reduce pain and improve function without relying solely on medication."
+    },
+
+    {
+      question: "How many sessions are required?",
+      answer:
+        "The number of sessions depends on your condition and recovery goals, which are determined during your assessment."
+    }
+  ]
+},
+
+{
+  slug: "home-care-physiotherapy",
+
+  title: "Home Care Physiotherapy",
+
+  tagline:
+    "Professional rehabilitation services delivered in the comfort of your home.",
+
+  image: womenImg,
+
+  intro:
+    "Our Home Care Physiotherapy service brings expert rehabilitation directly to your home. We provide personalized treatment for neurological, orthopedic, post-surgical, geriatric, and mobility-related conditions, ensuring convenient, safe, and effective recovery without the need to travel.",
+
+  conditions: [
+    "Stroke Rehabilitation",
+    "Post-Surgical Recovery",
+    "Orthopedic Rehabilitation",
+    "Geriatric Care",
+    "Parkinson's Disease",
+    "Fracture Rehabilitation",
+    "Joint Replacement Recovery",
+    "Mobility Limitations",
+    "Balance Disorders",
+    "Neurological Conditions"
+  ],
+
+  procedure: [
+    {
+      step: "Home Assessment",
+      desc:
+        "Our physiotherapist evaluates the patient's condition, mobility, home environment, and rehabilitation requirements."
+    },
+
+    {
+      step: "Customized Treatment Plan",
+      desc:
+        "A personalized physiotherapy program is designed according to the patient's medical condition and recovery goals."
+    },
+
+    {
+      step: "Home Therapy Sessions",
+      desc:
+        "Treatment includes manual therapy, strengthening exercises, mobility training, balance improvement, and functional rehabilitation delivered at home."
+    },
+
+    {
+      step: "Progress Monitoring",
+      desc:
+        "Recovery is regularly monitored, and treatment plans are updated while educating caregivers on supporting the rehabilitation process."
+    }
+  ],
+
+  benefits: [
+    "Convenient home-based care",
+    "Personalized rehabilitation",
+    "Improved mobility",
+    "Faster recovery",
+    "Reduced travel stress",
+    "Greater comfort and safety",
+    "Individual attention",
+    "Improved independence"
+  ],
+
+  technologies: [
+    "Portable Electrotherapy Devices",
+    "Therapeutic Exercise Equipment",
+    "Functional Mobility Training",
+    "Balance Rehabilitation",
+    "Manual Therapy Techniques"
+  ],
+
+  faq: [
+    {
+      question: "Who can benefit from home care physiotherapy?",
+      answer:
+        "Patients recovering from surgery, neurological conditions, orthopedic injuries, geriatric issues, or mobility limitations can benefit from home physiotherapy."
+    },
+
+    {
+      question: "Do I need special equipment at home?",
+      answer:
+        "No. Our physiotherapists bring the required portable equipment and recommend additional items only if necessary."
+    },
+
+    {
+      question: "Can family members be involved in the therapy?",
+      answer:
+        "Yes. Caregivers receive guidance on exercises and safe assistance techniques to support the patient's recovery."
+    }
+  ]
+},]

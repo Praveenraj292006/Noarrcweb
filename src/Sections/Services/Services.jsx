@@ -16,28 +16,20 @@ import Women from '../../assets/meditation.png'
 gsap.registerPlugin(ScrollTrigger)
 
 const services = [
-  {
-    slug: 'neuro-rehabilitation',
-    icon: neuro,
-    num: '01',
-    title: 'Advanced Neuro Rehabilitation',
-    desc: 'Comprehensive recovery programs for neurological conditions.',
-    tag: 'Neurology',
-  },
 
   {
-    slug: 'laser-therapy',
+    slug: 'pain-management',
     icon: laser,
-    num: '02',
-    title: 'Advanced Laser Therapy',
-    desc: 'Precision laser therapy for neck and back pain.',
+    num: '01',
+    title: 'Pain Management',
+    desc: 'Evidence-based relief for acute and chronic pain.',
     tag: 'Pain Therapy',
   },
 
   {
     slug: 'orthopedic-rehabilitation',
     icon: ortho,
-    num: '03',
+    num: '02',
     title: 'Orthopedic Rehabilitation',
     desc: 'Focused recovery programs for orthopedic injuries.',
     tag: 'Orthopedics',
@@ -46,7 +38,7 @@ const services = [
   {
     slug: 'inpatient-rehabilitation',
     icon: pain,
-    num: '04',
+    num: '03',
     title: 'Inpatient Rehabilitation',
     desc: 'Structured inpatient care for intensive recovery.',
     tag: 'Rehabilitation',
@@ -55,37 +47,28 @@ const services = [
   {
     slug: 'sports-therapy',
     icon: sports,
-    num: '05',
+    num: '04',
     title: 'Sports & Fitness Therapy',
     desc: 'Recovery and prevention programs for athletes.',
     tag: 'Sports Medicine',
   },
 
   {
-    slug: 'womens-health',
+    slug: 'home-care-physiotherapy',
     icon: Women,
-    num: '06',
-    title: "Women's Health",
-    desc: 'Specialised physiotherapy care for women.',
-    tag: 'Women’s Health',
+    num: '05',
+    title: "Home Care Physiotherapy",
+    desc: 'Expert rehabilitation at your doorstep.',
+    tag: 'Home Care ',
   },
 
   {
-    slug: 'robotic-physiotherapy',
+    slug: 'pediatric-rehabilitation',
     icon: robotic,
-    num: '07',
-    title: 'Robotic Physiotherapy',
-    desc: 'Technology-assisted rehabilitation programs.',
-    tag: 'Robotic Rehab',
-  },
-
-  {
-    slug: 'speech-therapy',
-    icon: speech,
-    num: '08',
-    title: 'Speech Therapy',
-    desc: 'Support for speech and communication disorders.',
-    tag: 'Speech Therapy',
+    num: '06',
+    title: 'Pediatric Rehabilitation',
+    desc: "Specialized therapy for children's development.",
+    tag: 'Pediatric Rehab',
   },
 ]
 

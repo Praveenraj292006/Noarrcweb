@@ -94,14 +94,13 @@ function Hero() {
           <p className={styles.tag}>Redefine Life</p>
 
           <h1 className={styles.titleMain}>NOARRC</h1>
-          <h2 className={styles.titleSub}>Neuro · Ortho · Robotic Rehab</h2>
+          <h2 className={styles.titleSub}>Advanced Robotic Rehabilitation ·  Compassionate Physiotherapy · Lasting Results</h2>
 
           <div className={styles.divider} />
 
           <p className={styles.desc}>
-            Advanced robotic rehabilitation for{' '}
-            <strong>Neuro, Ortho, and Cardiac</strong> care.
-            Precision therapy. Faster recovery. Long-term mobility — crafted around you.
+           Transforming Lives Through <strong>Advanced Neuro & Orthopaedic Rehabilitation
+Combining expert physiotherapy, robotic rehabilitation, and personalized care</strong> to help you regain independence and improve your quality of life. Empowering Every Step Towards Recovery
           </p>
 
           <div className={styles.ctaRow}>

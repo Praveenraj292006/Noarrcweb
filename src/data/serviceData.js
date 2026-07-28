@@ -1,6 +1,6 @@
 import neuroImg from '../assets/351A4663.avif'
-import orthoImg from '../assets/351A4675.avif'
-import roboticImg from '../assets/351A4800.avif'
+import pediatricImg from '../assets/351A4606_converted.avif'
+import homeCareImg from '../assets/351A4737_converted.avif'
 import painImg from '../assets/351A4840.avif'
 
 export const servicesData = {
@@ -13,72 +13,72 @@ export const servicesData = {
 
       image: neuroImg,
 
-      full: "Advanced rehabilitation programs for stroke and spinal injuries.",
+      full: "Advanced rehabilitation programs for stroke, spinal cord injuries, Parkinson's disease, and other neurological conditions.",
 
       procedure: [
-        "Initial assessment of neurological condition",
-        "Customized therapy plan",
-        "Guided movement training",
-        "Progress monitoring and adaptation"
+        "Comprehensive neurological assessment",
+        "Personalized rehabilitation planning",
+        "Guided neuro physiotherapy sessions",
+        "Progress monitoring and home rehabilitation"
       ],
 
       benefits: [
         "Improves mobility",
         "Enhances coordination",
-        "Faster recovery",
-        "Restores independence"
+        "Restores independence",
+        "Improves balance and strength"
       ]
     },
 
     {
-      id: "ortho",
-      title: "Orthopedic Rehab",
-      icon: orthoImg,
-      desc: "Treatment for joints and injuries.",
+      id: "pediatric",
+      title: "Pediatric Rehabilitation",
+      icon: pediatricImg,
+      desc: "Specialized therapy for children's development.",
 
-      image: orthoImg,
+      image: pediatricImg,
 
-      full: "Focused rehabilitation for bones, joints, and muscles.",
+      full: "Child-friendly rehabilitation for developmental, neurological, and orthopedic conditions to improve movement, balance, coordination, and independence.",
 
       procedure: [
-        "Injury evaluation",
-        "Pain reduction therapy",
-        "Strength training",
-        "Functional recovery"
+        "Comprehensive child assessment",
+        "Individualized therapy planning",
+        "Interactive rehabilitation sessions",
+        "Family guidance and progress monitoring"
       ],
 
       benefits: [
-        "Reduces pain",
-        "Improves flexibility",
-        "Strengthens muscles",
-        "Prevents future injuries"
+        "Improves motor development",
+        "Enhances balance and coordination",
+        "Builds confidence and independence",
+        "Supports healthy physical growth"
       ]
     }
   ],
 
   right: [
     {
-      id: "robotic",
-      title: "Robotic Therapy",
-      icon: roboticImg,
-      desc: "AI-assisted rehabilitation.",
+      id: "homecare",
+      title: "Home Care Physiotherapy",
+      icon: homeCareImg,
+      desc: "Expert rehabilitation at your doorstep.",
 
-      image: roboticImg,
+      image: homeCareImg,
 
-      full: "Advanced robotic systems for precise recovery.",
+      full: "Personalized physiotherapy services delivered at home for neurological, orthopedic, post-surgical, geriatric, and mobility-related conditions.",
 
       procedure: [
-        "Digital motion analysis",
-        "Machine-assisted therapy",
-        "Real-time corrections",
-        "Progress tracking"
+        "Home assessment",
+        "Customized treatment planning",
+        "Home-based therapy sessions",
+        "Regular progress evaluation"
       ],
 
       benefits: [
-        "High precision",
-        "Faster recovery",
-        "Consistent results",
-        "Modern approach"
+        "Convenient home treatment",
+        "Personalized rehabilitation",
+        "Improved mobility",
+        "Comfortable recovery environment"
       ]
     },
 
@@ -86,24 +86,24 @@ export const servicesData = {
       id: "pain",
       title: "Pain Management",
       icon: painImg,
-      desc: "Relief from chronic pain.",
+      desc: "Evidence-based relief for acute and chronic pain.",
 
       image: painImg,
 
-      full: "Comprehensive treatment for long-term pain relief.",
+      full: "Comprehensive pain management using manual therapy, therapeutic exercises, electrotherapy, and patient education to restore mobility and improve quality of life.",
 
       procedure: [
-        "Pain assessment",
-        "Manual therapy",
-        "Exercise therapy",
-        "Lifestyle guidance"
+        "Comprehensive pain assessment",
+        "Personalized treatment planning",
+        "Manual therapy and exercise therapy",
+        "Recovery guidance and prevention"
       ],
 
       benefits: [
-        "Long-term relief",
-        "Improves posture",
-        "Enhances mobility",
-        "Better quality of life"
+        "Reduces pain",
+        "Improves mobility",
+        "Enhances flexibility",
+        "Improves quality of life"
       ]
     }
   ]
