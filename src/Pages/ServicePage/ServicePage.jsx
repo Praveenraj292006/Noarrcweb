@@ -6,6 +6,33 @@ import { servicesDetails } from '../../data/servicesDetails'
 import { useAppointment } from '../../Context/AppointmentContext.jsx'
 import ContactData from '../../data/Contactdata.js'
 
+// Icons for conditions
+import aiIcon from '../../assets/ai.png'
+import medicalIcon from '../../assets/medical.png'
+import roboticIcon from '../../assets/artificial-intelligence.png'
+import painIcon from '../../assets/pain.png'
+import sportsIcon from '../../assets/soccer-player.png'
+import laserIcon from '../../assets/laser.png'
+import manIcon from '../../assets/man.png'
+import meditationIcon from '../../assets/meditation.png'
+import boneIcon from '../../assets/hand-bone.png'
+import neuroIcon from '../../assets/neuro.png'
+
+const getConditionIcon = (condition) => {
+  const text = condition.toLowerCase();
+  if (text.includes('sport') || text.includes('athlet') || text.includes('tennis') || text.includes('runner') || text.includes('acl')) return sportsIcon;
+  if (text.includes('pain') || text.includes('strain') || text.includes('sprain') || text.includes('sciatica') || text.includes('injur')) return painIcon;
+  if (text.includes('neuro') || text.includes('stroke') || text.includes('brain') || text.includes('parkinson') || text.includes('cerebral') || text.includes('autism')) return neuroIcon;
+  if (text.includes('ortho') || text.includes('fracture') || text.includes('joint') || text.includes('arthritis') || text.includes('bone') || text.includes('surgery') || text.includes('replacement')) return boneIcon;
+  if (text.includes('women') || text.includes('pregnan') || text.includes('postpartum') || text.includes('pelvic') || text.includes('diastasis') || text.includes('core')) return meditationIcon;
+  if (text.includes('child') || text.includes('pediatric') || text.includes('development') || text.includes('delay')) return manIcon;
+  if (text.includes('laser')) return laserIcon;
+  if (text.includes('robot') || text.includes('tech')) return roboticIcon;
+  if (text.includes('balance') || text.includes('coordination') || text.includes('walking') || text.includes('postur')) return aiIcon;
+  
+  return medicalIcon; // generic fallback
+}
+
 function ServicePage() {
 
   const { slug } = useParams()
@@ -73,7 +100,7 @@ function ServicePage() {
           </div>
 
           <div className={styles.introImage}>
-            <img src={service.image} alt={service.title} />
+            <img src={service.image} alt={service.title} loading="lazy" />
           </div>
 
         </div>
@@ -90,13 +117,13 @@ function ServicePage() {
           <h2>Focused Treatment for Complex Conditions</h2>
         </div>
 
-        <div className={styles.cardGrid}>
+        <div className={styles.pillGrid}>
 
-          {service.conditions.map((item, index) => (
+          {service.conditions.slice(0, 5).map((item, index) => (
             <div className={styles.infoCard} key={index}>
 
               <div className={styles.cardIcon}>
-                ✓
+                <img src={getConditionIcon(item)} alt={item} className={styles.pillImage} loading="lazy" />
               </div>
 
               <p>{item}</p>

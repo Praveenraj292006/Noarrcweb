@@ -173,37 +173,40 @@ button{
 
 /* Book Now — filled primary */
 .btnBook {
-  background: var(--navy);
+  background: linear-gradient(135deg, var(--navy), var(--navy-mid));
   color: white;
-  border: 1.5px solid var(--navy);
+  border: none;
   position: relative;
   overflow: hidden;
+  box-shadow: 0 4px 15px rgba(11, 37, 69, 0.2);
+  z-index: 1;
 }
 
 .btnBook::before {
   content: '';
   position: absolute;
   inset: 0;
-  background: var(--blue);
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.28s var(--ease);
+  background: linear-gradient(135deg, var(--blue), var(--accent));
+  opacity: 0;
+  transition: opacity 0.3s var(--ease);
+  z-index: -1;
 }
 
 .btnBook:hover {
   color: white;
-  box-shadow: 0 4px 18px rgba(11, 37, 69, 0.28);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(14, 165, 233, 0.4);
 }
 
 .btnBook:hover::before {
-  transform: scaleX(1);
+  opacity: 1;
 }
 
 /* text above the pseudo fill */
 .btnBook span,
 .btnBook i {
   position: relative;
-  z-index: 1;
+  z-index: 2;
 }
 
 /* ── Custom mobile toggler ───────────────────────────────── */

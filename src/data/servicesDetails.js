@@ -1,105 +1,10 @@
 import womenImg from '../assets/Data/351A4663.avif'
 import orthoImg from '../assets/Data/351A4675.avif'
-import roboticImg from '../assets/Data/351A4737_converted.avif'
 import rehabimg from '../assets/Data/351A4606_converted.avif'
 import sportsimg from  '../assets/Data/351A4670_converted.avif'
 import laserimg from  '../assets/Data/laser-therapy_converted.avif'
-import speechImg from '../assets/Data/351A4851_converted.avif'
-
 
 export const servicesDetails = [
-
-{
-  slug: "laser-therapy",
-
-  title: "Advanced Laser Therapy",
-
-  tagline:
-    "Accelerating healing with precision laser technology.",
-
-  image: laserimg,
-
-  intro:
-    "Our Advanced Laser Therapy uses high-intensity therapeutic laser technology to relieve pain, reduce inflammation, and promote tissue healing. This non-invasive treatment is ideal for both acute and chronic musculoskeletal conditions, helping patients recover faster with minimal discomfort.",
-
-  conditions: [
-    "Neck Pain",
-    "Back Pain",
-    "Shoulder Pain",
-    "Knee Pain",
-    "Sports Injuries",
-    "Muscle Strains",
-    "Ligament Sprains",
-    "Tendonitis",
-    "Arthritis",
-    "Chronic Joint Pain"
-  ],
-
-  procedure: [
-    {
-      step: "Clinical Evaluation",
-      desc:
-        "Our physiotherapist evaluates your condition, pain level, mobility, and medical history to determine whether laser therapy is suitable."
-    },
-
-    {
-      step: "Personalized Treatment Planning",
-      desc:
-        "Laser intensity, treatment duration, and session frequency are customized based on the affected area and severity of the condition."
-    },
-
-    {
-      step: "Laser Therapy Session",
-      desc:
-        "High-powered therapeutic laser energy is applied to the injured tissues to stimulate cellular repair, improve blood circulation, and reduce inflammation."
-    },
-
-    {
-      step: "Recovery Monitoring",
-      desc:
-        "Progress is assessed after each session, and your treatment plan is modified to ensure the best possible recovery."
-    }
-  ],
-
-  benefits: [
-    "Rapid pain relief",
-    "Reduced inflammation",
-    "Accelerated tissue healing",
-    "Improved blood circulation",
-    "Drug-free pain management",
-    "Non-invasive treatment",
-    "Reduced muscle stiffness",
-    "Faster recovery after injury"
-  ],
-
-  technologies: [
-    "High Intensity Laser Therapy (HILT)",
-    "Photobiomodulation Therapy",
-    "Soft Tissue Healing Technology",
-    "Advanced Pain Relief Systems"
-  ],
-
-  faq: [
-    {
-      question: "Is laser therapy painful?",
-      answer:
-        "No. Laser therapy is completely painless. Most patients experience a gentle warming sensation during treatment."
-    },
-
-    {
-      question: "How many sessions are required?",
-      answer:
-        "The number of sessions depends on your condition, but most patients notice improvement within 4–8 sessions."
-    },
-
-    {
-      question: "Can laser therapy replace surgery?",
-      answer:
-        "Laser therapy can significantly reduce pain and improve healing for many conditions, although severe cases may still require surgical intervention."
-    }
-  ]
-},
-
 {
   slug: "inpatient-rehabilitation",
 
@@ -282,97 +187,6 @@ export const servicesDetails = [
   ]
 },
 
-{
-  slug: "womens-health",
-
-  title: "Women's Health Physiotherapy",
-
-  tagline:
-    "Specialized physiotherapy designed for every stage of a woman's life.",
-
-  image: womenImg,
-
-  intro:
-    "Our Women's Health Physiotherapy services provide compassionate, evidence-based care for women experiencing pregnancy-related discomfort, postpartum recovery, pelvic floor dysfunction, and various musculoskeletal conditions. We create personalized treatment plans that improve comfort, restore function, and support long-term well-being.",
-
-  conditions: [
-    "Pregnancy-related Back Pain",
-    "Postpartum Recovery",
-    "Pelvic Floor Dysfunction",
-    "Urinary Incontinence",
-    "Pelvic Pain",
-    "Diastasis Recti",
-    "Neck & Shoulder Pain",
-    "Postural Problems",
-    "Joint Pain During Pregnancy",
-    "Core Muscle Weakness"
-  ],
-
-  procedure: [
-    {
-      step: "Comprehensive Women's Health Assessment",
-      desc:
-        "A detailed consultation is conducted to understand symptoms, lifestyle, medical history, pregnancy stage, or postpartum recovery requirements."
-    },
-
-    {
-      step: "Personalized Treatment Plan",
-      desc:
-        "Individualized physiotherapy programs are developed to address pain, pelvic floor health, posture, strength, and functional movement."
-    },
-
-    {
-      step: "Therapeutic Rehabilitation Sessions",
-      desc:
-        "Treatment may include pelvic floor muscle training, posture correction, manual therapy, breathing exercises, core strengthening, and guided movement therapy."
-    },
-
-    {
-      step: "Long-term Wellness Guidance",
-      desc:
-        "Patients receive home exercise programs, ergonomic advice, and lifestyle recommendations to maintain recovery and prevent recurring issues."
-    }
-  ],
-
-  benefits: [
-    "Reduced pregnancy-related discomfort",
-    "Improved pelvic floor strength",
-    "Better posture and body mechanics",
-    "Enhanced postpartum recovery",
-    "Reduced pelvic and lower back pain",
-    "Improved core stability",
-    "Greater confidence in daily activities",
-    "Improved overall quality of life"
-  ],
-
-  technologies: [
-    "Pelvic Floor Rehabilitation",
-    "Manual Therapy",
-    "Core Stabilization Programs",
-    "Therapeutic Exercise Equipment",
-    "Postural Assessment Tools"
-  ],
-
-  faq: [
-    {
-      question: "Is physiotherapy safe during pregnancy?",
-      answer:
-        "Yes. Our treatments are specifically designed to be safe and effective during pregnancy while helping manage pain and improve mobility."
-    },
-
-    {
-      question: "When should I begin postpartum physiotherapy?",
-      answer:
-        "Most women can begin physiotherapy after receiving medical clearance from their healthcare provider, depending on their delivery and recovery."
-    },
-
-    {
-      question: "Can physiotherapy help with urinary incontinence?",
-      answer:
-        "Yes. Pelvic floor rehabilitation is highly effective in improving bladder control and strengthening pelvic floor muscles."
-    }
-  ]
-},
 {
   slug: "pediatric-rehabilitation",
 
@@ -647,4 +461,44 @@ export const servicesDetails = [
         "Yes. Caregivers receive guidance on exercises and safe assistance techniques to support the patient's recovery."
     }
   ]
-},]
+},
+{
+  slug: "orthopedic-rehabilitation",
+  title: "Orthopedic Rehabilitation",
+  tagline: "Expert care for bones, joints, muscles, and post-surgical recovery.",
+  image: orthoImg,
+  intro: "Our Orthopedic Rehabilitation specializes in treating musculoskeletal injuries and guiding patients through post-surgical recovery. We use advanced manual therapy and strengthening protocols to ensure optimal healing.",
+  conditions: [
+    "Joint Replacement (Knee, Hip, Shoulder)",
+    "Fractures & Trauma",
+    "Ligament Reconstruction (ACL, PCL)",
+    "Rotator Cuff Repairs",
+    "Spinal Surgeries",
+    "Osteoarthritis",
+    "Tendinopathy"
+  ],
+  procedure: [
+    { step: "Post-op/Injury Assessment", desc: "Evaluating surgical precautions, range of motion, and tissue healing." },
+    { step: "Early Mobilization", desc: "Gentle movement to prevent stiffness and reduce swelling." },
+    { step: "Progressive Strengthening", desc: "Targeted exercises to rebuild muscle mass and joint stability." },
+    { step: "Return to Normal Activity", desc: "Functional testing to clear the patient for daily activities or sports." }
+  ],
+  benefits: [
+    "Faster post-surgical recovery",
+    "Restored joint range of motion",
+    "Reduced scar tissue formation",
+    "Increased muscular strength",
+    "Pain relief and improved mechanics"
+  ],
+  technologies: [
+    "Continuous Passive Motion (CPM)",
+    "Therapeutic Ultrasound",
+    "Cryotherapy",
+    "Advanced Resistance Equipment"
+  ],
+  faq: [
+    { question: "When should I start rehab after surgery?", answer: "Usually within 24-48 hours post-op as guided by your surgeon to prevent stiffness." },
+    { question: "Will orthopedic rehab hurt?", answer: "You may experience mild discomfort during stretching, but our therapists ensure pain is kept at a manageable and safe level." }
+  ]
+},
+]

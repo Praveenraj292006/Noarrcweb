@@ -105,8 +105,7 @@ function About() {
           
 
           <h2 className={styles.heading}>
-            Redefining Recovery<br />
-            <em>One Patient at a Time</em>
+            <em>Transforming Lives Through Advanced Neuro & Orthopaedic Rehabilitation</em>
           </h2>
 
           <div className={styles.divider} />

@@ -77,8 +77,7 @@ function Services() {
   const sectionRef = useRef(null)
   const navigate = useNavigate()
 
-  const featured = services[0]
-  const rest = services.slice(1)
+  const allServices = services
 
   useEffect(() => {
 
@@ -119,17 +118,6 @@ function Services() {
         ease: 'power3.out',
       })
 
-      gsap.from(`.${styles.featuredCard}`, {
-        scrollTrigger: {
-          trigger: `.${styles.featuredCard}`,
-          start: 'top 82%'
-        },
-        scale: 0.96,
-        opacity: 0,
-        duration: 0.8,
-        ease: 'power3.out',
-      })
-
     }, sectionRef)
 
     return () => ctx.revert()
@@ -165,72 +153,17 @@ function Services() {
       {/* LAYOUT */}
       <div className={styles.layout}>
 
-        {/* FEATURED */}
-        <div
-          className={styles.featuredCard}
-          onClick={() =>
-            navigate(`/services/${featured.slug}`)
-          }
-        >
-
-          <div className={styles.featuredInner}>
-
-            <span className={styles.cardNum}>
-              {featured.num}
-            </span>
-
-            <div className={styles.featuredTag}>
-              {featured.tag}
-            </div>
-
-            <div className={styles.featuredIconBox}>
-              <img
-                src={featured.icon}
-                alt={featured.title}
-              />
-            </div>
-
-            <h3 className={styles.featuredTitle}>
-              {featured.title}
-            </h3>
-
-            <p className={styles.featuredDesc}>
-              {featured.desc}
-            </p>
-
-            <button className={styles.featuredCta}>
-              Learn More →
-            </button>
-
-          </div>
-
-          <div className={styles.featuredAccent} />
-
-        </div>
-
+       
         {/* GRID */}
         <div className={styles.grid}>
-
-          {rest.map((item) => (
-
+          {allServices.map((item) => (
             <div
               className={styles.card}
               key={item.num}
-              onClick={() =>
-                navigate(`/services/${item.slug}`)
-              }
+              onClick={() => navigate(`/services/${item.slug}`)}
             >
-
-              <div className={styles.cardTop}>
-
-                <div className={styles.iconBox}>
-                  <img src={item.icon} alt={item.title} />
-                </div>
-
-                <span className={styles.cardNum}>
-                  {item.num}
-                </span>
-
+              <div className={styles.iconBox}>
+                <img src={item.icon} alt={item.title} loading="lazy" />
               </div>
 
               <span className={styles.cardTag}>
@@ -245,16 +178,11 @@ function Services() {
                 {item.desc}
               </p>
 
-              <span className={styles.link}>
-                Read More →
-              </span>
-
-              <div className={styles.cardLine} />
-
+              <button className={styles.cardButton}>
+                Learn More
+              </button>
             </div>
-
           ))}
-
         </div>
 
       </div>

@@ -2,9 +2,8 @@ import React, { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
 import { gsap } from 'gsap'
 
-import doctor from '../../assets/Noarrc-group.webp'
-import img1 from '../../assets/placeholder_4.jpg'
-import img2 from '../../assets/placeholder_2.jpg'
+import doctor from '../../assets/grop_img_hero.webp'
+
 
 const STATS = [
   { num: '5K+', label: 'Patients Recovered' },

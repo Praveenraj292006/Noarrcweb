@@ -16,14 +16,13 @@ function Navbar() {
 
 
   const servicesDropdown = [
-  { name: 'Neuro Rehabilitation', slug: 'neuro-rehabilitation' },
-  { name: 'Laser Therapy', slug: 'laser-therapy' },
+  
   { name: 'Orthopedic Rehab', slug: 'orthopedic-rehabilitation' },
   { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
   { name: 'Sports Therapy', slug: 'sports-therapy' },
-  { name: "Women's Health", slug: 'womens-health' },
-  { name: 'Robotic Physiotherapy', slug: 'robotic-physiotherapy' },
-  { name: 'Speech Therapy', slug: 'speech-therapy' },
+  { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
+  { name: 'Pain Management', slug: 'pain-management' },
+  { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
 ]
 
   useEffect(() => {
