@@ -254,6 +254,7 @@
 
 .heading em {
   font-style: italic;
+  font-size: 38px;
   color: var(--blue);
 }
 

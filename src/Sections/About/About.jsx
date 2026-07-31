@@ -6,7 +6,7 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import img       from '../../assets/noarrc_abt_2.avif'
 import therapy   from '../../assets/noaarc abt.avif'
 import illustration from '../../assets/physio-illu.png'
-import divimg from '../../assets/placeholder_6.png'
+
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -105,7 +105,8 @@ function About() {
           
 
           <h2 className={styles.heading}>
-            <em>Transforming Lives Through Advanced Neuro & Orthopaedic Rehabilitation</em>
+            Empowering Every Step Towards Recovery <br />
+            <em>Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results</em>
           </h2>
 
           <div className={styles.divider} />
