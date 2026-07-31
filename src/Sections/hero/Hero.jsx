@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
 import { gsap } from 'gsap'
-import Logo from '../../assets/Noarrc-logo-recovered.png'
+import Logo from '../../assets/Noarrc-logo-Recovered.png'
 
 import doctor from '../../assets/grop_img_hero.webp'
 
