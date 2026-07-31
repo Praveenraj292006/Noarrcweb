@@ -417,6 +417,20 @@
    ══════════════════════════════════════════════════════════ */
 
 @media (max-width: 900px) {
+
+  .heading {
+    font-size:1.2rem;
+    margin:4px;
+  }
+
+  .heading p{
+    margin-top: 5vh;
+    font-size: 1rem;
+  }
+
+  .body p{
+    font-size: 1rem;
+  }
   .about { padding: 80px 28px; }
 
   .inner {

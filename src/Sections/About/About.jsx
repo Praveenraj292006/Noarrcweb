@@ -67,8 +67,9 @@ function About() {
           
 
           <h2 className={styles.heading}>
-            Empowering Every Step Towards Recovery <br />
-            <em>Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results</em>
+            <em> Empowering Every Step Towards Recovery</em> <br />
+            <p>Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results
+            Empowering Every Step Towards Recovery</p>
           </h2>
 
           <div className={styles.body}>
