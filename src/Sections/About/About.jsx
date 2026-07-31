@@ -3,10 +3,6 @@ import styles from './About.module.css'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
-import img       from '../../assets/noarrc_abt_2.avif'
-import therapy   from '../../assets/noaarc abt.avif'
-import illustration from '../../assets/physio-illu.png'
-
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -25,18 +21,7 @@ function About() {
   useEffect(() => {
     const ctx = gsap.context(() => {
       /* Left collage */
-      gsap.from(`.${styles.collagePrimary}`, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 78%' },
-        x: -60, opacity: 0, duration: 1, ease: 'power3.out',
-      })
-      gsap.from(`.${styles.collageSecondary}`, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 75%' },
-        x: -40, y: 30, opacity: 0, duration: 0.9, delay: 0.15, ease: 'power3.out',
-      })
-      gsap.from(`.${styles.collageIllustration}`, {
-        scrollTrigger: { trigger: sectionRef.current, start: 'top 73%' },
-        scale: 0.85, opacity: 0, duration: 0.8, delay: 0.25, ease: 'back.out(1.4)',
-      })
+     
       
       /* Right text */
       gsap.from(`.${styles.heading}`, {
@@ -71,33 +56,10 @@ function About() {
       <div className={styles.blob1} aria-hidden="true" />
       <div className={styles.blob2} aria-hidden="true" />
 
-      <div className={styles.inner}>
+     
 
         {/* ══ LEFT — Image collage ══ */}
-        <div className={styles.collageWrap}>
-
-          {/* Primary image — large */}
-          <div className={styles.collagePrimary}>
-            <img src={img} loading="lazy" alt="NOARRC Clinic" />
-          </div>
-
-          {/* Secondary image — overlaps bottom-right */}
-          <div className={styles.collageSecondary}>
-            <img src={therapy} loading="lazy" alt="Therapy session" />
-          </div>
-
-          {/* Illustration — overlaps top-right */}
-          <div className={styles.collageIllustration}>
-            <img src={illustration} loading="lazy" alt="Physiotherapy illustration" />
-          </div>
-
-          {/* Est. badge */}
-          
-
-          {/* Decorative ring */}
         
-
-        </div>
 
         {/* ══ RIGHT — Text content ══ */}
         <div className={styles.content}>
@@ -109,32 +71,25 @@ function About() {
             <em>Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results</em>
           </h2>
 
-          <div className={styles.divider} />
-
           <div className={styles.body}>
-            <p>
-              At <strong> NOARRC </strong> – Neuro and Ortho Advanced Robotic Rehabilitation Centre, 
-              we combine advanced technology with expert physiotherapy to help patients 
-              regain strength, mobility, and independence.
-            </p>
-            <p>
-             Our multidisciplinary team specializes in neurological, orthopedic, sports injury, geriatric, and post-operative rehabilitation, delivering personalized treatment plans tailored to each patient’s goals.</p>
-             <p>With state-of-the-art robotic rehabilitation, evidence-based therapy, and compassionate care, we focus not just 
-              on recovery—but on restoring confidence, improving quality of life, and helping every patient return to the activities 
-              they love. Orthopaedic rehabilitation at NOARRC – Neuro and Ortho Advanced Robotic Rehabilitation Centre is designed to
-               help individuals recover from injuries, surgeries, joint disorders, and musculoskeletal conditions. 
-               Our evidence-based rehabilitation programs focus on reducing pain,
-               improving mobility, restoring strength, and enabling patients to return to their daily activities with confidence.</p>
-            <p>
-              Whether you are recovering from a fracture, ligament injury, joint replacement, 
-              or chronic orthopedic condition, our experienced physiotherapists create personalized treatment 
-              plans tailored to your specific goals and lifestyle. Inpatient Rehabilitation
-            </p>
-            <p>Our inpatient rehabilitation program offers intensive, multidisciplinary care 
-              for patients recovering from neurological and orthopedic conditions. 
-              We provide personalized treatment plans in a supportive 
-              environment to promote faster recovery and improved functional outcomes. Robotic Physiotherapy</p>
-          </div>
+              <p>
+                <strong>NOARRC – Neuro and Ortho Advanced Robotic Rehabilitation Centre</strong>
+                is dedicated to helping patients regain mobility, independence, and confidence
+                through evidence-based physiotherapy and advanced rehabilitation technology.
+              </p>
+
+              <p>
+                Our multidisciplinary team specializes in neurological, orthopedic, sports,
+                pediatric, women's health, and inpatient rehabilitation. Every treatment plan
+                is personalized to meet each patient's condition, lifestyle, and recovery goals.
+              </p>
+
+              <p>
+                By combining experienced clinicians, robotic rehabilitation systems, and modern
+                therapeutic techniques, we focus on reducing pain, restoring movement, and
+                improving long-term quality of life in a supportive environment.
+              </p>
+            </div>
 
           {/* Mini stats row */}
           <div className={styles.statsRow}>
@@ -164,7 +119,7 @@ function About() {
           </div>
 
         </div>
-      </div>
+      
     </section>
   )
 }

@@ -142,6 +142,10 @@
   flex-shrink: 0;
 }
 
+.Logo{
+  width:550px;
+}
+
 @keyframes marquee {
   0%   { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -234,7 +238,7 @@
   font-family: var(--lato);
   font-size: clamp(15px, 2vw, 22px);
   font-weight: 300;
-  color: var(--navy-mid);
+  color: black;
   letter-spacing: 2.5px;
   margin-bottom: 22px;
 }
@@ -251,7 +255,7 @@
 .desc {
   font-size: 18px;
   line-height: 1.85;
-  color: var(--text-soft);
+  color: black;
   max-width: 430px;
   margin-bottom: 34px;
 }

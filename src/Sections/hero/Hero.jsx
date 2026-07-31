@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import styles from './Hero.module.css'
 import { gsap } from 'gsap'
+import Logo from '../../assets/Noarrc-logo-recovered.png'
 
 import doctor from '../../assets/grop_img_hero.webp'
 
@@ -62,14 +63,7 @@ function Hero() {
   }, [])
 
   /* ── Stat-card 3D tilt ── */
-  const handleTilt = (e) => {
-    const card = e.currentTarget
-    const { left, top, width, height } = card.getBoundingClientRect()
-    const x = (e.clientX - left) / width - 0.5
-    const y = (e.clientY - top) / height - 0.5
-    card.style.transform = `perspective(500px) rotateX(${-y * 10}deg) rotateY(${x * 10}deg) translateY(-6px)`
-  }
-  const resetTilt = (e) => { e.currentTarget.style.transform = '' }
+  
 
   return (
     <section className={styles.hero} ref={heroRef} id="home">
@@ -92,7 +86,7 @@ function Hero() {
 
           <p className={styles.tag}>Redefine Life</p>
 
-          <h1 className={styles.titleMain}>NOARRC</h1>
+          <img src={Logo} alt="Noarc Logo" className={styles.Logo} />
           <h2 className={styles.titleSub}>Advanced Robotic Rehabilitation ·  Compassionate Physiotherapy · Lasting Results</h2>
 
           <div className={styles.divider} />
@@ -151,17 +145,7 @@ Combining expert physiotherapy, robotic rehabilitation, and personalized care</s
           </div>
 
           {/* Floating stat cards */}
-          {STATS.map((s, i) => (
-            <div
-              key={i}
-              className={`${styles.statCard} ${styles[`statCard${i + 1}`]}`}
-              onMouseMove={handleTilt}
-              onMouseLeave={resetTilt}
-            >
-              <div className={styles.statNum}>{s.num}</div>
-              <div className={styles.statLabel}>{s.label}</div>
-            </div>
-          ))}
+          
 
           {/* Side image cards */}
           <div className={styles.box}></div>
