@@ -12,15 +12,15 @@ import styles    from './ServicePage.module.css'
 import { servicesDetails } from '../../data/servicesDetails'
 
 // ── Section Components ─────────────────────────────────────
-import ServiceHero       from '../../components/ServiceDetail/ServiceHero.jsx'
-import Overview          from '../../components/ServiceDetail/Overview.jsx'
-import ConditionsGrid    from '../../components/ServiceDetail/ConditionsGrid.jsx'
-import RecoveryTimeline  from '../../components/ServiceDetail/RecoveryTimeline.jsx'
-import TreatmentProcess  from '../../components/ServiceDetail/TreatmentProcess.jsx'
-import BenefitsGrid      from '../../components/ServiceDetail/BenefitsGrid.jsx'
-import TechnologyGrid    from '../../components/ServiceDetail/TechnologyGrid.jsx'
-import FAQ               from '../../components/ServiceDetail/FAQ.jsx'
-import ServiceCTA        from '../../components/ServiceDetail/ServiceCTA.jsx'
+import ServiceHero       from '../../Components/ServiceDetail/ServiceHero.jsx'
+import Overview          from '../../Components/ServiceDetail/Overview.jsx'
+import ConditionsGrid    from '../../Components/ServiceDetail/ConditionsGrid.jsx'
+import RecoveryTimeline  from '../../Components/ServiceDetail/RecoveryTimeline.jsx'
+import TreatmentProcess  from '../../Components/ServiceDetail/TreatmentProcess.jsx'
+import BenefitsGrid      from '../../Components/ServiceDetail/BenefitsGrid.jsx'
+import TechnologyGrid    from '../../Components/ServiceDetail/TechnologyGrid.jsx'
+import FAQ               from '../../Components/ServiceDetail/FAQ.jsx'
+import ServiceCTA        from '../../Components/ServiceDetail/ServiceCTA.jsx'
 
 // ─────────────────────────────────────────────────────────────
 function ServicePage() {
