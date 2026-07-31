@@ -16,14 +16,13 @@ function Navbar() {
 
 
   const servicesDropdown = [
-  
-  { name: 'Orthopedic Rehab', slug: 'orthopedic-rehabilitation' },
-  { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
-  { name: 'Sports Therapy', slug: 'sports-therapy' },
-  { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
-  { name: 'Pain Management', slug: 'pain-management' },
-  { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
-]
+    { name: 'Orthopedic Rehab', slug: 'orthopedic-rehabilitation' },
+    { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
+    { name: 'Sports Therapy', slug: 'sports-therapy' },
+    { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
+    { name: 'Pain Management', slug: 'pain-management' },
+    { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
+  ]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)
@@ -40,7 +39,7 @@ function Navbar() {
       <div className="container-fluid">
 
         {/* ── Logo ── */}
-       <Link className="navbar-brand" to="/">
+        <Link className="navbar-brand" to="/">
           <img src={logo} alt="Noarrc Logo" className={styles.logo} />
         </Link>
 
@@ -63,7 +62,7 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNav">
 
           <ul className="navbar-nav mx-auto gap-lg-2 text-center">
-           <li className="nav-item">
+            <li className="nav-item">
               <button
                 className={styles.navLink}
                 onClick={() => goToSection("home")}
@@ -74,11 +73,11 @@ function Navbar() {
 
             <li className="nav-item">
               <button
-                  className={styles.navLink}
-                  onClick={() => goToSection("about")}
-                >
-                  About
-                </button>
+                className={styles.navLink}
+                onClick={() => goToSection("about")}
+              >
+                About
+              </button>
             </li>
 
             {/* SERVICES DROPDOWN */}
