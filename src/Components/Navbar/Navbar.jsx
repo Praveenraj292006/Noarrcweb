@@ -16,13 +16,16 @@ function Navbar() {
 
 
   const servicesDropdown = [
-    { name: 'Orthopedic Rehab', slug: 'orthopedic-rehabilitation' },
-    { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
-    { name: 'Sports Therapy', slug: 'sports-therapy' },
-    { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
-    { name: 'Pain Management', slug: 'pain-management' },
-    { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
-  ]
+  { name: 'Neurological Rehabilitation', slug: 'neurological-rehabilitation' },
+  { name: 'Orthopedic Rehabilitation', slug: 'orthopedic-rehabilitation' },
+  { name: "Women's Health", slug: 'womens-health' },
+  { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
+  { name: 'Robotic Physiotherapy', slug: 'robotic-physiotherapy' },
+  { name: 'Sports & Fitness Therapy', slug: 'sports-therapy' },
+  { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
+  { name: 'Pain Management', slug: 'pain-management' },
+  { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
+]
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 40)

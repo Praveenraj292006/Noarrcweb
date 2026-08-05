@@ -10,7 +10,7 @@ import robotic from '../../assets/artificial-intelligence.png'
 import pain from '../../assets/pain.png'
 import sports from '../../assets/soccer-player.png'
 import laser from '../../assets/laser.png'
-import speech from '../../assets/man.png'
+
 import Women from '../../assets/meditation.png'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -18,27 +18,54 @@ gsap.registerPlugin(ScrollTrigger)
 const services = [
 
   {
+    slug: 'neurological-rehabilitation',
+    icon: neuro,
+    num: '01',
+    title: 'Neurological Rehabilitation',
+    desc: 'Specialized rehabilitation for neurological conditions and recovery.',
+    tag: 'Neuro Rehab',
+  },
+
+  {
     slug: 'pain-management',
     icon: laser,
-    num: '01',
+    num: '02',
     title: 'Pain Management',
     desc: 'Evidence-based relief for acute and chronic pain.',
     tag: 'Pain Therapy',
   },
 
   {
+    slug: 'womens-health',
+    icon: Women,
+    num: '03',
+    title: "Women's Health",
+    desc: 'Specialized physiotherapy for every stage of women’s health.',
+    tag: "Women's Health",
+  },
+
+  {
     slug: 'orthopedic-rehabilitation',
     icon: ortho,
-    num: '02',
+    num: '04',
     title: 'Orthopedic Rehabilitation',
     desc: 'Focused recovery programs for orthopedic injuries.',
     tag: 'Orthopedics',
   },
 
   {
+    slug: 'robotic-physiotherapy',
+    icon: robotic,
+    num: '05',
+    title: 'Robotic Physiotherapy',
+    desc: 'Advanced robotic-assisted rehabilitation for faster recovery.',
+    tag: 'Robotic Rehab',
+  },
+
+  {
     slug: 'inpatient-rehabilitation',
     icon: pain,
-    num: '03',
+    num: '06',
     title: 'Inpatient Rehabilitation',
     desc: 'Structured inpatient care for intensive recovery.',
     tag: 'Rehabilitation',
@@ -47,7 +74,7 @@ const services = [
   {
     slug: 'sports-therapy',
     icon: sports,
-    num: '04',
+    num: '07',
     title: 'Sports & Fitness Therapy',
     desc: 'Recovery and prevention programs for athletes.',
     tag: 'Sports Medicine',
@@ -56,20 +83,21 @@ const services = [
   {
     slug: 'home-care-physiotherapy',
     icon: Women,
-    num: '05',
-    title: "Home Care Physiotherapy",
+    num: '08',
+    title: 'Home Care Physiotherapy',
     desc: 'Expert rehabilitation at your doorstep.',
-    tag: 'Home Care ',
+    tag: 'Home Care',
   },
 
   {
     slug: 'pediatric-rehabilitation',
     icon: robotic,
-    num: '06',
+    num: '09',
     title: 'Pediatric Rehabilitation',
     desc: "Specialized therapy for children's development.",
     tag: 'Pediatric Rehab',
   },
+
 ]
 
 function Services() {

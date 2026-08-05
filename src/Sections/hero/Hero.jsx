@@ -84,16 +84,14 @@ function Hero() {
         {/* LEFT */}
         <div className={styles.heroLeft}>
 
-          <p className={styles.tag}>Redefine Life</p>
-
           <img src={Logo} alt="Noarc Logo" className={styles.Logo} />
-          <h2 className={styles.titleSub}>Advanced Robotic Rehabilitation ·  Compassionate Physiotherapy · Lasting Results</h2>
+         
 
           <div className={styles.divider} />
 
           <p className={styles.desc}>
            Transforming Lives Through <strong>Advanced Neuro & Orthopaedic Rehabilitation
-Combining expert physiotherapy, robotic rehabilitation, and personalized care</strong> to help you regain independence and improve your quality of life. Empowering Every Step Towards Recovery
+Combining expert physiotherapy, robotic rehabilitation, and personalized care</strong> to help you regain independence and improve your quality of life.
           </p>
 
           <div className={styles.ctaRow}>
