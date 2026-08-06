@@ -136,7 +136,7 @@ function Navbar() {
               <i className="bi bi-telephone" /> Call Us
             </a>
             <button className={`btn ${styles.btnBook}`} onClick={() => scrollTo('contact')}>
-              Book Now
+              Request a Call Back
             </button>
           </div>
 
