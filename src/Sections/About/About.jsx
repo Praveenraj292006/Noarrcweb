@@ -93,14 +93,14 @@ function About() {
             </div>
 
           {/* Mini stats row */}
-          <div className={styles.statsRow}>
+          {/* <div className={styles.statsRow}>
             {stats.map((s) => (
               <div className={styles.statItem} key={s.label}>
                 <span className={styles.statNum}>{s.num}</span>
                 <span className={styles.statLabel}>{s.label}</span>
               </div>
             ))}
-          </div>
+          </div> */}
 
           {/* CTA */}
           <div className={styles.ctaRow}>
@@ -108,7 +108,7 @@ function About() {
               className={styles.btnPrimary}
               onClick={() => scrollTo('contact')}
             >
-              <span>Book Appointment</span>
+              <span>Request a Call Back</span>
               <span className={styles.btnArrow}>→</span>
             </button>
             <button

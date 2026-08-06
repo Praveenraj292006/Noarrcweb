@@ -10,7 +10,7 @@ import robotic from '../../assets/artificial-intelligence.png'
 import pain from '../../assets/pain.png'
 import sports from '../../assets/soccer-player.png'
 import laser from '../../assets/laser.png'
-
+import child from '../../assets/playing.png'
 import Women from '../../assets/meditation.png'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -91,7 +91,7 @@ const services = [
 
   {
     slug: 'pediatric-rehabilitation',
-    icon: robotic,
+    icon: child,
     num: '09',
     title: 'Pediatric Rehabilitation',
     desc: "Specialized therapy for children's development.",
