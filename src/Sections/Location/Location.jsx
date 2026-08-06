@@ -27,7 +27,7 @@ function Location() {
           </p>
 
           <p>
-            <i className="bi bi-telephone-fill"></i> +91 66780342
+            <i className="bi bi-telephone-fill"></i> +91 99403 32902
           </p>
 
           <p>
