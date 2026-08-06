@@ -42,9 +42,9 @@ function Navbar() {
       <div className="container-fluid">
 
         {/* ── Logo ── */}
-        <Link className="navbar-brand" to="/">
+        {/* <Link className="navbar-brand" to="/">
           <img src={logo} alt="Noarrc Logo" className={styles.logo} />
-        </Link>
+        </Link> */}
 
         {/* ── Mobile Toggle ── */}
         <button

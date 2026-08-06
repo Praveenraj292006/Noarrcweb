@@ -35,14 +35,14 @@ function ContactForm() {
     )
 
     /* ===== WHATSAPP AUTO MESSAGE ===== */
-    const message = `Hello ${name}, your appointment request for ${service} has been received. We will contact you shortly.`
+   const message = `Hello ${name}, thank you for contacting NOARRC. We have received your enquiry regarding ${service}. Our team will review your request and get in touch with you shortly.`
 
     window.open(
       `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
       '_blank'
     )
 
-    alert("Appointment request sent!")
+    alert("Thank you! Your enquiry has been received. Our team will contact you shortly.")
 
     form.reset()
   }
@@ -55,9 +55,11 @@ function ContactForm() {
         {/* LEFT SIDE */}
         <form ref={formRef} onSubmit={handleSubmit} className={styles.inputarea}>
 
-          <h2>For Enquiry Fill the Form</h2>
-          <p>We will contact you shortly to discuss your needs.</p>
-
+          <h2>Have a Question? Get in Touch</h2>
+          <p>
+            Fill out the enquiry form below and our team will get back to you shortly to
+            discuss your requirements and answer your questions.
+          </p>
           <div className={styles.row}>
             <input name="name" type="text" placeholder="Full Name" required />
             <input name="phone" type="tel" placeholder="Phone Number" required />
@@ -65,11 +67,17 @@ function ContactForm() {
 
           <div className={styles.row}>
             <input name="email" type="email" placeholder="Email Address" />
-            <select name="service">
-              <option>Neuro Rehabilitation</option>
-              <option>Orthopedic Rehab</option>
-              <option>Robotic Therapy</option>
+           <select name="service" required>
+              <option value="">Select a Service</option>
+              <option>Neurological Rehabilitation</option>
+              <option>Orthopedic Rehabilitation</option>
+              <option>Women's Health Physiotherapy</option>
+              <option>Inpatient Rehabilitation</option>
+              <option>Robotic Physiotherapy</option>
+              <option>Sports & Fitness Therapy</option>
+              <option>Pediatric Rehabilitation</option>
               <option>Pain Management</option>
+              <option>Home Care Physiotherapy</option>
             </select>
           </div>
 
@@ -84,7 +92,7 @@ function ContactForm() {
           />
 
           <button type="submit" className={styles.btn}>
-            Submit
+            Send Enquiry
           </button>
 
         </form>

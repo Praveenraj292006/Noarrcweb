@@ -90,8 +90,8 @@ function Hero() {
           <div className={styles.divider} />
 
           <p className={styles.desc}>
-           Transforming Lives Through <strong>Advanced Neuro & Orthopaedic Rehabilitation
-Combining expert physiotherapy, robotic rehabilitation, and personalized care</strong> to help you regain independence and improve your quality of life.
+           Transforming Lives Through Advanced Neuro & Orthopaedic Rehabilitation
+Combining expert physiotherapy, robotic rehabilitation, and personalized care help you regain independence and improve your quality of life.
           </p>
 
           <div className={styles.ctaRow}>
