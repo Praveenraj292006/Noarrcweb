@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import styles from './Navbar.module.css'
-import logo from '../../assets/Noarrc-logo-Recovered.png'
 
 import { Link, useNavigate } from "react-router-dom";
 import ContactData from '../../data/Contactdata';
@@ -15,16 +14,26 @@ function Navbar() {
   };
 
 
-  const servicesDropdown = [
-  { name: 'Neurological Rehabilitation', slug: 'neurological-rehabilitation' },
-  { name: 'Orthopedic Rehabilitation', slug: 'orthopedic-rehabilitation' },
-  { name: "Women's Health", slug: 'womens-health' },
-  { name: 'Inpatient Rehabilitation', slug: 'inpatient-rehabilitation' },
-  { name: 'Robotic Physiotherapy', slug: 'robotic-physiotherapy' },
-  { name: 'Sports & Fitness Therapy', slug: 'sports-therapy' },
-  { name: 'Pediatric Rehabilitation', slug: 'pediatric-rehabilitation' },
-  { name: 'Pain Management', slug: 'pain-management' },
-  { name: 'Home Care Physiotherapy', slug: 'home-care-physiotherapy' },
+ const servicesDropdown = [
+  {
+    title: "Rehabilitation Services",
+    children: [
+      { name: "Neurological Rehabilitation", slug: "neurological-rehabilitation" },
+      { name: "Orthopedic Rehabilitation", slug: "orthopedic-rehabilitation" },
+      { name: "Women's Health", slug: "womens-health" },
+      { name: "Robotic Physiotherapy", slug: "robotic-physiotherapy" },
+      { name: "Sports & Fitness Therapy", slug: "sports-therapy" },
+      { name: "Pediatric Rehabilitation", slug: "pediatric-rehabilitation" },
+      { name: "Pain Management", slug: "pain-management" }
+    ]
+  },
+  {
+    title: "Levels of Care",
+    children: [
+      { name: "Inpatient Rehabilitation", slug: "inpatient-rehabilitation" },
+      { name: "Home Care Physiotherapy", slug: "home-care-physiotherapy" }
+    ]
+  }
 ]
 
   useEffect(() => {
@@ -98,17 +107,36 @@ function Navbar() {
                 <i className={`bi bi-chevron-down ${dropdownOpen ? styles.rotate : ''}`} />
               </button>
 
-              <div className={`${styles.dropdownMenu} ${dropdownOpen ? styles.showDropdown : ''}`}>
+             <div className={`${styles.dropdownMenu} ${dropdownOpen ? styles.showDropdown : ''}`}>
 
-                {servicesDropdown.map((service, index) => (
-                  <a
-                    key={index}
-                    href={`/services/${service.slug}`}
-                    className={styles.dropdownItem}
-                  >
-                    {service.name}
-                  </a>
-                ))}
+                {servicesDropdown.map((group) => (
+
+                <div key={group.title} className={styles.dropdownGroup}>
+
+                  <div className={styles.dropdownParent}>
+                    <span>{group.title}</span>
+                    <i className="bi bi-chevron-right"></i>
+                  </div>
+
+                  <div className={styles.subMenu}>
+
+                    {group.children.map(service => (
+
+                      <a
+                        key={service.slug}
+                        href={`/services/${service.slug}`}
+                        className={styles.dropdownItem}
+                      >
+                        {service.name}
+                      </a>
+
+                    ))}
+
+                  </div>
+
+                </div>
+
+              ))}
 
               </div>
             </li>

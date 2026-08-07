@@ -81,10 +81,7 @@ function ContactForm() {
             </select>
           </div>
 
-          <div className={styles.row}>
-            <input name="date" type="date" required />
-            <input name="time" type="time" required />
-          </div>
+         
 
           <textarea
             name="message"
