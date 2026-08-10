@@ -165,6 +165,23 @@
   z-index: 2;
 }
 
+.slogan {
+  margin: 14px 0 18px;
+
+  font-family: var(--ubuntu);
+  font-size: clamp(2rem, 4vw, 3.6rem);
+  line-height: 1;
+  font-weight: 700;
+
+  color: var(--navy);
+
+  letter-spacing: -0.03em;
+}
+
+.slogan span {
+  color: var(--blue);
+}
+
 /* ══════════════════════════════════════════════════════════
    LEFT COLUMN
    ══════════════════════════════════════════════════════════ */
@@ -214,10 +231,10 @@
 
 /* Tag */
 .tag {
-  font-family: var(--patrick);
-  font-size: 22px;
-  font-weight: 600;
-  color: var(--blue);
+
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--navy);
   letter-spacing: 4px;
   text-transform: uppercase;
   margin-bottom: 10px;
@@ -253,7 +270,8 @@
 
 /* Description */
 .desc {
-  font-size: 18px;
+
+  font-size: clamp(14px, 1.2vw, 17px);
   font-weight: 700;
   line-height: 1.85;
   color: black;

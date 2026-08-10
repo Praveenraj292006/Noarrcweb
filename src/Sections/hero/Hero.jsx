@@ -85,13 +85,14 @@ function Hero() {
         <div className={styles.heroLeft}>
 
           <img src={Logo} alt="Noarc Logo" className={styles.Logo} />
+          <p className={styles.tag}>REDFINE LIFE</p>
          
 
           <div className={styles.divider} />
 
           <p className={styles.desc}>
            Transforming Lives Through Advanced Neuro & Orthopaedic Rehabilitation
-Combining expert physiotherapy, robotic rehabilitation, and personalized care help you regain independence and improve your quality of life.
+Combining expert physiotherapy, advanced robotic rehabilitation, and personalized care to restore movement, rebuild independence, and help you return to a healthier, more confident life.
           </p>
 
           <div className={styles.ctaRow}>
