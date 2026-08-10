@@ -24,8 +24,8 @@ function Location() {
     city: "Coimbatore",
     address:
       "Police Station, 577, Trichy Rd, near B-5, Agraharam, Singanallur, Coimbatore, Tamil Nadu 641005",
-    phone: "0422 259 5963",
-    rating: "4.8 / 5",
+    phone: " +91 422 2595963 / +91 98657 55568",
+    rating: "4.6 / 5",
     mapLink: "https://maps.app.goo.gl/wU12YfiYj1EvpXXC7",
     embed:
       "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3916.5086242707293!2d77.02441938492309!3d11.00041362709464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba8576c74e8408f%3A0x19bc2f89d5bb2136!2sNG%20Hospital%20%26%20Research%20Centre%20%7C%20Best%20multispeciality%20hospital%20in%20Singanallur!5e0!3m2!1sen!2sin!4v1786099516096!5m2!1sen!2sin"
