@@ -12,7 +12,7 @@ function Location() {
     name: "NOARRC – Guest Physiotherapy",
     city: "Chennai",
     address: "373, Poonamallee High Rd, Kilpauk, Chennai, Tamil Nadu",
-    phone: "+91 99403 32902",
+    phone: "+91 6381047727 | +91 7200080275",
     rating: "4.8 / 5",
     mapLink: "https://maps.app.goo.gl/uFinwqksPjXUqWQ28",
     embed:

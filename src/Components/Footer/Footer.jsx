@@ -42,7 +42,8 @@ function Footer() {
         <div className={styles.col}>
           <h3>Contact</h3>
           <p>📍 Chennai, Tamil Nadu</p>
-          <p>📞 +91 99403 32902</p>
+          <p>📞 +91 6381047727</p>
+          <p>📞 +91 7200080275</p>
           <p>✉️ noarrcphysion@gmail.com</p>
 
           <div className={styles.socials}>

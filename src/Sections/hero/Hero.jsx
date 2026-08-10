@@ -162,8 +162,8 @@ Combining expert physiotherapy, robotic rehabilitation, and personalized care he
     {
       icon: "bi bi-telephone-fill",
       label: "Call Us",
-      detail: "+91 99403 32902",
-      action: "tel:+919940332902"
+      detail: "+91 6381047727 | +91 7200080275",
+      action: "tel:+916381047727"
     },
     {
       icon: "bi bi-envelope-fill",
