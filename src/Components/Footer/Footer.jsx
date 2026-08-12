@@ -80,7 +80,7 @@ function Footer() {
           </p>
 
           <p>
-            ✉️ noarrcphysion@gmail.com
+            ✉️  noarrcrehab@gmail.com
           </p>
 
           

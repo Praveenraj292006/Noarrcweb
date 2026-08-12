@@ -169,7 +169,7 @@ Combining expert physiotherapy, advanced robotic rehabilitation, and personalize
     {
       icon: "bi bi-envelope-fill",
       label: "Email Us",
-      detail: "noarrcphysio@gmail.com",
+      detail: "noarrcrehab@gmail.com",
       action: "mailto:noarrcphysio@gmail.com"
     },
     {
