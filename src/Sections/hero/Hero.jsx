@@ -85,7 +85,7 @@ function Hero() {
         <div className={styles.heroLeft}>
 
           <img src={Logo} alt="Noarc Logo" className={styles.Logo} />
-          <p className={styles.tag}>REDFINE LIFE</p>
+          <p className={styles.tag}>REDEFINES LIFE</p>
          
 
           <div className={styles.divider} />
