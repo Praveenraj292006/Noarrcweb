@@ -17,7 +17,7 @@ function ConditionsGrid({ conditions }) {
             Focused Treatment for Complex Conditions
           </h2>
           <p className={styles.sectionSubheading}>
-            Our specialist team is trained to treat a wide range of conditions across the full rehabilitation spectrum.
+            Our Specialized team is trained to treat a wide range of conditions across the full rehabilitation spectrum.
           </p>
         </div>
 

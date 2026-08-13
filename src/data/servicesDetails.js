@@ -61,7 +61,9 @@ import pelvicStrengthImg from '../assets/Conditions/webp_output/pelvicstrength.w
 import postureImg from '../assets/Conditions/webp_output/perfect_posture.webp'
 import pregnancyBackPainImg from '../assets/Conditions/webp_output/pregnancyBackpain.webp'
 import pelvicFloorImg from '../assets/Conditions/webp_output/pelvicfloordysfunction.webp'
-import urinaryIncontinenceImg from '../assets/Conditions/webp_output/UrinaryIncontinence.webp'
+import urinaryIncontinenceImg from '../assets/Conditions/webp_output/urinary inconsitence.webp'
+import PcosImg from '../assets/Conditions/webp_output/Pcos.webp'
+import WomenfitnessImg from '../assets/Conditions/webp_output/WomenFitness.webp'
 import postpartumRecoveryImg from '../assets/Conditions/webp_output/postpartumrecovery.webp'
 import diastasisRectiImg from '../assets/Conditions/webp_output/diastasisrecti.webp'
 import pelvicPainImg from '../assets/Conditions/webp_output/pelvicGirdlepain.webp'
@@ -214,7 +216,7 @@ export const servicesDetails = [
   image: laserimg,
 
   overview:
-    "Our Pain Management program focuses on identifying the root cause of pain and providing evidence-based physiotherapy treatments to reduce discomfort, restore mobility, and improve overall function. Through personalized rehabilitation plans, advanced therapeutic techniques, and patient education, we help individuals recover from both acute and chronic pain conditions.",
+    "Our Pain Management program focuses on identifying the root cause of pain and providing evidence-based physiotherapy treatments to reduce pain, restore mobility, and improve overall function. Through personalized rehabilitation plans, advanced therapeutic techniques, and patient education, we help individuals recover from both acute and chronic pain conditions.",
 
   conditions: [
     {
@@ -261,7 +263,7 @@ export const servicesDetails = [
       description: "Targeted strengthening exercises to prevent recurring pain."
     },
     {
-      stage: "Long-Term Wellness",
+      stage: "Long-lasting Pain Relief",
       description: "Education, posture correction, and lifestyle guidance for lasting pain relief."
     }
   ],
@@ -761,8 +763,12 @@ export const servicesDetails = [
       image: arthritisImg
     },
     {
-      title: "Low Back & Neck Pain",
+      title: "Lower Back Pain",
       image: backPainImg
+    },
+     {
+      title: "Neck Pain",
+      image: neckPainImg
     }
   ],
 
@@ -1027,7 +1033,15 @@ export const servicesDetails = [
     {
       title: "Pelvic Girdle Pain",
       image: pelvicPainImg
-    }
+    },
+    {
+      title: "Polycystic ovary syndrome (PCOS)",
+      image: PcosImg
+    },
+    {
+      title: "Fitness",
+      image: WomenfitnessImg
+    },
   ],
 
   recoveryJourney: [

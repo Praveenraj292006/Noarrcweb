@@ -68,13 +68,13 @@ function About() {
 
           <h2 className={styles.heading}>
             <em> Empowering Every Step Towards Recovery</em> <br />
-            <p>Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results
-            Empowering Every Step Towards Recovery</p>
+            <p> Advanced Robotic Rehabilitation Compassionate Physiotherapy Lasting Results
+            Empowering Every Step Towards Recovery </p>
           </h2>
 
           <div className={styles.body}>
               <p>
-                <strong>NOARRC – Neuro and Ortho Advanced Robotic Rehabilitation Centre</strong>
+                <strong>NOARRC – Neuro and Ortho Advanced Robotic Rehabilitation Centre </strong>
                 is dedicated to helping patients regain mobility, independence, and confidence
                 through evidence-based physiotherapy and advanced rehabilitation technology.
               </p>
