@@ -961,76 +961,147 @@
 /* ══════════════════════════════════════════════════════════
    6. BENEFITS GRID
    ══════════════════════════════════════════════════════════ */
-.benefitsGrid {
+.benefitsBentoGrid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
+  grid-auto-rows: 320px;
+  gap: 20px;
   max-width: 1240px;
-  margin: 0 auto;
+  margin: 40px auto 0;
 }
 
-.benefitCard {
-  background: var(--white);
-  padding: 36px 28px;
-  border-radius: 24px;
-  box-shadow: 0 8px 28px rgba(11, 37, 69, 0.04);
-  border: 1px solid rgba(11, 37, 69, 0.06);
-  transition: all 0.4s var(--ease);
+.benefitBentoCard {
   position: relative;
+  min-height: 320px;
   overflow: hidden;
-  z-index: 1;
+
+  border-radius: 20px;
+
+  background: #0b2545;
+
+  box-shadow: 0 12px 35px rgba(11, 37, 69, 0.10);
+
+  transition:
+    transform 0.4s var(--ease),
+    box-shadow 0.4s var(--ease);
 }
 
-.benefitCard::after {
-  content: '';
+.benefitBentoCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 24px 55px rgba(11, 37, 69, 0.18);
+}
+
+
+/* =========================
+   IMAGE
+========================= */
+
+.benefitImage {
   position: absolute;
-  top: 0; left: 0;
-  width: 100%; height: 4px;
-  background: linear-gradient(90deg, var(--accent), var(--blue));
-  transform: scaleX(0);
-  transform-origin: left;
-  transition: transform 0.4s var(--ease);
-}
 
-.benefitCard:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 24px 56px rgba(11, 37, 69, 0.1);
-}
+  inset: 0;
 
-.benefitCard:hover::after {
-  transform: scaleX(1);
-}
+  width: 100%;
+  height: 100%;
 
-.benefitGhostNum {
-  position: absolute;
-  top: -8px;
-  right: 16px;
-  font-size: 80px;
-  font-family: 'Ubuntu', sans-serif;
-  font-weight: 700;
-  color: rgba(11, 37, 69, 0.03);
-  line-height: 1;
-  user-select: none;
-  transition: color 0.4s var(--ease);
-}
-
-.benefitCard:hover .benefitGhostNum {
-  color: rgba(14, 165, 233, 0.07);
-}
-
-.benefitIcon {
-  font-size: 28px;
   display: block;
-  margin-bottom: 14px;
-  line-height: 1;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  transition:
+    transform 0.6s var(--ease),
+    filter 0.4s ease;
 }
 
-.benefitText {
-  font-size: 16px;
-  font-weight: 600;
-  color: var(--navy);
-  line-height: 1.5;
+.benefitBentoCard:hover .benefitImage {
+  transform: scale(1.05);
+}
+
+
+/* =========================
+   OVERLAY
+========================= */
+
+.benefitOverlay {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  padding: 28px 24px 22px;
+
+  color: white;
+
+  /*
+    Only darken the bottom portion
+    instead of covering the entire image.
+  */
+  background: linear-gradient(
+    to top,
+    rgba(5, 25, 48, 0.90) 0%,
+    rgba(5, 25, 48, 0.68) 35%,
+    rgba(5, 25, 48, 0.15) 75%,
+    transparent 100%
+  );
+}
+
+
+/* =========================
+   NUMBER
+========================= */
+
+.benefitNumber {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  color: rgba(255, 255, 255, 0.75);
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.benefitOverlay h3 {
   margin: 0;
+
+  font-family: var(--ubuntu);
+
+  font-size: clamp(17px, 1.5vw, 22px);
+
+  line-height: 1.2;
+
+  font-weight: 600;
+
+  color: #fff;
+}
+
+
+/* =========================
+   DESCRIPTION
+========================= */
+
+.benefitOverlay p {
+  margin: 8px 0 0;
+
+  max-width: 420px;
+
+  font-size: 12px;
+
+  line-height: 1.55;
+
+  color: rgba(255, 255, 255, 0.82);
 }
 
 /* ══════════════════════════════════════════════════════════

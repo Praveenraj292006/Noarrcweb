@@ -1,6 +1,6 @@
 import womenImg from '../assets/Data/351A4663.avif'
-import orthoImg from '../assets/Data/351A4675.avif'
-import roboticImg from '../assets/Data/351A4737_converted.avif'
+import orthoImg from '../assets/Data/Ortho-rehab.avif'
+import roboticImg from '../assets/Data/Rymo.avif'
 import rehabimg from '../assets/Data/351A4606_converted.avif'
 import sportsimg from '../assets/Data/351A4670_converted.avif'
 import laserimg from '../assets/Data/laser-therapy_converted.avif'
@@ -17,6 +17,7 @@ import VrImg from '../assets/Conditions/webp_output/VrImg.webp'
 import PainImg from '../assets/Conditions/webp_output/PainImg.webp'
 import balanceImg from '../assets/Conditions/webp_output/balance.webp'
 import strengthImg from '../assets/Conditions/webp_output/Increasedstrength.webp'
+import fasterRecoveryoldImg from '../assets/Conditions/webp_output/fasterRecover-old.webp'
 
 import backPainImg from '../assets/Conditions/webp_output/Backpain.webp'
 import neckPainImg from '../assets/Conditions/webp_output/neck pain.webp'
@@ -24,6 +25,7 @@ import shoulderPainImg from '../assets/Conditions/webp_output/Shoulder pain.webp
 import kneePainImg from '../assets/Conditions/webp_output/Kneepain.webp'
 import sciaticaImg from '../assets/Conditions/webp_output/statics.webp'
 import arthritisImg from '../assets/Conditions/webp_output/arthirits.webp'
+import OsteoarthritisImg from '../assets/Conditions/webp_output/osteoarthritis.webp'
 import qualityLifeImg from '../assets/Conditions/webp_output/betterlife.webp'
 
 import aclImg from '../assets/Conditions/webp_output/ACLtear.webp'
@@ -57,10 +59,11 @@ import onetoonecareImg from '../assets/Conditions/webp_output/onetoone.webp'
 import fractureImg from '../assets/Conditions/webp_output/fractureImg.webp'
 import gbsImg from '../assets/Conditions/webp_output/Gbsyndrome.webp'
 import neuropathyImg from '../assets/Conditions/webp_output/neuropathy.webp'
-import pelvicStrengthImg from '../assets/Conditions/webp_output/pelvicstrength.webp'
+import pelvicStrengthImg from '../assets/Conditions/webp_output/Pelivc-Women.webp'
 import postureImg from '../assets/Conditions/webp_output/perfect_posture.webp'
 import pregnancyBackPainImg from '../assets/Conditions/webp_output/pregnancyBackpain.webp'
 import pelvicFloorImg from '../assets/Conditions/webp_output/pelvicfloordysfunction.webp'
+import Womenreducedpain from '../assets/Conditions/webp_output/ReducedPain-Women.webp'
 import urinaryIncontinenceImg from '../assets/Conditions/webp_output/urinary inconsitence.webp'
 import PcosImg from '../assets/Conditions/webp_output/Pcos.webp'
 import WomenfitnessImg from '../assets/Conditions/webp_output/WomenFitness.webp'
@@ -760,7 +763,7 @@ export const servicesDetails = [
     },
     {
       title: "Osteoarthritis",
-      image: arthritisImg
+      image: OsteoarthritisImg
     },
     {
       title: "Lower Back Pain",
@@ -832,7 +835,7 @@ export const servicesDetails = [
     },
     {
       title: "Faster Recovery",
-      image: fasterRecoveryImg,
+      image: fasterRecoveryoldImg,
       description: "Accelerate recovery and safely return to everyday activities and work."
     }
   ],
@@ -1089,7 +1092,7 @@ export const servicesDetails = [
   benefits: [
     {
       title: "Reduced Pain",
-      image: injuryPreventionImg,
+      image: Womenreducedpain,
       description: "Relieve pregnancy-related, pelvic, and musculoskeletal pain."
     },
     {
