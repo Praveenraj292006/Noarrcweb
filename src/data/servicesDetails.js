@@ -4,7 +4,7 @@ import roboticImg from '../assets/Data/Rymo.avif'
 import rehabimg from '../assets/Data/351A4606_converted.avif'
 import sportsimg from '../assets/Data/351A4670_converted.avif'
 import laserimg from '../assets/Data/laser-therapy_converted.avif'
-import neuroImg from '../assets/Data/351A4800.avif'
+import neuroImg from '../assets/Data/neurorehab.webp'
 
 import strokeImg from '../assets/Conditions/webp_output/strokerecovery.webp'
 import parkinsonImg from '../assets/Conditions/webp_output/parkisonsDisease.webp'
@@ -71,6 +71,10 @@ import postpartumRecoveryImg from '../assets/Conditions/webp_output/postpartumre
 import diastasisRectiImg from '../assets/Conditions/webp_output/diastasisrecti.webp'
 import pelvicPainImg from '../assets/Conditions/webp_output/pelvicGirdlepain.webp'
 
+import pediatricrehabimg from '../assets/Conditions/webp_output/Pediatric-Rehab.webp'
+import inpatientrehab from '../assets/Conditions/webp_output/Inpatientrehab.webp'
+import chronicpain from '../assets/Conditions/webp_output/chronicpainrelief.webp'
+
 
 
 
@@ -84,7 +88,7 @@ export const servicesDetails = [
   slug: "inpatient-rehabilitation",
   title: "Inpatient Rehabilitation",
   tagline: "Comprehensive rehabilitation under continuous medical supervision.",
-  image: rehabimg,
+  image: inpatientrehab,
 
   overview:
     "Our Inpatient Rehabilitation program provides intensive physiotherapy and multidisciplinary care for patients recovering from surgery, neurological disorders, trauma, and complex medical conditions. Every rehabilitation plan is personalized to maximize recovery and restore independence.",
@@ -479,7 +483,7 @@ export const servicesDetails = [
   slug: "pediatric-rehabilitation",
   title: "Pediatric Rehabilitation",
   tagline: "Helping children reach their fullest potential through compassionate rehabilitation.",
-  image: rehabimg,
+  image: pediatricrehabimg,
 
   overview:
     "Our Pediatric Rehabilitation program is dedicated to helping infants, children, and adolescents overcome developmental, neurological, orthopedic, and musculoskeletal challenges. Through individualized therapy plans and child-friendly rehabilitation techniques, we support every child's physical development, independence, confidence, and overall quality of life while working closely with parents and caregivers.",
@@ -637,7 +641,7 @@ export const servicesDetails = [
     },
     {
       title: "Chronic Pain Management",
-      image: strokeImg
+      image: chronicpain
     }
   ],
 
@@ -1007,7 +1011,7 @@ export const servicesDetails = [
   slug: "womens-health",
   title: "Women's Health Physiotherapy",
   tagline: "Supporting women's health through every stage of life with compassionate, specialized care.",
-  image: womenImg,
+  image: WomenfitnessImg,
 
   overview:
     "Our Women's Health Physiotherapy program provides specialized rehabilitation for women across every stage of life—from pregnancy and postpartum recovery to menopause and pelvic health. Through evidence-based physiotherapy, personalized treatment plans, and compassionate care, we help women reduce pain, restore function, strengthen the pelvic floor, and improve their overall quality of life.",
