@@ -10,7 +10,7 @@ import AppointmentModal from './Components/AppointmentModal/AppointmentModal.jsx
 
 function PageLoader() {
   return (
-    <div className="flex h-screen w-full items-center justify-center">
+    <div className="flex h-screen w-screen items-center justify-center">
       <div className="h-10 w-10 animate-spin rounded-full border-4 border-teal-500 border-t-transparent" />
     </div>
   );

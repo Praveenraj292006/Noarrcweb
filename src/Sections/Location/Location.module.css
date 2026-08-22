@@ -1,31 +1,101 @@
 /* ===== SECTION ===== */
 .section {
-  padding: 50px ;
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Alice blue */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+
+  padding: 50px;
+  background-image: linear-gradient(
+    to top,
+    #cfd9df 0%,
+    #e2ebf0 100%
+  );
+
+  overflow-x: hidden;
 }
+
 
 /* ===== CONTAINER ===== */
 .container {
+  width: 100%;
   max-width: 1350px;
-  margin: auto;
-  background:white;
-  padding :40px 20px;
+  margin: 0 auto;
+
+  box-sizing: border-box;
+
+  background: white;
+  padding: 40px 20px;
+
   border-radius: 25px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
+  box-shadow:
+    rgba(0, 0, 0, 0.15) 0px 15px 25px,
+    rgba(0, 0, 0, 0.05) 0px 5px 10px;
+
   display: flex;
   gap: 40px;
   align-items: center;
 }
 
+
+/* ===== LOCATIONS GRID ===== */
+.locationsGrid {
+  width: 100%;
+  max-width: 100%;
+
+  display: grid;
+
+  /* IMPORTANT:
+     minmax(0, 1fr) allows cards to shrink */
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 40px;
+
+  box-sizing: border-box;
+}
+
+
+/* ===== LOCATION CARD ===== */
+.locationCard {
+  width: 100%;
+  min-width: 0;
+
+  box-sizing: border-box;
+
+  padding: 20px;
+
+  background: #fff;
+
+  border-radius: 24px;
+
+  overflow: hidden;
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.08);
+
+  transition: 0.35s;
+}
+
+.locationCard:hover {
+  transform: translateY(-8px);
+
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.12);
+}
+
+
 /* ===== DETAILS ===== */
 .details {
+  min-width: 0;
+
   flex: 1;
+
   font-family: "Montserrat", sans-serif;
 }
 
 .details h2 {
   color: #035EA1;
   margin-bottom: 10px;
+
+  overflow-wrap: anywhere;
 }
 
 .address {
@@ -36,19 +106,73 @@
 .details p {
   margin: 6px 0;
   color: #555;
+
+  overflow-wrap: anywhere;
+
+  transition: 0.3s ease;
 }
+
+.details p:hover {
+  transform: translateX(5px);
+}
+
+
+/* ===== CITY BADGE ===== */
+.cityBadge {
+  display: inline-block;
+
+  background: #1E6FBF;
+
+  color: #fff;
+
+  padding: 6px 16px;
+
+  border-radius: 999px;
+
+  margin-bottom: 20px;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+/* ===== ICON STYLING ===== */
+.details i {
+  color: #035EA1;
+
+  margin-right: 8px;
+
+  font-size: 16px;
+}
+
+
+/* ===== HEADER ICON ===== */
+.details h2 i {
+  font-size: 20px;
+}
+
 
 /* ===== BUTTON ===== */
 .mapBtn {
-  display: inline-block;
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 6px;
+
   margin-top: 15px;
+
   padding: 10px 20px;
 
   background: #035EA1;
+
   color: white;
+
   border-radius: 6px;
 
   text-decoration: none;
+
   font-size: 14px;
 
   transition: 0.3s ease;
@@ -58,129 +182,64 @@
   background: #024a80;
 }
 
-/* ===== MAP ===== */
-.mapsection {
-  flex: 1;
+.mapBtn i {
+  margin-right: 0;
 }
 
-.map {
+
+/* ===== MAP SECTION ===== */
+.mapsection {
   width: 100%;
-  height: 350px;
+  min-width: 0;
+
+  flex: 1;
+
+  overflow: hidden;
+}
+
+
+/* ===== MAP ===== */
+.map {
+  display: block;
+
+  width: 100%;
+  max-width: 100%;
+
+  height: 320px;
+
   border: none;
+
   border-radius: 15px;
 
-  box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-}
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
 
-
-.locationsGrid{
-
-    display:grid;
-
-    grid-template-columns:repeat(auto-fit,minmax(520px,1fr));
-
-    gap:40px;
-
-    width:100%;
-}
-
-.locationCard{
-  padding: 20px;
-
-    background:#fff;
-
-    border-radius:24px;
-
-    overflow:hidden;
-
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
-
-    transition:.35s;
-}
-
-.locationCard:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:0 25px 60px rgba(0,0,0,.12);
-
-}
-
-.cityBadge{
-
-    display:inline-block;
-
-    background:#1E6FBF;
-
-    color:#fff;
-
-    padding:6px 16px;
-
-    border-radius:999px;
-
-    margin-bottom:20px;
-
-    font-size:13px;
-
-    font-weight:600;
-}
-
-.map{
-
-    width:100%;
-
-    height:320px;
-
-    border:none;
-}
-
-
-/* ===== ICON STYLING ===== */
-.details i {
-  color: #035EA1;
-  margin-right: 8px;
-  font-size: 16px;
-}
-
-/* HEADER ICON */
-.details h2 i {
-  font-size: 20px;
-}
-
-/* ===== BUTTON ICON ===== */
-.mapBtn i {
-  margin-right: 6px;
-}
-
-/* ===== HOVER EFFECT ===== */
-.details p {
   transition: 0.3s ease;
-}
 
-.details p:hover {
-  transform: translateX(5px);
-}
-
-/* ===== MAP HOVER ===== */
-.map {
-  transition: 0.3s ease;
+  box-sizing: border-box;
 }
 
 .map:hover {
   transform: scale(1.02);
 }
 
-/* ===== BUTTON HOVER ===== */
-.mapBtn {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-}
 
-/* ===== TABLET ===== */
+/* =====================================================
+   TABLET
+   ===================================================== */
+
 @media (max-width: 900px) {
-  .container {
-    flex-direction: column;
+
+  .section {
+    padding: 40px 25px;
+  }
+
+  .locationsGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .locationCard {
+    width: 100%;
   }
 
   .map {
@@ -188,23 +247,100 @@
   }
 }
 
-/* ===== MOBILE ===== */
+
+/* =====================================================
+   MOBILE
+   ===================================================== */
+
 @media (max-width: 600px) {
 
   .section {
+    width: 100%;
+    max-width: 100%;
+
     padding: 40px 15px;
+
+    box-sizing: border-box;
+  }
+
+  .locationsGrid {
+    width: 100%;
+    max-width: 100%;
+
+    grid-template-columns: minmax(0, 1fr);
+
+    gap: 25px;
+  }
+
+  .locationCard {
+    width: 100%;
+    min-width: 0;
+
+    padding: 18px;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
   }
 
   .details {
+    width: 100%;
+    min-width: 0;
+
     text-align: center;
+  }
+
+  .details h2 {
+    font-size: 20px;
+  }
+
+  .details p {
+    font-size: 14px;
+
+    overflow-wrap: anywhere;
   }
 
   .mapBtn {
     width: 100%;
+
+    box-sizing: border-box;
+
     text-align: center;
   }
 
+  .mapsection {
+    width: 100%;
+    min-width: 0;
+  }
+
   .map {
+    width: 100%;
+    max-width: 100%;
+
     height: 250px;
+  }
+}
+
+
+/* =====================================================
+   VERY SMALL PHONES
+   ===================================================== */
+
+@media (max-width: 400px) {
+
+  .section {
+    padding: 30px 10px;
+  }
+
+  .locationCard {
+    padding: 15px;
+  }
+
+  .details h2 {
+    font-size: 18px;
+  }
+
+  .map {
+    height: 220px;
   }
 }

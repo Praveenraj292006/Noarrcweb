@@ -6,6 +6,8 @@ import sportsimg from '../assets/Data/351A4670_converted.avif'
 import laserimg from '../assets/Data/laser-therapy_converted.avif'
 import neuroImg from '../assets/Data/neurorehab.webp'
 
+import betterlifewomen from '../assets/Conditions/webp_output/betterlife-women.webp'
+
 import strokeImg from '../assets/Conditions/webp_output/strokerecovery.webp'
 import parkinsonImg from '../assets/Conditions/webp_output/parkisonsDisease.webp'
 import SpinalCord from '../assets/Conditions/webp_output/SpinecordImg.webp'
@@ -1111,7 +1113,7 @@ export const servicesDetails = [
     },
     {
       title: "Enhanced Quality of Life",
-      image: qualityLifeImg,
+      image: betterlifewomen,
       description: "Increase confidence, independence, and overall well-being."
     }
   ],

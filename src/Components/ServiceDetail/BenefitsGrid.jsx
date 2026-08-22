@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "../../Pages/ServicePage/ServicePage.module.css";
+import styles from "./Css/BenefitsGrid.module.css";
 
 function BenefitsGrid({ benefits }) {
   if (!benefits || benefits.length === 0) return null;
