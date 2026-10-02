@@ -38,7 +38,7 @@ function ContactForm() {
    const message = `Hello ${name}, thank you for contacting NOARRC. We have received your enquiry regarding ${service}. Our team will review your request and get in touch with you shortly.`
 
     window.open(
-      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+      `https://wa.me/917200080275?text=${encodeURIComponent(message)}`,
       '_blank'
     )
 
