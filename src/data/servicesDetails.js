@@ -60,7 +60,7 @@ import onetoonecareImg from '../assets/Conditions/webp_output/onetoone.webp'
 
 import fractureImg from '../assets/Conditions/webp_output/fractureImg.webp'
 import gbsImg from '../assets/Conditions/webp_output/Gbsyndrome.webp'
-import NeuropathyImg from '../assets/Conditions/webp_output/Neuropathy.webp'
+import NeuropathyImg from '../assets/Conditions/webp_output/neuropathy.webp'
 import pelvicStrengthImg from '../assets/Conditions/webp_output/Pelivc-Women.webp'
 import postureImg from '../assets/Conditions/webp_output/perfect_posture.webp'
 import pregnancyBackPainImg from '../assets/Conditions/webp_output/pregnancyBackpain.webp'
