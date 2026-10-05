@@ -1,5 +1,5 @@
 import React from 'react'
-import styles from './RecoveryTimeline.module.css'
+import styles from './recoveryTimeline.module.css'
 
 function RecoveryTimeline({ recoveryJourney }) {
   if (!recoveryJourney || recoveryJourney.length === 0) return null
