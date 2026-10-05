@@ -4,7 +4,7 @@ import roboticImg from '../assets/Data/Rymo.avif'
 
 import sportsimg from '../assets/Data/351A4670_converted.avif'
 import laserimg from '../assets/Data/laser-therapy_converted.avif'
-import NeuroImg from '../assets/Data/Neurorehab.webp'
+import NeuroImg from '../assets/Data/neurorehab.webp'
 
 import betterlifewomen from '../assets/Conditions/webp_output/betterlife-women.webp'
 
