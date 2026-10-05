@@ -84,9 +84,10 @@ function Hero() {
         {/* LEFT */}
         <div className={styles.heroLeft}>
 
+        <div className={styles.logotag}>
           <img src={Logo} alt="Noarc Logo" className={styles.Logo} />
-          <p className={styles.tag}>REDEFINES LIFE</p>
-         
+          <p className={styles.tag}>--REDEFINES LIFE</p>
+         </div>
 
           <div className={styles.divider} />
 
