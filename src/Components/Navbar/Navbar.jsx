@@ -18,7 +18,7 @@ function Navbar() {
   {
     title: "Rehabilitation Services",
     children: [
-      { name: "Neurological Rehabilitation", slug: "neurological-rehabilitation" },
+      { name: "Neuro Rehabilitation", slug: "neurological-rehabilitation" },
       { name: "Orthopedic Rehabilitation", slug: "orthopedic-rehabilitation" },
       { name: "Women's Health", slug: "womens-health" },
       { name: "Robotic Physiotherapy", slug: "robotic-physiotherapy" },

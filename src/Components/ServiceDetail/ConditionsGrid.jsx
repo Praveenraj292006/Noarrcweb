@@ -12,7 +12,7 @@ function ConditionsGrid({ conditions }) {
       <div className={styles.sectionInner}>
 
         <div className={styles.headingCenter}>
-          <span className={styles.sectionTag}>CONDITIONS WE TREAT</span>
+          <span className={styles.sectionTag}>CONDITIONS WE ADDRESS</span>
           <h2 id="conditions-heading" className={styles.sectionHeading}>
             Focused Treatment for Complex Conditions
           </h2>

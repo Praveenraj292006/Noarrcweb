@@ -1,10 +1,10 @@
-import womenImg from '../assets/Data/351A4663.avif'
+
 import orthoImg from '../assets/Data/Ortho-rehab.avif'
 import roboticImg from '../assets/Data/Rymo.avif'
-import rehabimg from '../assets/Data/351A4606_converted.avif'
+
 import sportsimg from '../assets/Data/351A4670_converted.avif'
 import laserimg from '../assets/Data/laser-therapy_converted.avif'
-import neuroImg from '../assets/Data/neurorehab.webp'
+import NeuroImg from '../assets/Data/Neurorehab.webp'
 
 import betterlifewomen from '../assets/Conditions/webp_output/betterlife-women.webp'
 
@@ -49,7 +49,7 @@ import spinaBifidaImg from '../assets/Conditions/webp_output/spinebifidia.webp'
 import torticollisImg from '../assets/Conditions/webp_output/Torticollis.webp'
 import childDevelopmentImg from '../assets/Conditions/webp_output/childdevelopment.webp'
 import independenceImg from '../assets/Conditions/webp_output/independence.webp'
-import motorSkillsImg from '../assets/Conditions/webp_output/motorSkills.webp'
+
 
 import homeStrokeImg from '../assets/Conditions/webp_output/homestroke.webp'
 import jointReplacementImg from '../assets/Conditions/webp_output/Jointreplacement.webp'
@@ -60,7 +60,7 @@ import onetoonecareImg from '../assets/Conditions/webp_output/onetoone.webp'
 
 import fractureImg from '../assets/Conditions/webp_output/fractureImg.webp'
 import gbsImg from '../assets/Conditions/webp_output/Gbsyndrome.webp'
-import neuropathyImg from '../assets/Conditions/webp_output/neuropathy.webp'
+import NeuropathyImg from '../assets/Conditions/webp_output/Neuropathy.webp'
 import pelvicStrengthImg from '../assets/Conditions/webp_output/Pelivc-Women.webp'
 import postureImg from '../assets/Conditions/webp_output/perfect_posture.webp'
 import pregnancyBackPainImg from '../assets/Conditions/webp_output/pregnancyBackpain.webp'
@@ -78,6 +78,18 @@ import inpatientrehab from '../assets/Conditions/webp_output/Inpatientrehab.webp
 import chronicpain from '../assets/Conditions/webp_output/chronicpainrelief.webp'
 
 
+import pediaMobility from '../assets/Conditions/webp_output/greater-mobility-pedia.webp'
+import pediaBalance from '../assets/Conditions/webp_output/Balance and Coord.webp'
+import pediaIndepence from '../assets/Conditions/webp_output/greater-Independence.webp'
+
+import balaceInpatient from '../assets/Conditions/webp_output/balance-Inpatient.webp'
+import mobilityinpatient from '../assets/Conditions/webp_output/mobility-Inpatient.webp'
+import painInpatient from '../assets/Conditions/webp_output/reducedpain-Inpatient.webp'
+import strengthInpatient from '../assets/Conditions/webp_output/strength-Inpatinent.webp'
+
+
+
+
 
 
 
@@ -93,7 +105,7 @@ export const servicesDetails = [
   image: inpatientrehab,
 
   overview:
-    "Our Inpatient Rehabilitation program provides intensive physiotherapy and multidisciplinary care for patients recovering from surgery, neurological disorders, trauma, and complex medical conditions. Every rehabilitation plan is personalized to maximize recovery and restore independence.",
+    "Our Inpatient Rehabilitation program provides intensive physiotherapy and multidisciplinary care for patients recovering from surgery, Neuro disorders, trauma, and complex medical conditions. Every rehabilitation plan is personalized to maximize recovery and restore independence.",
 
   conditions: [
   {
@@ -171,21 +183,21 @@ export const servicesDetails = [
   benefits: [
     {
     title: "Improved Mobility",
-    image: mobility,
+    image: mobilityinpatient,
     description: "Move freely and confidently with better joint function."
   },{
     title: "Reduced Pain",
-    image: PainImg,
+    image: painInpatient,
     description: "Evidence-based treatment to relieve acute and chronic pain."
   },
   {
     title: "Better Balance",
-    image: balanceImg,
+    image: balaceInpatient,
     description: "Reduce the risk of falls through balance retraining."
   },
    {
     title: "Enhanced Strength",
-    image: strengthImg,
+    image: strengthInpatient,
     description: "Progressive strengthening for everyday activities."
   },
 
@@ -197,7 +209,7 @@ export const servicesDetails = [
   {
     question: "Who needs inpatient rehabilitation?",
     answer:
-      "Inpatient rehabilitation is recommended for individuals recovering from stroke, spinal cord injuries, traumatic brain injuries, major orthopedic surgeries, neurological disorders, or any condition requiring intensive, multidisciplinary rehabilitation under continuous medical supervision."
+      "Inpatient rehabilitation is recommended for individuals recovering from stroke, spinal cord injuries, traumatic brain injuries, major orthopedic surgeries, Neuro disorders, or any condition requiring intensive, multidisciplinary rehabilitation under continuous medical supervision."
   },
   {
     question: "How long does an inpatient rehabilitation program last?",
@@ -207,7 +219,7 @@ export const servicesDetails = [
   {
     question: "What therapies are included during inpatient rehabilitation?",
     answer:
-      "Our inpatient rehabilitation program combines physiotherapy, occupational therapy, speech and swallowing therapy, neurological rehabilitation, pain management, mobility training, and personalized exercise programs to maximize recovery."
+      "Our inpatient rehabilitation program combines physiotherapy, occupational therapy, speech and swallowing therapy, Neuro rehabilitation, pain management, mobility training, and personalized exercise programs to maximize recovery."
   },
   {
     question: "Will I receive therapy every day?",
@@ -303,7 +315,7 @@ export const servicesDetails = [
       description: "Reduce acute and chronic pain using evidence-based physiotherapy treatments."
     },
     {
-      title: "Improved Mobility",
+      title: "Pain-free Mobility",
       image: mobility,
       description: "Restore comfortable movement and improve joint flexibility."
     },
@@ -353,7 +365,7 @@ export const servicesDetails = [
 {
   slug: "sports-therapy",
   title: "Sports & Fitness Therapy",
-  tagline: "Helping athletes recover faster, perform better, and prevent future injuries.",
+  tagline: "Helping  recover faster, perform better, and prevent future injuries.",
   image: sportsimg,
 
   overview:
@@ -488,7 +500,7 @@ export const servicesDetails = [
   image: pediatricrehabimg,
 
   overview:
-    "Our Pediatric Rehabilitation program is dedicated to helping infants, children, and adolescents overcome developmental, neurological, orthopedic, and musculoskeletal challenges. Through individualized therapy plans and child-friendly rehabilitation techniques, we support every child's physical development, independence, confidence, and overall quality of life while working closely with parents and caregivers.",
+    "Our Pediatric Rehabilitation program is dedicated to helping infants, children, and adolescents overcome developmental, Neuro, orthopedic, and musculoskeletal challenges. Through individualized therapy plans and child-friendly rehabilitation techniques, we support every child's physical development, independence, confidence, and overall quality of life while working closely with parents and caregivers.",
 
   conditions: [
     {
@@ -562,17 +574,17 @@ export const servicesDetails = [
   benefits: [
     {
       title: "Improved Motor Skills",
-      image: motorSkillsImg,
+      image: pediaMobility,
       description: "Enhances gross and fine motor abilities to support everyday activities."
     },
     {
       title: "Better Balance & Coordination",
-      image: balanceImg,
+      image: pediaBalance,
       description: "Improves posture, stability, and body coordination through structured rehabilitation."
     },
     {
       title: "Greater Independence",
-      image: independenceImg,
+      image: pediaIndepence,
       description: "Helps children become more confident and independent in daily activities."
     },
     {
@@ -586,7 +598,7 @@ export const servicesDetails = [
     {
       question: "Which children can benefit from pediatric rehabilitation?",
       answer:
-        "Children with developmental delays, neurological conditions, orthopedic disorders, congenital conditions, or movement difficulties can benefit from pediatric rehabilitation."
+        "Children with developmental delays, Neuro conditions, orthopedic disorders, congenital conditions, or movement difficulties can benefit from pediatric rehabilitation."
     },
     {
       question: "At what age can my child start physiotherapy?",
@@ -618,7 +630,7 @@ export const servicesDetails = [
   image: homeCareImg,
 
   overview:
-    "Our Home Care Physiotherapy service brings professional rehabilitation directly to your doorstep, allowing patients to receive high-quality physiotherapy in a familiar and comfortable environment. Whether recovering from surgery, managing a neurological condition, or requiring long-term rehabilitation, our experienced physiotherapists provide personalized treatment plans designed to restore mobility, reduce pain, and improve independence without the need to travel.",
+    "Our Home Care Physiotherapy service brings professional rehabilitation directly to your doorstep, allowing patients to receive high-quality physiotherapy in a familiar and comfortable environment. Whether recovering from surgery, managing a Neuro condition, or requiring long-term rehabilitation, our experienced physiotherapists provide personalized treatment plans designed to restore mobility, reduce pain, and improve independence without the need to travel.",
 
   conditions: [
     {
@@ -716,12 +728,12 @@ export const servicesDetails = [
     {
       question: "Who can benefit from Home Care Physiotherapy?",
       answer:
-        "Home Care Physiotherapy is ideal for elderly individuals, post-surgical patients, stroke survivors, neurological patients, and anyone with limited mobility who finds it difficult to travel to a clinic."
+        "Home Care Physiotherapy is ideal for elderly individuals, post-surgical patients, stroke survivors, Neuro patients, and anyone with limited mobility who finds it difficult to travel to a clinic."
     },
     {
       question: "What conditions can be treated at home?",
       answer:
-        "Our physiotherapists provide rehabilitation for neurological disorders, orthopedic conditions, post-operative recovery, chronic pain, balance disorders, mobility limitations, and age-related functional decline."
+        "Our physiotherapists provide rehabilitation for Neuro disorders, orthopedic conditions, post-operative recovery, chronic pain, balance disorders, mobility limitations, and age-related functional decline."
     },
     {
       question: "Do I need special equipment at home?",
@@ -760,7 +772,7 @@ export const servicesDetails = [
       image: fractureImg
     },
     {
-      title: "Ligament Injuries",
+      title: "Ligament and Soft tissue Injuries",
       image: runnersKneeImg
     },
     {
@@ -778,6 +790,9 @@ export const servicesDetails = [
      {
       title: "Neck Pain",
       image: neckPainImg
+    },
+    {title:"Rheumatoid arthritis",
+      image: arthritisImg
     }
   ],
 
@@ -877,12 +892,12 @@ export const servicesDetails = [
 
 {
   slug: "neurological-rehabilitation",
-  title: "Neurological Rehabilitation",
-  tagline: "Restoring movement, independence, and confidence through specialized neurological rehabilitation.",
-  image: neuroImg,
+  title: "Neuro Rehabilitation",
+  tagline: "Restoring movement, independence, and confidence through specialized Neuro rehabilitation.",
+  image: NeuroImg,
 
   overview:
-    "Our Advanced Neurological Rehabilitation program is designed to support individuals recovering from diseases, injuries, and disorders affecting the nervous system. Through evidence-based physiotherapy, personalized rehabilitation plans, and compassionate care, we help patients restore function, improve mobility, maximize independence, and enhance their overall quality of life.",
+    "Our Advanced Neuro Rehabilitation program is designed to support individuals recovering from diseases, injuries, and disorders affecting the nervous system. Through evidence-based physiotherapy, personalized rehabilitation plans, and compassionate care, we help patients restore function, improve mobility, maximize independence, and enhance their overall quality of life.",
 
   conditions: [
     {
@@ -910,15 +925,15 @@ export const servicesDetails = [
       image: gbsImg
     },
     {
-      title: "Neuropathy",
-      image: neuropathyImg
+      title: "Peripheral neuropathy",
+      image: NeuropathyImg
     }
   ],
 
   recoveryJourney: [
     {
       stage: "Comprehensive Assessment",
-      description: "Detailed neurological evaluation to understand functional limitations, mobility, balance, strength, and rehabilitation goals."
+      description: "Detailed Neuro evaluation to understand functional limitations, mobility, balance, strength, and rehabilitation goals."
     },
     {
       stage: "Early Rehabilitation",
@@ -940,16 +955,16 @@ export const servicesDetails = [
 
   procedure: [
     {
-      step: "Neurological Evaluation",
+      step: "Neuro Evaluation",
       desc: "Comprehensive assessment of movement, muscle tone, coordination, balance, posture, and functional abilities."
     },
     {
       step: "Personalized Rehabilitation Plan",
-      desc: "Individualized treatment goals are developed according to the patient's neurological condition and recovery potential."
+      desc: "Individualized treatment goals are developed according to the patient's Neuro condition and recovery potential."
     },
     {
       step: "Specialized Therapy Sessions",
-      desc: "Treatment includes gait training, balance exercises, functional mobility training, strengthening, coordination exercises, and neurological physiotherapy."
+      desc: "Treatment includes gait training, balance exercises, functional mobility training, strengthening, coordination exercises, and Neuro physiotherapy."
     },
     {
       step: "Continuous Progress Monitoring",
@@ -982,22 +997,22 @@ export const servicesDetails = [
 
   faq: [
     {
-      question: "Who can benefit from Neurological Rehabilitation?",
+      question: "Who can benefit from Neuro Rehabilitation?",
       answer:
-        "Patients recovering from stroke, spinal cord injuries, traumatic brain injuries, Parkinson's disease, Multiple Sclerosis, Guillain-Barré Syndrome, neuropathy, and other neurological disorders can benefit from neurological rehabilitation."
+        "Patients recovering from stroke, spinal cord injuries, traumatic brain injuries, Parkinson's disease, Multiple Sclerosis, Guillain-Barré Syndrome, Peripheral neuropathy, and other Neuro disorders can benefit from Neuro rehabilitation."
     },
     {
-      question: "When should neurological rehabilitation begin?",
+      question: "When should Neuro rehabilitation begin?",
       answer:
         "Rehabilitation should begin as early as medically possible. Early intervention helps maximize recovery, reduce complications, and improve long-term outcomes."
     },
     {
-      question: "How long does neurological rehabilitation take?",
+      question: "How long does Neuro rehabilitation take?",
       answer:
-        "The duration varies depending on the neurological condition, severity of impairment, and individual recovery goals. Progress is regularly assessed and treatment plans are adjusted accordingly."
+        "The duration varies depending on the Neuro condition, severity of impairment, and individual recovery goals. Progress is regularly assessed and treatment plans are adjusted accordingly."
     },
     {
-      question: "Can neurological rehabilitation improve independence?",
+      question: "Can Neuro rehabilitation improve independence?",
       answer:
         "Yes. Our rehabilitation programs focus on improving mobility, balance, coordination, strength, and daily living skills to help patients achieve the highest possible level of independence."
     },
@@ -1149,7 +1164,7 @@ export const servicesDetails = [
   image: roboticImg,
 
   overview:
-    "Our Robotic Physiotherapy program combines advanced robotic rehabilitation technology with expert physiotherapy to help patients recover from neurological and orthopedic conditions. Robotic-assisted therapy provides highly repetitive, precise, and task-oriented movements that improve mobility, balance, coordination, strength, and independence while accelerating recovery.",
+    "Our Robotic Physiotherapy program combines advanced robotic rehabilitation technology with expert physiotherapy to help patients recover from Neuro and orthopedic conditions. Robotic-assisted therapy provides highly repetitive, precise, and task-oriented movements that improve mobility, balance, coordination, strength, and independence while accelerating recovery.",
 
   conditions: [
     {
@@ -1181,7 +1196,7 @@ export const servicesDetails = [
   recoveryJourney: [
     {
       stage: "Clinical Assessment",
-      description: "Comprehensive evaluation of neurological function, mobility, balance, strength, and gait."
+      description: "Comprehensive evaluation of Neuro function, mobility, balance, strength, and gait."
     },
     {
       stage: "Robotic Therapy Planning",
@@ -1250,7 +1265,7 @@ export const servicesDetails = [
     },
     {
       question: "Who can benefit from robotic rehabilitation?",
-      answer: "Patients recovering from stroke, spinal cord injury, Parkinson's disease, traumatic brain injury, orthopedic surgeries, and other neurological or musculoskeletal conditions may benefit from robotic rehabilitation."
+      answer: "Patients recovering from stroke, spinal cord injury, Parkinson's disease, traumatic brain injury, orthopedic surgeries, and other Neuro or musculoskeletal conditions may benefit from robotic rehabilitation."
     },
     {
       question: "Is robotic therapy painful?",

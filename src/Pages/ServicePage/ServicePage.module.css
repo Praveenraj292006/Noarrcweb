@@ -386,156 +386,450 @@
 }
 
 /* ══════════════════════════════════════════════════════════
-   4. RECOVERY TIMELINE
+   RECOVERY JOURNEY — PREMIUM HOMEPAGE GRID
    ══════════════════════════════════════════════════════════ */
+
 .timeline {
-  position: relative;
-  max-width: 1080px;
-  margin: 0 auto;
-  padding: 0 60px;
-}
-
-.timelineSpine {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(
-    180deg,
-    transparent 0%,
-    var(--alice-deep) 8%,
-    var(--alice-deep) 92%,
-    transparent 100%
-  );
-}
-
-.timelineRow {
   display: grid;
-  grid-template-columns: 1fr 80px 1fr;
-  align-items: center;
-  gap: 0;
-  margin-bottom: 48px;
-  position: relative;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+  
+
+  max-width: 1240px;
+  margin: 52px auto 0;
 }
 
-.timelineRow:last-child {
-  margin-bottom: 0;
-}
 
-/* Left-side card */
-.timelineRowLeft .timelineCard {
-  grid-column: 1;
-  grid-row: 1;
-  text-align: right;
-}
+/* ══════════════════════════════════════════════════════════
+   CARD
+   ══════════════════════════════════════════════════════════ */
 
-.timelineRowLeft .timelineNodeWrap {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.timelineRowLeft .timelineSpacer {
-  grid-column: 3;
-  grid-row: 1;
-}
-
-/* Right-side card */
-.timelineRowRight .timelineSpacer {
-  grid-column: 1;
-  grid-row: 1;
-}
-
-.timelineRowRight .timelineNodeWrap {
-  grid-column: 2;
-  grid-row: 1;
-}
-
-.timelineRowRight .timelineCard {
-  grid-column: 3;
-  grid-row: 1;
-  text-align: left;
-}
-
-/* Card */
 .timelineCard {
-  background: var(--white);
-  border-radius: 24px;
-  padding: 36px 32px;
-  border: 1px solid rgba(11, 37, 69, 0.07);
-  box-shadow: 0 8px 30px rgba(11, 37, 69, 0.05);
-  transition: all 0.35s var(--ease);
   position: relative;
+
+  min-height: 330px;
+  padding: 34px 32px 28px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(255, 255, 255, 0.98),
+      rgba(248, 251, 253, 0.96)
+    );
+
+  border: 1px solid rgba(11, 37, 69, 0.08);
+  border-radius: 26px;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+
+  box-shadow:
+    0 8px 30px rgba(11, 37, 69, 0.045),
+    0 1px 2px rgba(11, 37, 69, 0.04);
+
+  transition:
+    transform 0.45s var(--ease),
+    box-shadow 0.45s var(--ease),
+    border-color 0.45s var(--ease);
+
+  isolation: isolate;
 }
+
+
+/* Soft glow behind card */
+
+.timelineCard::before {
+  content: '';
+
+  position: absolute;
+  width: 220px;
+  height: 220px;
+
+  top: -120px;
+  right: -100px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(14, 165, 233, 0.16),
+      transparent 70%
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.45s ease;
+
+  pointer-events: none;
+
+  z-index: -1;
+}
+
+
+/* Bottom gradient line */
+
+.timelineCard::after {
+  content: '';
+
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 3px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      var(--blue)
+    );
+
+  transform: scaleX(0);
+  transform-origin: left;
+
+  transition: transform 0.45s var(--ease);
+}
+
+
+/* Hover */
 
 .timelineCard:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 50px rgba(11, 37, 69, 0.1);
-  border-color: rgba(14, 165, 233, 0.2);
+  transform: translateY(-10px);
+
+  border-color:
+    rgba(14, 165, 233, 0.25);
+
+  box-shadow:
+    0 25px 55px rgba(11, 37, 69, 0.10),
+    0 8px 20px rgba(14, 165, 233, 0.06);
 }
+
+.timelineCard:hover::before {
+  opacity: 1;
+}
+
+.timelineCard:hover::after {
+  transform: scaleX(1);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   LARGE BACKGROUND NUMBER
+   ══════════════════════════════════════════════════════════ */
 
 .timelineStageNum {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 2px;
-  color: var(--accent);
-  margin-bottom: 8px;
-  text-transform: uppercase;
+  position: absolute;
+
+  top: 12px;
+  right: 22px;
+
   font-family: 'Ubuntu', sans-serif;
-}
 
-.timelineEmoji {
-  font-size: 32px;
-  display: block;
-  margin-bottom: 12px;
-  line-height: 1;
-}
-
-.timelineRowLeft .timelineEmoji {
-  text-align: right;
-}
-
-.timelineStageTitle {
-  font-size: 20px;
-  color: var(--navy);
-  margin-bottom: 10px;
+  font-size: 86px;
   font-weight: 700;
+
+  line-height: 1;
+
+  color: rgba(11, 37, 69, 0.035);
+
+  user-select: none;
+  pointer-events: none;
+
+  transition:
+    color 0.45s ease,
+    transform 0.45s ease;
 }
 
-.timelineDesc {
-  font-size: 15px;
-  line-height: 1.7;
-  color: var(--text-soft);
-  margin: 0;
+.timelineCard:hover .timelineStageNum {
+  color: rgba(14, 165, 233, 0.075);
+  transform: translateY(-4px);
 }
 
-/* Node (centre dot) */
-.timelineNodeWrap {
+
+/* ══════════════════════════════════════════════════════════
+   TOP SECTION
+   ══════════════════════════════════════════════════════════ */
+
+.timelineTop {
   display: flex;
   align-items: center;
-  justify-content: center;
+  gap: 16px;
+
   position: relative;
   z-index: 2;
 }
 
-.timelineNode {
-  width: 20px;
-  height: 20px;
+
+/* ══════════════════════════════════════════════════════════
+   ICON
+   ══════════════════════════════════════════════════════════ */
+
+.timelineIcon {
+  width: 58px;
+  height: 58px;
+
+  flex-shrink: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 17px;
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 165, 233, 0.12),
+      rgba(14, 165, 233, 0.045)
+    );
+
+  border: 1px solid rgba(14, 165, 233, 0.10);
+
+  font-size: 27px;
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.8);
+
+  transition:
+    transform 0.4s var(--ease),
+    background 0.4s ease;
+}
+
+.timelineCard:hover .timelineIcon {
+  transform: scale(1.08) rotate(-3deg);
+
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 165, 233, 0.18),
+      rgba(14, 165, 233, 0.07)
+    );
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   STAGE LABEL
+   ══════════════════════════════════════════════════════════ */
+
+.timelineStage {
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 0.16em;
+
+  color: var(--blue);
+
+  text-transform: uppercase;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   ACCENT
+   ══════════════════════════════════════════════════════════ */
+
+.timelineAccent {
+  width: 42px;
+  height: 3px;
+
+  margin-top: 26px;
+  margin-bottom: 22px;
+
+  border-radius: 10px;
+
+  background:
+    linear-gradient(
+      90deg,
+      var(--accent),
+      var(--blue)
+    );
+
+  transition:
+    width 0.4s var(--ease);
+}
+
+.timelineCard:hover .timelineAccent {
+  width: 64px;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   TITLE
+   ══════════════════════════════════════════════════════════ */
+
+.timelineStageTitle {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 13px;
+
+  font-size: 23px;
+  line-height: 1.25;
+
+  color: var(--navy);
+
+  letter-spacing: -0.02em;
+
+  transition: color 0.3s ease;
+}
+
+.timelineCard:hover .timelineStageTitle {
+  color: var(--blue);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   DESCRIPTION
+   ══════════════════════════════════════════════════════════ */
+
+.timelineDesc {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  max-width: 330px;
+
+  font-size: 15px;
+  line-height: 1.75;
+
+  color: var(--text-soft);
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   BOTTOM
+   ══════════════════════════════════════════════════════════ */
+
+.timelineBottom {
+  margin-top: auto;
+  padding-top: 25px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+
+  color: rgba(11, 37, 69, 0.40);
+}
+
+.timelineArrow {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
   border-radius: 50%;
-  background: var(--white);
-  border: 3px solid var(--accent);
-  box-shadow: 0 0 0 6px var(--accent-soft);
-  transition: all 0.3s var(--ease);
+
+  background: rgba(11, 37, 69, 0.045);
+
+  font-size: 15px;
+
+  color: var(--navy);
+
+  transition:
+    transform 0.4s var(--ease),
+    background 0.4s ease,
+    color 0.4s ease;
 }
 
-.timelineRow:hover .timelineNode {
-  background: var(--accent);
-  box-shadow: 0 0 0 8px rgba(14, 165, 233, 0.15);
+.timelineCard:hover .timelineArrow {
+  transform: translate(3px, -3px);
+
+  background: var(--blue);
+  color: var(--white);
 }
 
-.timelineSpacer {
-  /* empty visual spacer */
+
+/* ══════════════════════════════════════════════════════════
+   FEATURED CARD
+   ══════════════════════════════════════════════════════════ */
+
+.timelineCardHighlight {
+  background:
+    linear-gradient(
+      145deg,
+      #ffffff 0%,
+      #f4fbff 100%
+    );
+
+  border-color:
+    rgba(14, 165, 233, 0.16);
+
+  box-shadow:
+    0 12px 38px rgba(14, 165, 233, 0.08);
+}
+
+.timelineCardHighlight .timelineStage {
+  color: var(--accent);
+}
+
+.timelineCardHighlight::before {
+  opacity: 0.45;
+}
+
+.timelineCardHighlight .timelineIcon {
+  background:
+    linear-gradient(
+      145deg,
+      rgba(14, 165, 233, 0.18),
+      rgba(14, 165, 233, 0.06)
+    );
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   TABLET
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 1000px) {
+
+  .timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   MOBILE
+   ══════════════════════════════════════════════════════════ */
+
+@media (max-width: 650px) {
+
+  .timeline {
+    grid-template-columns: 1fr;
+    gap: 18px;
+
+    margin-top: 36px;
+  }
+
+  .timelineCard {
+    min-height: 300px;
+    padding: 30px 26px 25px;
+  }
+
+  .timelineStageNum {
+    font-size: 72px;
+  }
+
+  .timelineStageTitle {
+    font-size: 21px;
+  }
+
+  .timelineDesc {
+    font-size: 14px;
+  }
+
 }
 
 /* =========================================

@@ -21,7 +21,7 @@ const services = [
     slug: 'neurological-rehabilitation',
     icon: neuro,
     num: '01',
-    title: 'Neurological Rehabilitation',
+    title: 'Neuro Rehabilitation',
     desc: 'Specialized rehabilitation for neurological conditions and recovery.',
     tag: 'Neuro Rehab',
   },

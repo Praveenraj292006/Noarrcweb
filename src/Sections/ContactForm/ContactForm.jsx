@@ -7,46 +7,81 @@ function ContactForm() {
 
   const formRef = useRef()
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+const handleSubmit = async (e) => {
+  e.preventDefault()
 
-    const form = formRef.current
+  const form = formRef.current
 
-    const formData = new FormData(form)
+  const formData = new FormData(form)
 
-    const name = formData.get("name")
-    const phone = formData.get("phone")
-    const service = formData.get("service")
+  const name = formData.get("name")
+  const phone = formData.get("phone")
+  const email = formData.get("email")
+  const service = formData.get("service")
+  const message = formData.get("message")
 
-    /* ===== EMAIL TO ADMIN ===== */
-    emailjs.sendForm(
+  try {
+    // =========================
+    // EMAIL TO ORGANIZATION
+    // =========================
+    await emailjs.sendForm(
       'service_wl3n7r9',
       'template_669e2wv',
       form,
       'WqtGATQJNSC28jQt5'
     )
 
-    /* ===== EMAIL TO USER ===== */
-    emailjs.sendForm(
-      'service_wl3n7r9',
-      'template_cp1cgx4',
-      form,
-      'WqtGATQJNSC28jQt5'
-    )
+    // =========================
+    // CONFIRMATION EMAIL TO USER
+    // =========================
+    if (email) {
+      await emailjs.sendForm(
+        'service_wl3n7r9',
+        'template_cp1cgx4',
+        form,
+        'WqtGATQJNSC28jQt5'
+      )
+    }
 
-    /* ===== WHATSAPP AUTO MESSAGE ===== */
-   const message = `Hello ${name}, thank you for contacting NOARRC. We have received your enquiry regarding ${service}. Our team will review your request and get in touch with you shortly.`
+    // =========================
+    // WHATSAPP MESSAGE
+    // =========================
 
+    const whatsappMessage = `
+New Enquiry - NOARRC
+
+Name: ${name}
+Phone: ${phone}
+Email: ${email || "Not provided"}
+Service: ${service}
+
+Message:
+${message || "No additional message"}
+    `.trim()
+
+    // Opens WhatsApp for the organization
     window.open(
-      `https://wa.me/917200080275?text=${encodeURIComponent(message)}`,
+      `https://wa.me/917200080275?text=${encodeURIComponent(
+        whatsappMessage
+      )}`,
       '_blank'
     )
 
-    alert("Thank you! Your enquiry has been received. Our team will contact you shortly.")
+    alert(
+      "Thank you! Your enquiry has been received. Our team will contact you shortly."
+    )
 
     form.reset()
-  }
 
+  } catch (error) {
+
+    console.error("Form submission failed:", error)
+
+    alert(
+      "Something went wrong while submitting your enquiry. Please try again."
+    )
+  }
+}
   return (
     <section className={styles.section}>
 

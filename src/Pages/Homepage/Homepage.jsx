@@ -3,6 +3,7 @@ import React, { lazy, Suspense } from "react";
 import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Sections/hero/Hero";
 import FloatingBar from "../../Components/FloatingBar/FloatinBar";
+import RecoveryTimeline from "../../Components/ServiceDetail/RecoveryPath/RecoveryTimeline";
 
 // Lazy loaded sections
 const About = lazy(() => import("../../Sections/About/About"));
@@ -11,6 +12,40 @@ const Testimonials = lazy(() => import("../../Components/Testimonials/Testimonia
 const ContactForm = lazy(() => import("../../Sections/ContactForm/ContactForm"));
 const Location = lazy(() => import("../../Sections/Location/Location"));
 const Footer = lazy(() => import("../../Components/Footer/Footer"));
+
+
+const recoveryJourney = [
+  {
+    stage: "Assessment & Goal Setting",
+    description:
+      "Comprehensive evaluation and personalized treatment plan.",
+    icon: "🎯",
+  },
+  {
+    stage: "Early Rehabilitation",
+    description:
+      "Pain management, mobility training, and prevention of complications.",
+    icon: "🌱",
+  },
+  {
+    stage: "Functional Recovery",
+    description:
+      "Strength, balance, coordination, gait, and daily living activities.",
+    icon: "🚶",
+  },
+  {
+    stage: "Advanced Rehabilitation",
+    description:
+      "Robotic therapy, task-specific training, endurance, and independence.",
+    icon: "💪",
+  },
+  {
+    stage: "Return to Life",
+    description:
+      "Home exercise program, community reintegration, and long-term wellness.",
+    icon: "🏡",
+  },
+]
 
 function SectionLoader() {
   return (
@@ -46,6 +81,12 @@ function HomePage() {
       <Suspense fallback={<SectionLoader />}>
         <section id="reviews">
           <Testimonials />
+        </section>
+      </Suspense>
+
+      <Suspense fallback={<SectionLoader />}>
+        <section id="recoveryPath">
+          <RecoveryTimeline recoveryJourney={recoveryJourney} />
         </section>
       </Suspense>
 

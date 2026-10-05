@@ -15,7 +15,6 @@ import { servicesDetails } from '../../data/servicesDetails'
 import ServiceHero       from '../../Components/ServiceDetail/ServiceHero.jsx'
 import Overview          from '../../Components/ServiceDetail/Overview.jsx'
 import ConditionsGrid    from '../../Components/ServiceDetail/ConditionsGrid.jsx'
-import RecoveryTimeline  from '../../Components/ServiceDetail/RecoveryTimeline.jsx'
 import TreatmentProcess  from '../../Components/ServiceDetail/TreatmentProcess.jsx'
 import BenefitsGrid      from '../../Components/ServiceDetail/BenefitsGrid.jsx'
 import TechnologyGrid    from '../../Components/ServiceDetail/TechnologyGrid.jsx'
@@ -62,10 +61,7 @@ function ServicePage() {
         conditions={service.conditions}
       />
 
-      {/* ── 4. Recovery Journey (Timeline) ─────────── */}
-      <RecoveryTimeline
-        recoveryJourney={service.recoveryJourney}
-      />
+     
 
       {/* ── 5. Treatment Process ───────────────────── */}
       <TreatmentProcess
