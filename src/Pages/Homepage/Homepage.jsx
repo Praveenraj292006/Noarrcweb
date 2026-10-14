@@ -4,6 +4,7 @@ import Navbar from "../../Components/Navbar/Navbar";
 import Hero from "../../Sections/hero/Hero";
 import FloatingBar from "../../Components/FloatingBar/FloatinBar";
 import RecoveryTimeline from "../../Components/ServiceDetail/RecoveryPath/RecoveryTimeline";
+import Doctors from "../../Sections/Doctors/Doctors";
 
 // Lazy loaded sections
 const About = lazy(() => import("../../Sections/About/About"));
@@ -75,6 +76,13 @@ function HomePage() {
       <Suspense fallback={<SectionLoader />}>
         <section id="services">
           <Services />
+        </section>
+      </Suspense>
+
+
+       <Suspense fallback={<SectionLoader />}>
+        <section id="doctors">
+          <Doctors />
         </section>
       </Suspense>
 

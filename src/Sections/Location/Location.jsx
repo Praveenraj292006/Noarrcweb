@@ -22,7 +22,7 @@ function Location() {
       city: "Coimbatore",
       address:
         "Police Station, 577, Trichy Rd, near B-5, Agraharam, Singanallur, Coimbatore, Tamil Nadu 641005",
-      phone: "+91 6381047727 | +91 7200080275",
+      phone: " +91 9791901199 | +91 7200080275",
       rating: "4.6 / 5",
       mapLink:
         "https://maps.app.goo.gl/wU12YfiYj1EvpXXC7",
@@ -35,7 +35,7 @@ function Location() {
       city: "Chitlapakkam",
       address:
         "29, Anna St, State Bank Of India Colony, Chitlapakkam, Tambaram, Tamil Nadu 600064",
-      phone: "+91 6381047727 | +91 7200080275",
+      phone: "+91  6362129833 | +91 7200080275",
       mapLink:
         "https://share.google/PZ6NpzEAUF8y9O8wj",
       rating: "Specialist Centre",
@@ -47,7 +47,7 @@ function Location() {
       city: "Porur",
       address:
         "Rasi Complex, Door No 116/1, Mount Poonamallee Road, Porur, Chennai - 600116",
-      phone: "+91 6381047727 | +91 7200080275",
+      phone: "+91  9994218012 | +91 7200080275",
       mapLink:
         "https://share.google/MGCaKuotFfrkWG01W",
       rating: "Specialist Centre",
