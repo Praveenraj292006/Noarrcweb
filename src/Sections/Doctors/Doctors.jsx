@@ -161,6 +161,15 @@ function Doctors() {
                 <h3 className={styles.doctorName}>
                   {doctor.name}
                 </h3>
+                {doctor.memberships.length > 0 && (
+                  <div className={styles.memberships}>
+                    {doctor.memberships.map((membership) => (
+                      <span key={membership}>
+                        {membership}
+                      </span>
+                    ))}
+                  </div>
+                )}
 
                 <p className={styles.specialty}>
                   {doctor.specialty}
@@ -180,15 +189,7 @@ function Doctors() {
                   ))}
                 </ul>
 
-                {doctor.memberships.length > 0 && (
-                  <div className={styles.memberships}>
-                    {doctor.memberships.map((membership) => (
-                      <span key={membership}>
-                        {membership}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                
               </div>
 
               <div className={styles.cardAccent} />

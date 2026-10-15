@@ -360,8 +360,9 @@
 .memberships {
   display: flex;
   flex-wrap: wrap;
+  font-weight: bold;
   gap: 8px;
-  margin-top: 14px;
+
 }
 
 .memberships span {
