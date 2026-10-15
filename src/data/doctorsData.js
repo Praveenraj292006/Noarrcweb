@@ -30,7 +30,7 @@ const doctors = [
       'CMT',
       'MIAP',
     ],
-    memberships: [],
+    memberships: ["Member of IFNR"],
     experience: '20+ Years',
     specialty: 'Orthopedics & Sports',
     image: [dralwin],
