@@ -21,8 +21,8 @@ const doctors = [
     imageAlt: 'Portrait of Dr. R. Prasanna',
   },
   {
-    id: 'dr-alwin',
-    name: 'Dr. R. Alwin',
+    id: 'dr-aswin',
+    name: 'Dr. R. Aswin',
     role: 'Senior Consultant',
     qualifications: [
       'BPT',
